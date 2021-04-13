@@ -1,7 +1,7 @@
-In this notebook, we will look at eigen values
+# Eigen values
 
-https://www.youtube.com/watch?v=PFDu9oVAE-g    
-    
+In this notebook, we will look at eigen values {cite}`holdgraf_evidence_2014`. 
+https://www.youtube.com/watch?v=PFDu9oVAE-g  
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -74,3 +74,6 @@ plot_transformation([-1, 1], np.array([[3, 1], [0, 2]]))
 
 In above two, we can see that the input vectors become two times (=eigen value)
 
+## test
+
+## Eigen values

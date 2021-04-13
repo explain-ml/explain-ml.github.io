@@ -1,3 +1,5 @@
+# Determinant
+
 In this notebook, we will look at determinants
 
 https://www.youtube.com/watch?v=Ip3X9LOh2dk&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab&index=6
@@ -39,4 +41,3 @@ for i in range(-5, 5, 1):
         plot_transformation([i, j], np.array([[-2, -3], [4, 6]]))
 
 Because the matrix is not full rank, x(-2, 3) + y(4, 6) for any x and y will be along y=1.5x line
-

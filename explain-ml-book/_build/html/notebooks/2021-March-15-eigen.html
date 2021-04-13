@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; Explain-ML</title>
+    <title>Eigen values &#8212; Explain-ML</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -57,8 +57,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="2021-March-16-GP-PyMC3.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="2021-March-15-determinant.html" />
+    <link rel="next" title="Determinant" href="2021-March-15-determinant.html" />
+    <link rel="prev" title="Explain ML" href="../intro.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -95,6 +95,28 @@
   </a>
  </li>
 </ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Linear Algebra for ML
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Eigen values
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-15-determinant.html">
+   Determinant
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Others
+ </span>
+</p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="2021-March-11-blr-pymc.html">
@@ -343,6 +365,18 @@
   </a>
  </li>
 </ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  References
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../references.html">
+   References
+  </a>
+ </li>
+</ul>
 
 </nav> <!-- To handle the deprecated key -->
 
@@ -429,7 +463,12 @@
             Contents
         </div>
         <nav id="bd-toc-nav">
-            <ul class="simple nav section-nav flex-column">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#test">
+   test
+  </a>
+ </li>
 </ul>
 
         </nav>
@@ -442,8 +481,10 @@
         
               <div>
                 
-  <p>In this notebook, we will look at eigen values</p>
-<p><a class="reference external" href="https://www.youtube.com/watch?v=PFDu9oVAE-g">https://www.youtube.com/watch?v=PFDu9oVAE-g</a></p>
+  <div class="section" id="eigen-values">
+<h1>Eigen values<a class="headerlink" href="#eigen-values" title="Permalink to this headline">¶</a></h1>
+<p>In this notebook, we will look at eigen values <span id="id1">[<a class="reference internal" href="../references.html#id2"><span>HdHPK14</span></a>]</span>.
+<a class="reference external" href="https://www.youtube.com/watch?v=PFDu9oVAE-g">https://www.youtube.com/watch?v=PFDu9oVAE-g</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -466,7 +507,7 @@
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-1.0, 3.0)
 </pre></div>
 </div>
-<img alt="../_images/2021-March-15-eigen_2_1.png" src="../_images/2021-March-15-eigen_2_1.png" />
+<img alt="../_images/2021-March-15-eigen_3_1.png" src="../_images/2021-March-15-eigen_3_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -511,7 +552,7 @@
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([7, 2])
 </pre></div>
 </div>
-<img alt="../_images/2021-March-15-eigen_5_1.png" src="../_images/2021-March-15-eigen_5_1.png" />
+<img alt="../_images/2021-March-15-eigen_6_1.png" src="../_images/2021-March-15-eigen_6_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -524,7 +565,7 @@
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-1,  0])
 </pre></div>
 </div>
-<img alt="../_images/2021-March-15-eigen_6_1.png" src="../_images/2021-March-15-eigen_6_1.png" />
+<img alt="../_images/2021-March-15-eigen_7_1.png" src="../_images/2021-March-15-eigen_7_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -536,7 +577,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2021-March-15-eigen_7_0.png" src="../_images/2021-March-15-eigen_7_0.png" />
+<img alt="../_images/2021-March-15-eigen_8_0.png" src="../_images/2021-March-15-eigen_8_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -548,7 +589,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2021-March-15-eigen_8_0.png" src="../_images/2021-March-15-eigen_8_0.png" />
+<img alt="../_images/2021-March-15-eigen_9_0.png" src="../_images/2021-March-15-eigen_9_0.png" />
 </div>
 </div>
 <p>For these two values of lambda (eigen values), any input vector will be squished to the two red lines shown (determinant is zero, thus ..).</p>
@@ -569,7 +610,7 @@
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 2, -2])
 </pre></div>
 </div>
-<img alt="../_images/2021-March-15-eigen_12_1.png" src="../_images/2021-March-15-eigen_12_1.png" />
+<img alt="../_images/2021-March-15-eigen_13_1.png" src="../_images/2021-March-15-eigen_13_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -582,10 +623,21 @@
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-2,  2])
 </pre></div>
 </div>
-<img alt="../_images/2021-March-15-eigen_13_1.png" src="../_images/2021-March-15-eigen_13_1.png" />
+<img alt="../_images/2021-March-15-eigen_14_1.png" src="../_images/2021-March-15-eigen_14_1.png" />
 </div>
 </div>
 <p>In above two, we can see that the input vectors become two times (=eigen value)</p>
+<div class="section" id="test">
+<h2>test<a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Eigen values</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -612,8 +664,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="2021-March-15-determinant.html" title="previous page">&lt;no title&gt;</a>
-    <a class='right-next' id="next-link" href="2021-March-16-GP-PyMC3.html" title="next page">&lt;no title&gt;</a>
+    <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">Explain ML</a>
+    <a class='right-next' id="next-link" href="2021-March-15-determinant.html" title="next page">Determinant</a>
 
         </div>
         
