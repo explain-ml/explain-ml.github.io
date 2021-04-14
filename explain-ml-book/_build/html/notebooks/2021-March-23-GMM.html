@@ -50,15 +50,15 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="2021-March-23-Stationarity-stochastic-processes.html" />
-    <link rel="prev" title="Stochastic processes" href="2021-March-19-stochastic-processes.html" />
+    <link rel="next" title="Bayesian ML" href="2021-March-23-bayesian-ml.html" />
+    <link rel="prev" title="Stationary GP model" href="2021-March-17-LLS-GP-PyMC3.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -77,7 +77,7 @@
         <div class="navbar-brand-box">
 <a class="navbar-brand text-wrap" href="../index.html">
   
-  <img src="../_static/logo.png" class="logo" alt="logo">
+  <img src="../_static/Logo.png" class="logo" alt="logo">
   
   
   <h1 class="site-logo" id="site-title">Explain-ML</h1>
@@ -111,26 +111,21 @@
    Determinant
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-15-Positive-semi-definite.html">
+   Positive definiteness
+  </a>
+ </li>
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  Others
+  Stochastic processes
  </span>
 </p>
-<ul class="current nav sidenav_l1">
+<ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-11-blr-pymc.html">
-   Laplacian Prior (LASSO)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-17-LLS-GP-PyMC3.html">
-   Stationary GP model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-17-LLS-GP-PyMC3.html#lls-gp">
-   LLS GP
+  <a class="reference internal" href="2021-March-19-stochastic-processes.html">
+   Stochastic processes
   </a>
  </li>
  <li class="toctree-l1">
@@ -198,9 +193,26 @@
    How to convert non-stationary Time-series to stationary?
   </a>
  </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Others
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-19-stochastic-processes.html">
-   Stochastic processes
+  <a class="reference internal" href="2021-March-11-blr-pymc.html">
+   Laplacian Prior (LASSO)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-17-LLS-GP-PyMC3.html">
+   Stationary GP model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-17-LLS-GP-PyMC3.html#lls-gp">
+   LLS GP
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -220,11 +232,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="2021-March-23-bayesian-ml.html#but-what-is-the-likelihood-to-how-likely-the-event-is-given-a-belief-parameters">
-   But what is the Likelihood?
-   <span class="math notranslate nohighlight">
-    \(\to\)
-   </span>
-   How likely the event is, given a belief (parameters)?
+   But what is the Likelihood? $\to$ How likely the event is, given a belief (parameters)?
   </a>
  </li>
  <li class="toctree-l1">
@@ -234,11 +242,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="2021-March-23-bayesian-ml.html#how-to-choose-appropriate-prior-for-likelihood-or-model-to-conjugate-priors">
-   How to choose appropriate prior for likelihood (or model)?
-   <span class="math notranslate nohighlight">
-    \(\to\)
-   </span>
-   Conjugate priors
+   How to choose appropriate prior for likelihood (or model)? $\to$ Conjugate priors
   </a>
  </li>
  <li class="toctree-l1">
@@ -248,10 +252,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="2021-March-23-bayesian-ml.html#evidence-p-d">
-   Evidence
-   <span class="math notranslate nohighlight">
-    \(p(D)\)
-   </span>
+   Evidence $p(D)$
   </a>
  </li>
  <li class="toctree-l1">
@@ -441,7 +442,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebooks/2021-March-23-GMM.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/explain-ml/explain-ml-book/main?urlpath=tree/notebooks/2021-March-23-GMM.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -449,6 +450,14 @@
         
         
         
+        <a class="colab-button" href="https://colab.research.google.com/github/explain-ml/explain-ml-book/blob/main/notebooks/2021-March-23-GMM.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
         
     </div>
 </div>
@@ -486,8 +495,8 @@
         
               <div>
                 
-  <p><a class="reference external" href="http://ethen8181.github.io/machine-learning/clustering/GMM/GMM.html">http://ethen8181.github.io/machine-learning/clustering/GMM/GMM.html</a></p>
-<p><a class="reference external" href="https://www.python-course.eu/expectation_maximization_and_gaussian_mixture_models.php">https://www.python-course.eu/expectation_maximization_and_gaussian_mixture_models.php</a></p>
+  <p>http://ethen8181.github.io/machine-learning/clustering/GMM/GMM.html</p>
+<p>https://www.python-course.eu/expectation_maximization_and_gaussian_mixture_models.php</p>
 <p>Coursera course on ML by UW (Emily Fox)</p>
 <p>Expectation Maximisation Based GMM for 1d data</p>
 <p>Basic Algorithm</p>
@@ -495,23 +504,21 @@
 <li><p>Assume K clusters</p></li>
 <li><p>Prior of sample being in that cluster</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{array}{l}
-0 \leq \pi_{k} \leq 1 \\
+<p>$$\begin{array}{l}
+0 \leq \pi_{k} \leq 1 \
 \sum_{k=1}^{K} \pi_{k}=1
 \end{array}
-\end{split}\]</div>
+$$</p>
 <ul class="simple">
-<li><p>Cluster assignment (<span class="math notranslate nohighlight">\(z\)</span>)for <span class="math notranslate nohighlight">\(i^{th}\)</span> observation to <span class="math notranslate nohighlight">\(k^{th}\)</span> cluster:
-<span class="math notranslate nohighlight">\(p\left(z_{i}=k\right)=\pi_{k} \)</span></p></li>
-<li><p>Given observation <span class="math notranslate nohighlight">\(\left(x_{i}\right)\)</span> s from cluster <span class="math notranslate nohighlight">\(k\)</span>, what’s the ikelihood of seeing <span class="math notranslate nohighlight">\(\mathbf{x}_{i} ?\)</span></p></li>
+<li><p>Cluster assignment ($z$)for $i^{th}$ observation to $k^{th}$ cluster:
+$p\left(z_{i}=k\right)=\pi_{k} $</p></li>
+<li><p>Given observation $\left(x_{i}\right)$ s from cluster $k$, what’s the ikelihood of seeing $\mathbf{x}_{i} ?$</p></li>
 </ul>
-<p><span class="math notranslate nohighlight">\(p\left(x_{i} \mid z_{i}=k, \mu_{k}, \Sigma_{k}\right)=N\left(x_{i} \mid \mu_{k}, \Sigma_{k}\right)\)</span></p>
+<p>$p\left(x_{i} \mid z_{i}=k, \mu_{k}, \Sigma_{k}\right)=N\left(x_{i} \mid \mu_{k}, \Sigma_{k}\right)$</p>
 <ul class="simple">
-<li><p>Posterior that a sample <span class="math notranslate nohighlight">\(x_i\)</span> is sampled from <span class="math notranslate nohighlight">\(k^{th}\)</span> cluster is:</p></li>
+<li><p>Posterior that a sample $x_i$ is sampled from $k^{th}$ cluster is:</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[ p(z_i=k|x_i, \mu_{k}, \Sigma_{k}, \pi_k) = \frac{\pi_k \times N\left(x_{i} \mid \mu_{k}, \Sigma_{k}\right)}{\sum_{k=1}^{K}\pi_k \times N\left(x_{i} \mid \mu_{k}, \Sigma_{k}\right)} \]</div>
+<p>$$ p(z_i=k|x_i, \mu_{k}, \Sigma_{k}, \pi_k) = \frac{\pi_k \times N\left(x_{i} \mid \mu_{k}, \Sigma_{k}\right)}{\sum_{k=1}^{K}\pi_k \times N\left(x_{i} \mid \mu_{k}, \Sigma_{k}\right)} $$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">mediapy</span>
@@ -1353,7 +1360,7 @@
 </div>
 </div>
 <p>using Bayesian</p>
-<p>Following: <a class="reference external" href="https://pyro.ai/examples/gmm.html">https://pyro.ai/examples/gmm.html</a></p>
+<p>Following: https://pyro.ai/examples/gmm.html</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
@@ -1571,8 +1578,8 @@ CompoundStep
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "explain-ml/explain-ml-book",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -1592,8 +1599,8 @@ CompoundStep
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="2021-March-19-stochastic-processes.html" title="previous page">Stochastic processes</a>
-    <a class='right-next' id="next-link" href="2021-March-23-Stationarity-stochastic-processes.html" title="next page">&lt;no title&gt;</a>
+    <a class='left-prev' id="prev-link" href="2021-March-17-LLS-GP-PyMC3.html" title="previous page">Stationary GP model</a>
+    <a class='right-next' id="next-link" href="2021-March-23-bayesian-ml.html" title="next page">Bayesian ML</a>
 
         </div>
         

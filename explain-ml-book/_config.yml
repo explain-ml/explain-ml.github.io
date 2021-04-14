@@ -8,9 +8,21 @@
 title                       : Explain-ML  # The title of the book. Will be placed in the left navbar.
 author                      : Nipun Batra, Zeel B Patel  # The author of the book
 copyright                   : "2021"  # Copyright year to be placed in the footer
-logo                        : logo.png  # A path to the book logo
+logo                        : Logo.png  # A path to the book logo
 execute:
   execute_notebooks: 'off'
   
 bibtex_bibfiles:
   - references.bib
+  
+launch_buttons:
+  colab_url: "https://colab.research.google.com"
+  thebe: true
+
+repository:
+  url: https://github.com/explain-ml/explain-ml-book
+  branch: main
+  
+parse:
+  myst_enable_extensions:
+    - amsmath

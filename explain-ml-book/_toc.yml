@@ -7,6 +7,13 @@
   chapters:  
     - file: notebooks/2021-March-15-eigen
     - file: notebooks/2021-March-15-determinant
+    - file: notebooks/2021-March-15-Positive-semi-definite
+    
+- part: Stochastic processes
+  chapters:
+    - file: notebooks/2021-March-19-stochastic-processes
+    - file: notebooks/2021-March-17-Stationary-Time_Series
+    - file: notebooks/2021-March-23-Stationarity-stochastic-processes
 
 - part: Others
   chapters:
@@ -15,13 +22,9 @@
     - file: notebooks/2021-March-11-blr-pymc
     - file: notebooks/2021-March-12-logistic-bayesian
     - file: notebooks/2021-March-12-mlp
-    - file: notebooks/2021-March-15-Positive-semi-definite
     - file: notebooks/2021-March-16-GP-PyMC3
     - file: notebooks/2021-March-17-LLS-GP-PyMC3
-    - file: notebooks/2021-March-17-Stationary-Time_Series
-    - file: notebooks/2021-March-19-stochastic-processes
     - file: notebooks/2021-March-23-GMM
-    - file: notebooks/2021-March-23-Stationarity-stochastic-processes
     - file: notebooks/2021-March-23-bayesian-ml
     - file: notebooks/2021-March-24-sigmoid
     - file: notebooks/2021-March-26-GMM-example

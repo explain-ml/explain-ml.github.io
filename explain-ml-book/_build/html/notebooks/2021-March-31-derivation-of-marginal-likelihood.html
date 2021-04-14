@@ -50,9 +50,9 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -77,7 +77,7 @@
         <div class="navbar-brand-box">
 <a class="navbar-brand text-wrap" href="../index.html">
   
-  <img src="../_static/logo.png" class="logo" alt="logo">
+  <img src="../_static/Logo.png" class="logo" alt="logo">
   
   
   <h1 class="site-logo" id="site-title">Explain-ML</h1>
@@ -111,26 +111,21 @@
    Determinant
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-15-Positive-semi-definite.html">
+   Positive definiteness
+  </a>
+ </li>
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  Others
+  Stochastic processes
  </span>
 </p>
-<ul class="current nav sidenav_l1">
+<ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-11-blr-pymc.html">
-   Laplacian Prior (LASSO)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-17-LLS-GP-PyMC3.html">
-   Stationary GP model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-17-LLS-GP-PyMC3.html#lls-gp">
-   LLS GP
+  <a class="reference internal" href="2021-March-19-stochastic-processes.html">
+   Stochastic processes
   </a>
  </li>
  <li class="toctree-l1">
@@ -198,9 +193,26 @@
    How to convert non-stationary Time-series to stationary?
   </a>
  </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Others
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-19-stochastic-processes.html">
-   Stochastic processes
+  <a class="reference internal" href="2021-March-11-blr-pymc.html">
+   Laplacian Prior (LASSO)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-17-LLS-GP-PyMC3.html">
+   Stationary GP model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-17-LLS-GP-PyMC3.html#lls-gp">
+   LLS GP
   </a>
  </li>
  <li class="toctree-l1">
@@ -220,11 +232,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="2021-March-23-bayesian-ml.html#but-what-is-the-likelihood-to-how-likely-the-event-is-given-a-belief-parameters">
-   But what is the Likelihood?
-   <span class="math notranslate nohighlight">
-    \(\to\)
-   </span>
-   How likely the event is, given a belief (parameters)?
+   But what is the Likelihood? $\to$ How likely the event is, given a belief (parameters)?
   </a>
  </li>
  <li class="toctree-l1">
@@ -234,11 +242,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="2021-March-23-bayesian-ml.html#how-to-choose-appropriate-prior-for-likelihood-or-model-to-conjugate-priors">
-   How to choose appropriate prior for likelihood (or model)?
-   <span class="math notranslate nohighlight">
-    \(\to\)
-   </span>
-   Conjugate priors
+   How to choose appropriate prior for likelihood (or model)? $\to$ Conjugate priors
   </a>
  </li>
  <li class="toctree-l1">
@@ -248,10 +252,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="2021-March-23-bayesian-ml.html#evidence-p-d">
-   Evidence
-   <span class="math notranslate nohighlight">
-    \(p(D)\)
-   </span>
+   Evidence $p(D)$
   </a>
  </li>
  <li class="toctree-l1">
@@ -441,7 +442,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebooks/2021-March-31-derivation-of-marginal-likelihood.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/explain-ml/explain-ml-book/main?urlpath=tree/notebooks/2021-March-31-derivation-of-marginal-likelihood.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -449,6 +450,14 @@
         
         
         
+        <a class="colab-button" href="https://colab.research.google.com/github/explain-ml/explain-ml-book/blob/main/notebooks/2021-March-31-derivation-of-marginal-likelihood.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
         
     </div>
 </div>
@@ -548,7 +557,7 @@
 \epsilon &amp;\sim \mathcal{N}(0, \sigma_n^2)\
 \theta &amp;\sim \mathcal{N}(\mathbf{m}_0, S_0)
 \end{aligned}</p>
-<p>For a Gaussian random variable <span class="math notranslate nohighlight">\(\mathbf{z} \sim \mathcal{N}(\boldsymbol{\mu}, \Sigma)\)</span>, <span class="math notranslate nohighlight">\(A\mathbf{z} + \mathbf{b}\)</span> is also a Gaussian random variable.</p>
+<p>For a Gaussian random variable $\mathbf{z} \sim \mathcal{N}(\boldsymbol{\mu}, \Sigma)$, $A\mathbf{z} + \mathbf{b}$ is also a Gaussian random variable.</p>
 </div>
 <div class="section" id="id1">
 <h1>\begin{aligned}<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
@@ -561,7 +570,7 @@
 &amp;= XV(\mathbf{\theta})X^T+V(\boldsymbol{\epsilon})\
 &amp;= XS_0X^T + \sigma_n^2I
 \end{aligned}</p>
-<p>Marginal likelihood is <span class="math notranslate nohighlight">\(p(\mathbf{y})\)</span> so,</p>
+<p>Marginal likelihood is $p(\mathbf{y})$ so,</p>
 </div>
 <div class="section" id="id2">
 <h1>\begin{aligned}<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
@@ -571,7 +580,7 @@
 </div>
 <div class="section" id="products-of-gaussian-pdfs">
 <h1>Products of Gaussian PDFs<a class="headerlink" href="#products-of-gaussian-pdfs" title="Permalink to this headline">¶</a></h1>
-<p>Product of two Gaussians <span class="math notranslate nohighlight">\(\mathbf{x} \sim \mathcal{N}(\boldsymbol{\mu}_0, \Sigma_0)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{x} \sim \mathcal{N}(\boldsymbol{\mu}_1, \Sigma_1)\)</span> is an unnormalized Gaussian.</p>
+<p>Product of two Gaussians $\mathbf{x} \sim \mathcal{N}(\boldsymbol{\mu}_0, \Sigma_0)$ and $\mathbf{x} \sim \mathcal{N}(\boldsymbol{\mu}_1, \Sigma_1)$ is an unnormalized Gaussian.</p>
 </div>
 <div class="section" id="id3">
 <h1>\begin{aligned}<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h1>
@@ -579,7 +588,7 @@
 g(\mathbf{x}) &amp;= \frac{1}{(2\pi)^{\frac{N}{2}}|\Sigma_1|^{\frac{1}{2}}}\exp\left[-\frac{1}{2}(\mathbf{x}-\boldsymbol{\mu}_1)^T\Sigma_1^{-1}(\mathbf{x}-\boldsymbol{\mu}_1)\right]\
 \int h(x) = \frac{1}{c}\int f(\mathbf{x})g(\mathbf{x})d\mathbf{x} &amp;= 1
 \end{aligned}</p>
-<p>We need to find figure out value of <span class="math notranslate nohighlight">\(c\)</span> to solve the integration.</p>
+<p>We need to find figure out value of $c$ to solve the integration.</p>
 </div>
 <div class="section" id="id4">
 <h1>\begin{aligned}<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h1>
@@ -605,7 +614,7 @@ f(x)g(x) &amp;= \frac{1}{(2\pi)^{\frac{N}{2}}|\Sigma_0|^{\frac{1}{2}}(2\pi)^{\fr
 \Sigma^{-1}\boldsymbol{\mu} &amp;= \Sigma_0^{-1}\boldsymbol{\mu}_0 + \Sigma_1^{-1}\boldsymbol{\mu}_1\
 \boldsymbol{\mu} &amp;= \Sigma\left(\Sigma_0^{-1}\boldsymbol{\mu}_0 + \Sigma_1^{-1}\boldsymbol{\mu}_1\right)
 \end{aligned}</p>
-<p>Now, solving for the normalizing constant <span class="math notranslate nohighlight">\(c\)</span>,</p>
+<p>Now, solving for the normalizing constant $c$,</p>
 </div>
 <div class="section" id="id6">
 <h1>\begin{aligned}<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h1>
@@ -625,14 +634,13 @@ V(\theta) &amp;= \frac{\left[(X^TX)^{-1}X^T\right]\left[(X^TX)^{-1}X^T\right]^T}
 &amp;= \frac{(X^TX)^{-1}X^TX(X^TX)^{-1}}{\sigma_n^2}\
 &amp;= \frac{(X^TX)^{-1}}{\sigma_n^2}
 \end{aligned}</p>
-<p>If we have two Gaussians <span class="math notranslate nohighlight">\(\mathcal{N}(\mathbf{a}, A)\)</span> and <span class="math notranslate nohighlight">\(\mathcal{N}(\mathbf{b}, B)\)</span> for same random variable <span class="math notranslate nohighlight">\(\mathbf{x}\)</span>, Marginal likelihood can be given as,</p>
-<div class="math notranslate nohighlight">
-\[
+<p>If we have two Gaussians $\mathcal{N}(\mathbf{a}, A)$ and $\mathcal{N}(\mathbf{b}, B)$ for same random variable $\mathbf{x}$, Marginal likelihood can be given as,</p>
+<p>$$
 c = (2\pi)^{-N/2}|A+B|^{-1/2}\exp -\frac{1}{2}\left[(\mathbf{a} - \mathbf{b})^T(A+B)^{-1}(\mathbf{a} - \mathbf{b})\right]
-\]</div>
-<p>Here, we have two Gaussians <span class="math notranslate nohighlight">\(\mathcal{N}(0, \sigma^2I)\)</span> and <span class="math notranslate nohighlight">\(\mathcal{N}((X^TX)^{-1}X^T\mathbf{y}, \frac{(X^TX)^{-1}}{\sigma_n^2} )\)</span> for same random variable <span class="math notranslate nohighlight">\(\boldsymbol{\theta}\)</span>, Marginal likelihood can be given as,</p>
-<div class="math notranslate nohighlight">
-\[\]</div>
+$$</p>
+<p>Here, we have two Gaussians $\mathcal{N}(0, \sigma^2I)$ and $\mathcal{N}((X^TX)^{-1}X^T\mathbf{y}, \frac{(X^TX)^{-1}}{\sigma_n^2} )$ for same random variable $\boldsymbol{\theta}$, Marginal likelihood can be given as,</p>
+<p>$$
+$$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -780,8 +788,8 @@ c = (2\pi)^{-N/2}|A+B|^{-1/2}\exp -\frac{1}{2}\left[(\mathbf{a} - \mathbf{b})^T(
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "explain-ml/explain-ml-book",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",

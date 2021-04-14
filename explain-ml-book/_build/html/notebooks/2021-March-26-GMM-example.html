@@ -50,9 +50,9 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -77,7 +77,7 @@
         <div class="navbar-brand-box">
 <a class="navbar-brand text-wrap" href="../index.html">
   
-  <img src="../_static/logo.png" class="logo" alt="logo">
+  <img src="../_static/Logo.png" class="logo" alt="logo">
   
   
   <h1 class="site-logo" id="site-title">Explain-ML</h1>
@@ -111,26 +111,21 @@
    Determinant
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-15-Positive-semi-definite.html">
+   Positive definiteness
+  </a>
+ </li>
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  Others
+  Stochastic processes
  </span>
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-11-blr-pymc.html">
-   Laplacian Prior (LASSO)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-17-LLS-GP-PyMC3.html">
-   Stationary GP model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-17-LLS-GP-PyMC3.html#lls-gp">
-   LLS GP
+  <a class="reference internal" href="2021-March-19-stochastic-processes.html">
+   Stochastic processes
   </a>
  </li>
  <li class="toctree-l1">
@@ -198,9 +193,26 @@
    How to convert non-stationary Time-series to stationary?
   </a>
  </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Others
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-19-stochastic-processes.html">
-   Stochastic processes
+  <a class="reference internal" href="2021-March-11-blr-pymc.html">
+   Laplacian Prior (LASSO)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-17-LLS-GP-PyMC3.html">
+   Stationary GP model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-17-LLS-GP-PyMC3.html#lls-gp">
+   LLS GP
   </a>
  </li>
  <li class="toctree-l1">
@@ -220,11 +232,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="2021-March-23-bayesian-ml.html#but-what-is-the-likelihood-to-how-likely-the-event-is-given-a-belief-parameters">
-   But what is the Likelihood?
-   <span class="math notranslate nohighlight">
-    \(\to\)
-   </span>
-   How likely the event is, given a belief (parameters)?
+   But what is the Likelihood? $\to$ How likely the event is, given a belief (parameters)?
   </a>
  </li>
  <li class="toctree-l1">
@@ -234,11 +242,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="2021-March-23-bayesian-ml.html#how-to-choose-appropriate-prior-for-likelihood-or-model-to-conjugate-priors">
-   How to choose appropriate prior for likelihood (or model)?
-   <span class="math notranslate nohighlight">
-    \(\to\)
-   </span>
-   Conjugate priors
+   How to choose appropriate prior for likelihood (or model)? $\to$ Conjugate priors
   </a>
  </li>
  <li class="toctree-l1">
@@ -248,10 +252,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="2021-March-23-bayesian-ml.html#evidence-p-d">
-   Evidence
-   <span class="math notranslate nohighlight">
-    \(p(D)\)
-   </span>
+   Evidence $p(D)$
   </a>
  </li>
  <li class="toctree-l1">
@@ -441,7 +442,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebooks/2021-March-26-GMM-example.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/explain-ml/explain-ml-book/main?urlpath=tree/notebooks/2021-March-26-GMM-example.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -449,6 +450,14 @@
         
         
         
+        <a class="colab-button" href="https://colab.research.google.com/github/explain-ml/explain-ml-book/blob/main/notebooks/2021-March-26-GMM-example.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
         
     </div>
 </div>
@@ -1088,8 +1097,8 @@
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "explain-ml/explain-ml-book",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",

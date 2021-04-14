@@ -1,15 +1,6 @@
+# Stochastic processes
+
 https://www.youtube.com/watch?v=TuTmC8aOQJE
-
-import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib import rc
-from matplotlib.animation import FuncAnimation
-from IPython.display import HTML
-from itertools import combinations, product
-
-rc('animation', html='jshtml')
-
-## Stochastic processes
 
 **Definition:** It is a collection of random variables indexed by time.
 
@@ -26,25 +17,41 @@ Let's see some trivial examples in the context of forecasting where we have all 
 First example is,
 
 $$
-f(t) = t \tag{1}
+f(t) = t
 $$
 
-t = 10
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib import rc
+from matplotlib.animation import FuncAnimation
+from IPython.display import HTML
+from itertools import combinations, product
+
+rc('font',size=14)
+rc('animation', html='jshtml')
+
+t = 20
 f = lambda t: np.arange(t)
 plt.plot(np.arange(t), f(t), 'o-');
 plt.xlabel('$t$');plt.ylabel('$f(t)$');
 
-No randomness here. We are 100% certain about value of $f(t)$ at time $t$. Now, another example is,
-\begin{aligned}
-f(t) &= t, \forall t, \;\;\;\;\;\; proba=\frac{1}{2}\\
-     &= -t, \forall t, \;\;\;\;\;\; proba=\frac{1}{2}
-\end{aligned}
+No randomness here. We are 100% certain about the value of $f(t)$ at time $t$. 
+
+
+Now, another example is,
+
+
+$$
+\begin{cases}
+    f(t) = t, & p=0.5 \\
+    f(t) = -t, & p=0.5 \\
+  \end{cases}
+$$
 
 f_possible1 = lambda t: np.arange(t)
 f_possible2 = lambda t: -np.arange(t)
 f = lambda t: np.arange(t) if np.random.uniform(0,1)>0.5 else -np.arange(t)
 
-rc('font',size=14)
 fig, ax = plt.subplots()
 def frame(_):
     ax.cla()
@@ -54,15 +61,22 @@ def frame(_):
     ax.set_xlabel('$t$');ax.set_ylabel('$f(t)$');
     ax.legend()
 plt.close()
-anim = FuncAnimation(fig, frame, frames=range(10))
+anim = FuncAnimation(fig, frame, frames=range(t))
 anim
 
-There is a randomness in this stochastic process but once the path is chosen, it becomes certain. In other words, given any $f(t),t>0$, we can know the value of $f(t')$. Now, yet another example,
-\begin{aligned}
-\text{for each } t,
-f(t) &= t, \;\;\;\;\;\; proba=\frac{1}{2}\\
-     &= -t, \;\;\;\;\;\; proba=\frac{1}{2}
-\end{aligned}
+There is a randomness in this stochastic process but once a path is chosen, we become certain. In other words, given any $f(t),t>0$, we can know the value of $f(t')$. 
+
+
+Now, yet another example,
+
+
+$$
+f(t) = 
+\begin{cases}
+    t, & p=0.5 \\
+    -t, & p=0.5 \\
+  \end{cases}
+$$
 
 f_possible1 = lambda t: np.arange(t)
 f_possible2 = lambda t: -np.arange(t)
@@ -83,10 +97,10 @@ def frame(_):
     ax.set_xlabel('$t$');ax.set_ylabel('$f(t)$');
     ax.legend()
 plt.close()
-anim = FuncAnimation(fig, frame, frames=range(10))
+anim = FuncAnimation(fig, frame, frames=range(t))
 anim
 
-This stochastic process is truly random, in the sense, given all the values from $f(0)$ to $f(t-1)$ we can not be certain about $f(t)$.
+This stochastic process is having the most randomness, in the sense, given all the values from $f(0)$ to $f(t-1)$ we can not be certain about $f(t)$.
 
 In the study of stochastic processes, we are interested in three questions,
 
@@ -96,9 +110,9 @@ In the study of stochastic processes, we are interested in three questions,
 
 Now, let us see the fundamental stochastic process : a simple(1D) random walk
 
-### Simple random walk
+## Simple random walk
 
-if $y_i$ take value 1 or -1 with equal probability then simple random walk at time $t$ is, $f(t) = \sum\limits_{0}^{t}y_i(t)$.
+if $y_i$ takes value 1 or -1 with equal probability then a simple random walk at time $t$ is, $f(t) = \sum\limits_{0}^{t}y_i(t)$.
 
 f_upper = lambda t: np.arange(t)
 f_lower = lambda t: -np.arange(t)
@@ -115,11 +129,13 @@ def frame(_):
     ax.plot(np.arange(t), f(t), 'o-', label='chosen path',color='k');
     ax.set_xlabel('$t$');ax.set_ylabel('$f(t)$');
     ax.legend()
+    ax.set_title('Simple random walk')
 plt.close()
 anim = FuncAnimation(fig, frame, frames=range(t))
 anim
 
 Let's check for expected value and variance of $f(t)$
+
 
 \begin{aligned}
 f(t) &= f(t-1) + I, \text{   where, } I \text{ takes value 1 or -1 with equal probability}\\
@@ -129,6 +145,8 @@ f(t) &= f(t-1) + I, \text{   where, } I \text{ takes value 1 or -1 with equal pr
 \end{aligned}
 
 And, variance
+
+
 \begin{aligned}
 V(f(t)) &= \sum\limits_{T=0}^{t}V(I)\\
         &= \sum\limits_{T=0}^{t}(\mathbb{E}(I^2) - (\mathbb{E}(I))^2\\
@@ -153,6 +171,8 @@ plt.xticks(range(len(test_ind)), test_ind)
 plt.legend();
 plt.xlabel('t');plt.ylabel('standard deviation');
 
+Below we show many samples drawn from a simple random walk.
+
 t = 100
 for _ in range(100):
     f_t = f(t)
@@ -165,9 +185,11 @@ plt.xlabel('$t$');plt.ylabel('$f(t)$')
 plt.ylim(-35,35)
 plt.legend(bbox_to_anchor=[1,1]);
 
-### Random walk and Gaussian distribution
+## Random walk and Gaussian distribution
 
 Interesting fact about a simple random walk is the following,
+
+
 $$
 \text{for }t \to \infty, \frac{1}{\sqrt{t}}f(t) \sim \mathcal{N}(0,1)
 $$
@@ -178,7 +200,7 @@ Let us verify this by fitting various distributions to the data.
 from distfit import distfit
 
 t = 100000
-N = 10000
+N = 1000
 samples = (1/np.sqrt(t))*np.array([f(t)[-1] for _ in range(N)])
 dist = distfit(alpha=0.05)
 
@@ -186,33 +208,19 @@ print('theoretical standard deviation =',np.sqrt(t).round(2))
 # Search for best theoretical fit on your empirical data
 dist.fit_transform(samples)['summary'];
 
+We see that for `norm` (Gaussian) distribution, `loc` (mean) is close to $0$ and `scale` (standard deviation) is close to $1$.
+
+Let us visualize histogram and pdf of this Gaussian distribution.
+
 from scipy.stats import norm
+import seaborn as sns
+
 samples = np.sort(samples, axis=0) 
 
 plt.figure(figsize=(10,4))
-plt.hist(samples, bins=100, density=True,label='samples');
-plt.plot(samples, norm.pdf(samples), linewidth=10, alpha=0.6, label='pdf');
+plt.hist(samples, bins=20, density=True,label='histogram', alpha=0.5);
+# plt.plot(samples, norm.pdf(samples), linewidth=10, alpha=0.6, label='pdf');
+sns.kdeplot(samples, shade=True, linewidth=4, label='pdf', color='r')
+plt.eventplot(samples, lineoffsets=-0.1, linelengths=0.1, label='samples')
+plt.ylim(-0.2, 0.6)
 plt.legend(bbox_to_anchor=(1,1));
-
-### Stationarity
-
-A random walk has stationarity property so, distribution of $f(t_1)$ to $f(t_1+h)$ is same as $f(t_2)$ to $f(t_2+h)$.
-
-Let us check this.
-
-t = 10000
-h = 100
-t1 = 1000
-t2 = 2000
-
-f_t = f(t)
-f_t1 = f_t[t1:t1+h]
-f_t2 = f_t[t2:t2+h]
-
-plt.figure(figsize=(10,4))
-plt.plot(norm.cdf(f_t1, scale=np.sqrt(t1+h)), label='mean of distribution 1')
-plt.plot(norm.cdf(f_t2, scale=np.sqrt(t2+h)), label='mean of distribution 2');
-# plt.plot(np.array(s_t1).std(axis=1), label='std of distribution 1')
-# plt.plot(np.array(s_t2).std(axis=1), label='std of distribution 2');
-plt.legend();
-

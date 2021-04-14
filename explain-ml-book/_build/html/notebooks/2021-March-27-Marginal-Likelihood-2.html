@@ -50,9 +50,9 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -77,7 +77,7 @@
         <div class="navbar-brand-box">
 <a class="navbar-brand text-wrap" href="../index.html">
   
-  <img src="../_static/logo.png" class="logo" alt="logo">
+  <img src="../_static/Logo.png" class="logo" alt="logo">
   
   
   <h1 class="site-logo" id="site-title">Explain-ML</h1>
@@ -111,26 +111,21 @@
    Determinant
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-15-Positive-semi-definite.html">
+   Positive definiteness
+  </a>
+ </li>
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  Others
+  Stochastic processes
  </span>
 </p>
-<ul class="current nav sidenav_l1">
+<ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-11-blr-pymc.html">
-   Laplacian Prior (LASSO)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-17-LLS-GP-PyMC3.html">
-   Stationary GP model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-17-LLS-GP-PyMC3.html#lls-gp">
-   LLS GP
+  <a class="reference internal" href="2021-March-19-stochastic-processes.html">
+   Stochastic processes
   </a>
  </li>
  <li class="toctree-l1">
@@ -198,9 +193,26 @@
    How to convert non-stationary Time-series to stationary?
   </a>
  </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Others
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-19-stochastic-processes.html">
-   Stochastic processes
+  <a class="reference internal" href="2021-March-11-blr-pymc.html">
+   Laplacian Prior (LASSO)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-17-LLS-GP-PyMC3.html">
+   Stationary GP model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-17-LLS-GP-PyMC3.html#lls-gp">
+   LLS GP
   </a>
  </li>
  <li class="toctree-l1">
@@ -220,11 +232,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="2021-March-23-bayesian-ml.html#but-what-is-the-likelihood-to-how-likely-the-event-is-given-a-belief-parameters">
-   But what is the Likelihood?
-   <span class="math notranslate nohighlight">
-    \(\to\)
-   </span>
-   How likely the event is, given a belief (parameters)?
+   But what is the Likelihood? $\to$ How likely the event is, given a belief (parameters)?
   </a>
  </li>
  <li class="toctree-l1">
@@ -234,11 +242,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="2021-March-23-bayesian-ml.html#how-to-choose-appropriate-prior-for-likelihood-or-model-to-conjugate-priors">
-   How to choose appropriate prior for likelihood (or model)?
-   <span class="math notranslate nohighlight">
-    \(\to\)
-   </span>
-   Conjugate priors
+   How to choose appropriate prior for likelihood (or model)? $\to$ Conjugate priors
   </a>
  </li>
  <li class="toctree-l1">
@@ -248,10 +252,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="2021-March-23-bayesian-ml.html#evidence-p-d">
-   Evidence
-   <span class="math notranslate nohighlight">
-    \(p(D)\)
-   </span>
+   Evidence $p(D)$
   </a>
  </li>
  <li class="toctree-l1">
@@ -441,7 +442,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebooks/2021-March-27-Marginal-Likelihood-2.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/explain-ml/explain-ml-book/main?urlpath=tree/notebooks/2021-March-27-Marginal-Likelihood-2.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -449,6 +450,14 @@
         
         
         
+        <a class="colab-button" href="https://colab.research.google.com/github/explain-ml/explain-ml-book/blob/main/notebooks/2021-March-27-Marginal-Likelihood-2.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
         
     </div>
 </div>
@@ -504,25 +513,25 @@
 </div>
 </div>
 <p>From MML book</p>
-<p>Definition 6.3 (Expected Value). The expected value of a function <span class="math notranslate nohighlight">\(g: \mathbb{R} \rightarrow\)</span> <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> of a univariate continuous random variable <span class="math notranslate nohighlight">\(X \sim p(x)\)</span> is given by
-$<span class="math notranslate nohighlight">\(
-\mathbb{E}_{X}[g(x)]=\int_{\mathcal{X}} g(x) p(x) \mathrm{d} x
-\)</span><span class="math notranslate nohighlight">\(
-Correspondingly, the expected value of a function \)</span>g<span class="math notranslate nohighlight">\( of a discrete random variable \)</span>X \sim p(x)<span class="math notranslate nohighlight">\( is given by
-\)</span><span class="math notranslate nohighlight">\(
-\mathbb{E}_{X}[g(x)]=\sum_{x \in \mathcal{X}} g(x) p(x)
-\)</span>$</p>
-<p>From Nando De Freitas <a class="reference external" href="https://www.youtube.com/watch?v=mz3j59aJBZQ&amp;list=PLE6Wd9FR--EdyJ5lbFl8UuGjecvVw66F6&amp;index=16&amp;t=1957s">https://www.youtube.com/watch?v=mz3j59aJBZQ&amp;list=PLE6Wd9FR–EdyJ5lbFl8UuGjecvVw66F6&amp;index=16&amp;t=1957s</a></p>
+<p>Definition 6.3 (Expected Value). The expected value of a function $g: \mathbb{R} \rightarrow$ $\mathbb{R}$ of a univariate continuous random variable $X \sim p(x)$ is given by
+$$
+\mathbb{E}<em>{X}[g(x)]=\int</em>{\mathcal{X}} g(x) p(x) \mathrm{d} x
+$$
+Correspondingly, the expected value of a function $g$ of a discrete random variable $X \sim p(x)$ is given by
+$$
+\mathbb{E}<em>{X}[g(x)]=\sum</em>{x \in \mathcal{X}} g(x) p(x)
+$$</p>
+<p>From Nando De Freitas https://www.youtube.com/watch?v=mz3j59aJBZQ&amp;list=PLE6Wd9FR–EdyJ5lbFl8UuGjecvVw66F6&amp;index=16&amp;t=1957s</p>
 <p>starting 50 mins</p>
-<p><span class="math notranslate nohighlight">\(I = \int_{\mathcal{X}} g(x)p(x)dx = \dfrac{\sum_{i=1}^N g(x_i)}{N}\)</span> where <span class="math notranslate nohighlight">\(x_i \sim p(x)\)</span> is a sample from p(x)</p>
+<p>$I = \int_{\mathcal{X}} g(x)p(x)dx = \dfrac{\sum_{i=1}^N g(x_i)}{N}$ where $x_i \sim p(x)$ is a sample from p(x)</p>
 <p>Example</p>
-<p><span class="math notranslate nohighlight">\(X \sim \mathcal{N}(0, 1)\)</span></p>
-<p><span class="math notranslate nohighlight">\(g(x) = x\)</span></p>
-<p><span class="math notranslate nohighlight">\(\mathbb{E}_{X}[g(x)] = \mu = 0\)</span></p>
+<p>$X \sim \mathcal{N}(0, 1)$</p>
+<p>$g(x) = x$</p>
+<p>$\mathbb{E}_{X}[g(x)] = \mu = 0$</p>
 <p>Case II</p>
-<p><span class="math notranslate nohighlight">\(g(x) = x^2\)</span></p>
+<p>$g(x) = x^2$</p>
 <p>Now, we know that</p>
-<p><span class="math notranslate nohighlight">\(\mathbb{V}_{X}[x]=\mathbb{E}_{X}\left[x^{2}\right]-\left(\mathbb{E}_{X}[x]\right)^{2}\)</span></p>
+<p>$\mathbb{V}<em>{X}[x]=\mathbb{E}</em>{X}\left[x^{2}\right]-\left(\mathbb{E}_{X}[x]\right)^{2}$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">1000000</span>
@@ -550,9 +559,9 @@ Correspondingly, the expected value of a function \)</span>g<span class="math no
 </div>
 </div>
 <p>We can similarly approximate the marginal likelihood as follows:</p>
-<p>Marginal likelihood = <span class="math notranslate nohighlight">\(\int_{\mathcal{\theta}} P(D|\theta) P(\theta)d\theta = I = \dfrac{\sum_{i=1}^N P(D|\theta_i)}{N}\)</span> where <span class="math notranslate nohighlight">\(\theta_i\)</span> is drawn from <span class="math notranslate nohighlight">\(p(\theta)\)</span></p>
+<p>Marginal likelihood = $\int_{\mathcal{\theta}} P(D|\theta) P(\theta)d\theta = I = \dfrac{\sum_{i=1}^N P(D|\theta_i)}{N}$ where $\theta_i$ is drawn from $p(\theta)$</p>
 <p>To do:</p>
-<p>Linear regression in say two variables. Prior is <span class="math notranslate nohighlight">\(p(\theta)\sim \mathcal{N}([0, 0]^T, I)\)</span>. We can easily draw samples from this prior then the obtained sample can be used to calculate the likelihood. The marginal likelihood is the empirical mean of likelihoods derived in this way.</p>
+<p>Linear regression in say two variables. Prior is $p(\theta)\sim \mathcal{N}([0, 0]^T, I)$. We can easily draw samples from this prior then the obtained sample can be used to calculate the likelihood. The marginal likelihood is the empirical mean of likelihoods derived in this way.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Generating pseudo-random data</span>
@@ -740,8 +749,8 @@ Correspondingly, the expected value of a function \)</span>g<span class="math no
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "explain-ml/explain-ml-book",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
