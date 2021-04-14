@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stationarity of time-series &#8212; Explain-ML</title>
+    <title>Stationarity of time-series stochastic process &#8212; Explain-ML</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -57,7 +57,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="2021-March-23-Stationarity-stochastic-processes.html" />
+    <link rel="next" title="Stationarity of stochastic processes II" href="2021-March-23-Stationarity-stochastic-processes.html" />
     <link rel="prev" title="Stochastic processes" href="2021-March-19-stochastic-processes.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -130,67 +130,29 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Stationarity of time-series
+   Stationarity of time-series stochastic process
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="#what-is-a-time-series">
-   What is a time-series?
+  <a class="reference internal" href="2021-March-23-Stationarity-stochastic-processes.html">
+   Stationarity of stochastic processes II
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Bayesian ML
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-23-bayesian-ml.html">
+   Bayesian ML: Fundamentals
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="#id1">
-   What is a time-series?
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#what-is-a-stochastic-process">
-   What is a stochastic process?
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#connection-between-time-series-and-stochastic-process">
-   Connection between time-series and stochastic process
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#stationary-time-series-process">
-   Stationary time-series process
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#why-stationarity-is-important">
-   Why stationarity is important?
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#how-to-check-for-stationarity">
-   How to check for stationarity?
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#linear-time-series-model">
-   Linear time-series model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#characteristic-equation-and-unit-root">
-   Characteristic equation and unit root
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#id2">
-   Characteristic equation and unit root
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#stationarity">
-   Stationarity
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#how-to-convert-non-stationary-time-series-to-stationary">
-   How to convert non-stationary Time-series to stationary?
+  <a class="reference internal" href="2021-April-14-bayesian-linear-regression.html">
+   Bayesian linear regression
   </a>
  </li>
 </ul>
@@ -218,46 +180,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="2021-March-23-GMM.html">
    Step 1
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-23-bayesian-ml.html">
-   Bayesian ML
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-23-bayesian-ml.html#what-is-the-intuition-behind-the-bayesian-update-itempool">
-   What is the intuition behind the Bayesian update? itempool
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-23-bayesian-ml.html#but-what-is-the-likelihood-to-how-likely-the-event-is-given-a-belief-parameters">
-   But what is the Likelihood? $\to$ How likely the event is, given a belief (parameters)?
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-23-bayesian-ml.html#prior-beliefs-over-parameters">
-   Prior beliefs over parameters
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-23-bayesian-ml.html#how-to-choose-appropriate-prior-for-likelihood-or-model-to-conjugate-priors">
-   How to choose appropriate prior for likelihood (or model)? $\to$ Conjugate priors
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-23-bayesian-ml.html#bayes-rule">
-   Bayes rule
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-23-bayesian-ml.html#evidence-p-d">
-   Evidence $p(D)$
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-23-bayesian-ml.html#full-posterior-prediction-for-coin-toss-experiment">
-   Full posterior prediction for coin toss experiment
   </a>
  </li>
  <li class="toctree-l1">
@@ -473,70 +395,59 @@
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Stationarity of time-series
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-is-a-time-series">
    What is a time-series?
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   What is a time-series?
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-is-a-stochastic-process">
    What is a stochastic process?
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#connection-between-time-series-and-stochastic-process">
    Connection between time-series and stochastic process
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#stationary-time-series-process">
    Stationary time-series process
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#why-stationarity-is-important">
    Why stationarity is important?
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#how-to-check-for-stationarity">
    How to check for stationarity?
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#linear-time-series-model">
    Linear time-series model
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#characteristic-equation-and-unit-root">
+     Characteristic equation and unit root
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#characteristic-equation-and-unit-root">
-   Characteristic equation and unit root
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id2">
-   Characteristic equation and unit root
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#stationarity">
    Stationarity
   </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-convert-non-stationary-time-series-to-stationary">
-   How to convert non-stationary Time-series to stationary?
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-to-convert-non-stationary-time-series-to-stationary">
+     How to convert non-stationary Time-series to stationary?
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -550,21 +461,17 @@
         
               <div>
                 
-  <div class="section" id="stationarity-of-time-series">
-<h1>Stationarity of time-series<a class="headerlink" href="#stationarity-of-time-series" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="stationarity-of-time-series-stochastic-process">
+<h1>Stationarity of time-series stochastic process<a class="headerlink" href="#stationarity-of-time-series-stochastic-process" title="Permalink to this headline">¶</a></h1>
 <p>Main resources used:</p>
 <ol class="simple">
 <li><p><a class="reference external" href="https://in.mathworks.com/help/econ/stationary-stochastic-process.html">Stochastic process charecteristics - MATLAB Help</a></p></li>
 <li><p><a class="reference external" href="https://machinelearningmastery.com/time-series-data-stationary-python/">How to Check if Time Series Data is Stationary with Python - machinelearningmastery.com</a></p></li>
 <li><p><a class="reference external" href="https://www.machinelearningplus.com/time-series/time-series-analysis-python/">Time Series Analysis in Python – A Comprehensive Guide with Examples</a></p></li>
 </ol>
-</div>
 <div class="section" id="what-is-a-time-series">
-<h1>What is a time-series?<a class="headerlink" href="#what-is-a-time-series" title="Permalink to this headline">¶</a></h1>
+<h2>What is a time-series?<a class="headerlink" href="#what-is-a-time-series" title="Permalink to this headline">¶</a></h2>
 <p>Observations made at equally spaced time-stamps create a time-series</p>
-</div>
-<div class="section" id="id1">
-<h1>What is a time-series?<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -603,17 +510,16 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2021-March-17-Stationary-Time_Series_5_0.png" src="../_images/2021-March-17-Stationary-Time_Series_5_0.png" />
+<img alt="../_images/2021-March-17-Stationary-Time_Series_4_0.png" src="../_images/2021-March-17-Stationary-Time_Series_4_0.png" />
 </div>
 </div>
 </div>
 <div class="section" id="what-is-a-stochastic-process">
-<h1>What is a stochastic process?<a class="headerlink" href="#what-is-a-stochastic-process" title="Permalink to this headline">¶</a></h1>
+<h2>What is a stochastic process?<a class="headerlink" href="#what-is-a-stochastic-process" title="Permalink to this headline">¶</a></h2>
 <p>A joint probability distribution for a collection of random variables</p>
-<p>example $\to$ Gaussian process</p>
 </div>
 <div class="section" id="connection-between-time-series-and-stochastic-process">
-<h1>Connection between time-series and stochastic process<a class="headerlink" href="#connection-between-time-series-and-stochastic-process" title="Permalink to this headline">¶</a></h1>
+<h2>Connection between time-series and stochastic process<a class="headerlink" href="#connection-between-time-series-and-stochastic-process" title="Permalink to this headline">¶</a></h2>
 <p>A time-series can be treated as a realization (sample) of stochastic process.</p>
 <table class="colwidths-auto table">
 <thead>
@@ -630,26 +536,26 @@
 </tr>
 </tbody>
 </table>
-<p>Example $\to$ A Time-series with 8 time-stamps is a sample taken from joint probability distribution of a stochastic process with 8 variables.</p>
+<p>Example <span class="math notranslate nohighlight">\(\to\)</span> A Time-series with 8 time-stamps is a sample taken from joint probability distribution of a stochastic process with 8 variables.</p>
 </div>
 <div class="section" id="stationary-time-series-process">
-<h1>Stationary time-series process<a class="headerlink" href="#stationary-time-series-process" title="Permalink to this headline">¶</a></h1>
-<p>First moment ($\mathbb{E}$) and second moment ($V$) should be constant over time</p>
-<p>For all $t$,</p>
+<h2>Stationary time-series process<a class="headerlink" href="#stationary-time-series-process" title="Permalink to this headline">¶</a></h2>
+<p>First moment (<span class="math notranslate nohighlight">\(\mathbb{E}\)</span>) and second moment (<span class="math notranslate nohighlight">\(V\)</span>) should be constant over time</p>
+<p>For all <span class="math notranslate nohighlight">\(t\)</span>,</p>
 <ul class="simple">
-<li><p>$\mathbb{E}(y_t) = \mu $ Constant</p></li>
-<li><p>$V(y_t) = \sigma^2 $ Constant</p></li>
-<li><p>$Cov(y_t, y_{t+h}) = \gamma $ Constant</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbb{E}(y_t) = \mu \)</span> Constant</p></li>
+<li><p><span class="math notranslate nohighlight">\(V(y_t) = \sigma^2 \)</span> Constant</p></li>
+<li><p><span class="math notranslate nohighlight">\(Cov(y_t, y_{t+h}) = \gamma \)</span> Constant</p></li>
 </ul>
 </div>
 <div class="section" id="why-stationarity-is-important">
-<h1>Why stationarity is important?<a class="headerlink" href="#why-stationarity-is-important" title="Permalink to this headline">¶</a></h1>
+<h2>Why stationarity is important?<a class="headerlink" href="#why-stationarity-is-important" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Autoregressive models for modeling and prediction works best with stationary time-series</p></li>
 </ul>
 </div>
 <div class="section" id="how-to-check-for-stationarity">
-<h1>How to check for stationarity?<a class="headerlink" href="#how-to-check-for-stationarity" title="Permalink to this headline">¶</a></h1>
+<h2>How to check for stationarity?<a class="headerlink" href="#how-to-check-for-stationarity" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p>Visually</p></li>
 <li><p>Global v/s local test</p></li>
@@ -658,6 +564,8 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">statsmodels.tsa.stattools</span> <span class="kn">import</span> <span class="n">adfuller</span>
+
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>
 <span class="n">y1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../data/international-airline-passengers.csv&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
@@ -677,32 +585,30 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2021-March-17-Stationary-Time_Series_12_0.png" src="../_images/2021-March-17-Stationary-Time_Series_12_0.png" />
+<img alt="../_images/2021-March-17-Stationary-Time_Series_11_0.png" src="../_images/2021-March-17-Stationary-Time_Series_11_0.png" />
 </div>
 </div>
+<p>p-value close to <span class="math notranslate nohighlight">\(1\)</span> means non-stationarity in adfuller test and vice versa.</p>
 </div>
 <div class="section" id="linear-time-series-model">
-<h1>Linear time-series model<a class="headerlink" href="#linear-time-series-model" title="Permalink to this headline">¶</a></h1>
-<p>$$
+<h2>Linear time-series model<a class="headerlink" href="#linear-time-series-model" title="Permalink to this headline">¶</a></h2>
+<div class="math notranslate nohighlight">
+\[
 X_t = \sum\limits_{i=1}^{p}\phi_iX_{t-i} + \epsilon_t
-$$</p>
-</div>
+\]</div>
 <div class="section" id="characteristic-equation-and-unit-root">
-<h1>Characteristic equation and unit root<a class="headerlink" href="#characteristic-equation-and-unit-root" title="Permalink to this headline">¶</a></h1>
+<h3>Characteristic equation and unit root<a class="headerlink" href="#characteristic-equation-and-unit-root" title="Permalink to this headline">¶</a></h3>
 <p>AutoRegressive(1) model</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3c15a7c7-13ad-4385-9856-ecf36ca7eda5">
-<span class="eqno">(22)<a class="headerlink" href="#equation-3c15a7c7-13ad-4385-9856-ecf36ca7eda5" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-bf0868f2-7770-4aae-be8c-5361997e58c4">
+<span class="eqno">(3)<a class="headerlink" href="#equation-bf0868f2-7770-4aae-be8c-5361997e58c4" title="Permalink to this equation">¶</a></span>\[\begin{align}
 X_t - \phi_1X_{t-1} &amp;= a_t \\
 (1-\phi_1B)X_t &amp;= a_t \\
 \text{Char. eq.}\\
 1 - \phi_1Z &amp;= 0
 \end{align}\]</div>
-</div>
-<div class="section" id="id2">
-<h1>Characteristic equation and unit root<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
 <p>AutoRegressive(2) model</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a9ada3ad-a302-4697-a2fe-2e09ae439f03">
-<span class="eqno">(23)<a class="headerlink" href="#equation-a9ada3ad-a302-4697-a2fe-2e09ae439f03" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-694b181c-2694-4827-9d51-e0a68ed42dd9">
+<span class="eqno">(4)<a class="headerlink" href="#equation-694b181c-2694-4827-9d51-e0a68ed42dd9" title="Permalink to this equation">¶</a></span>\[\begin{align}
 X_t - \phi_1X_{t-1} - \phi_2X_{t-2}&amp;= a_t \\
 X_t- \phi_1 BX_t -\phi_2 B^2 X_t &amp;=   a_t \\
 X_t\left[ 1 - \phi_1 B - \phi_2 B^2  \right] &amp;= a_t \\
@@ -710,32 +616,37 @@ X_t\left[ 1 - \phi_1 B - \phi_2 B^2  \right] &amp;= a_t \\
 1 - \phi_1 Z - \phi_2 Z^2 &amp;= 0
 \end{align}\]</div>
 </div>
-<div class="section" id="stationarity">
-<h1>Stationarity<a class="headerlink" href="#stationarity" title="Permalink to this headline">¶</a></h1>
-<p>if all roots are outside unit circle, we call the process as stationary</p>
 </div>
+<div class="section" id="stationarity">
+<h2>Stationarity<a class="headerlink" href="#stationarity" title="Permalink to this headline">¶</a></h2>
+<p>if all roots are outside unit circle, we call the process as stationary</p>
 <div class="section" id="how-to-convert-non-stationary-time-series-to-stationary">
-<h1>How to convert non-stationary Time-series to stationary?<a class="headerlink" href="#how-to-convert-non-stationary-time-series-to-stationary" title="Permalink to this headline">¶</a></h1>
+<h3>How to convert non-stationary Time-series to stationary?<a class="headerlink" href="#how-to-convert-non-stationary-time-series-to-stationary" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>Remove known trends</p></li>
 <li><p>Apply log transform</p></li>
 <li><p>Take difference series</p></li>
 </ol>
+<p>Below is an example of difference series.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y1</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;p value=</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">adfuller</span><span class="p">(</span><span class="n">y1</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;adf test p value=</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">adfuller</span><span class="p">(</span><span class="n">y1</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">);</span><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">);</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">();</span>
 <span class="n">y11</span> <span class="o">=</span> <span class="n">y1</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">y11</span> <span class="o">=</span> <span class="n">y11</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">-</span> <span class="n">y11</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y11</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;p value=</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">adfuller</span><span class="p">(</span><span class="n">y11</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;adf test p value=</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">adfuller</span><span class="p">(</span><span class="n">y11</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">);</span><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2021-March-17-Stationary-Time_Series_18_0.png" src="../_images/2021-March-17-Stationary-Time_Series_18_0.png" />
-<img alt="../_images/2021-March-17-Stationary-Time_Series_18_1.png" src="../_images/2021-March-17-Stationary-Time_Series_18_1.png" />
+<img alt="../_images/2021-March-17-Stationary-Time_Series_19_0.png" src="../_images/2021-March-17-Stationary-Time_Series_19_0.png" />
+<img alt="../_images/2021-March-17-Stationary-Time_Series_19_1.png" src="../_images/2021-March-17-Stationary-Time_Series_19_1.png" />
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -766,7 +677,7 @@ X_t\left[ 1 - \phi_1 B - \phi_2 B^2  \right] &amp;= a_t \\
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="2021-March-19-stochastic-processes.html" title="previous page">Stochastic processes</a>
-    <a class='right-next' id="next-link" href="2021-March-23-Stationarity-stochastic-processes.html" title="next page">&lt;no title&gt;</a>
+    <a class='right-next' id="next-link" href="2021-March-23-Stationarity-stochastic-processes.html" title="next page">Stationarity of stochastic processes II</a>
 
         </div>
         

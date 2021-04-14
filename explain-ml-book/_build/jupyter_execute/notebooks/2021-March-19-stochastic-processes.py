@@ -35,17 +35,16 @@ f = lambda t: np.arange(t)
 plt.plot(np.arange(t), f(t), 'o-');
 plt.xlabel('$t$');plt.ylabel('$f(t)$');
 
-No randomness here. We are 100% certain about the value of $f(t)$ at time $t$. 
+No randomness here. We are 100% certain about the value of $ f(t) $ at time $ t $. 
 
 
 Now, another example is,
 
-
 $$
 \begin{cases}
     f(t) = t, & p=0.5 \\
-    f(t) = -t, & p=0.5 \\
-  \end{cases}
+    f(t) = -t, & p=0.5
+\end{cases}
 $$
 
 f_possible1 = lambda t: np.arange(t)
@@ -73,9 +72,9 @@ Now, yet another example,
 $$
 f(t) = 
 \begin{cases}
-    t, & p=0.5 \\
+    t, & p=0.5 \\   
     -t, & p=0.5 \\
-  \end{cases}
+\end{cases}
 $$
 
 f_possible1 = lambda t: np.arange(t)
@@ -137,24 +136,24 @@ anim
 Let's check for expected value and variance of $f(t)$
 
 
-\begin{aligned}
+\begin{align}
 f(t) &= f(t-1) + I, \text{   where, } I \text{ takes value 1 or -1 with equal probability}\\
 \mathbb{E}(f(t)) &= \mathbb{E}(f(t-1)) + \mathbb{E}(I)\\
                  &= \sum\limits_{time=0}^{t}\mathbb{E}(I)\\
 \mathbb{E}(f(t)) &= 0
-\end{aligned}
+\end{align}
 
 And, variance
 
 
-\begin{aligned}
+\begin{align}
 V(f(t)) &= \sum\limits_{T=0}^{t}V(I)\\
         &= \sum\limits_{T=0}^{t}(\mathbb{E}(I^2) - (\mathbb{E}(I))^2\\
         &= \sum\limits_{T=0}^{t}\mathbb{E}(I^2)\\
         &= \sum\limits_{T=0}^{t}(0.5\times(1)^2+0.5\times(-1)^2)\\
         &= \sum\limits_{T=0}^{t}1\\
 V(f(t)) &= t
-\end{aligned}
+\end{align}
 
 So, standard deviation would be $\sqrt{t}$. Let us emprirically verify if this is the case.
 
@@ -198,13 +197,13 @@ Let us verify this by fitting various distributions to the data.
 
 !pip install -qq distfit
 from distfit import distfit
+np.random.seed(0)
 
 t = 100000
-N = 1000
+N = 2000
 samples = (1/np.sqrt(t))*np.array([f(t)[-1] for _ in range(N)])
 dist = distfit(alpha=0.05)
 
-print('theoretical standard deviation =',np.sqrt(t).round(2))
 # Search for best theoretical fit on your empirical data
 dist.fit_transform(samples)['summary'];
 

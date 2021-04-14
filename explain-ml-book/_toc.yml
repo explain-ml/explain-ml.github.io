@@ -15,6 +15,11 @@
     - file: notebooks/2021-March-17-Stationary-Time_Series
     - file: notebooks/2021-March-23-Stationarity-stochastic-processes
 
+- part: Bayesian ML
+  chapters:
+    - file: notebooks/2021-March-23-bayesian-ml
+    - file: notebooks/2021-April-14-bayesian-linear-regression
+
 - part: Others
   chapters:
     - file: notebooks/2021-March-10-importance-sampling
@@ -25,7 +30,6 @@
     - file: notebooks/2021-March-16-GP-PyMC3
     - file: notebooks/2021-March-17-LLS-GP-PyMC3
     - file: notebooks/2021-March-23-GMM
-    - file: notebooks/2021-March-23-bayesian-ml
     - file: notebooks/2021-March-24-sigmoid
     - file: notebooks/2021-March-26-GMM-example
     - file: notebooks/2021-March-27-Marginal-Likelihood-2
