@@ -1,48 +1,42 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from sklearn.datasets import make_circles, make_moons
+import seaborn as sns
+import pymc3 as pm
+import arviz as az
+
 %matplotlib inline
 
-from sklearn.datasets import make_circles
-
-
 np.random.seed(0)
-X, y = make_circles(n_samples=200)
+X, y = make_moons(n_samples=200, noise=0.1)
 
 plt.scatter(X[:, 0], X[:, 1],c=y)
 X_concat = np.hstack((np.ones((len(y), 1)), X))
 X_concat.shape
 
-w1
-
 basic_model = pm.Model()
 shapes = [4, 5, 1]
 
 with basic_model:
-    w1 = pm.Normal("w1", mu=0, sigma=10, shape=(X_concat.shape[1], shapes[0]))
-    w2 = pm.Normal("w2", mu=0, sigma=10, shape=(shapes[0], shapes[1]))
-    w3 = pm.Normal("w3", mu=0, sigma=10, shape=(shapes[1], shapes[2]))
+    w1 = pm.Normal("w1", mu=1, sigma=10, shape=(X_concat.shape[1], shapes[0]))
+    w2 = pm.Normal("w2", mu=2, sigma=10, shape=(shapes[0], shapes[1]))
+    w3 = pm.Normal("w3", mu=3, sigma=10, shape=(shapes[1], shapes[2]))
                    
     X_ = pm.Data('features', X_concat)
+    y_ = pm.Data('targets', y)
     # Expected value of outcome
     
-    a_1 = pm.math.sigmoid(tt.dot(X_, w1))
-    a_2 = pm.math.sigmoid(tt.dot(a_1, w2))
-    a_3 = pm.math.sigmoid(tt.dot(a_2, w3))
+    a_1 = pm.math.sigmoid(pm.math.dot(X_, w1))
+    a_2 = pm.math.sigmoid(pm.math.dot(a_1, w2))
+    a_3 = pm.math.sigmoid(pm.math.dot(a_2, w3))
     
     
     # Likelihood (sampling distribution) of observations
-    Y_obs = pm.Bernoulli("Y_obs", p=a_3, observed=y)
+    Y_obs = pm.Bernoulli("Y_obs", p=a_3, observed=y_)
 
 pm.model_to_graphviz(basic_model.model)
 
-
-import seaborn as sns
-import pymc3 as pm
-import arviz as az
-import theano.tensor as tt
-
 map_estimate = pm.find_MAP(model=basic_model)
-
 map_estimate
 
 with basic_model:
@@ -51,12 +45,11 @@ with basic_model:
 
 trace = approx.sample(draws=50)
 
-
 with basic_model:
     # draw 500 posterior samples
     trace = pm.sample(20,return_inferencedata=False,tune=10)
 
-az.plot_trace(trace)
+az.plot_trace(trace);
 
 x_min, x_max = X[:, 0].min() - 1, X[:, 0].max() + 1
 y_min, y_max = X[:, 1].min() - 1, X[:, 1].max() + 1
@@ -71,6 +64,7 @@ with basic_model:
     pm.set_data({'features': X_test_concat})
     posterior = pm.sample_posterior_predictive(trace)
 
+Z = posterior['Y_obs']
 posterior['Y_obs'].shape, X_test_concat.shape
 
 for i in range(len(Z))[:500]:

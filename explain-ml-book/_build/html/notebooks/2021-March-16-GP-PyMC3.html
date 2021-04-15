@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; Explain-ML</title>
+    <title>Gaussian process regression in PyMC &#8212; Explain-ML</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -57,6 +57,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Local Lengthscale GP with PyMC" href="2021-March-17-lls-gp-pymc3.html" />
+    <link rel="prev" title="Local Lengthscale GP" href="2021-April-15-LLS-GP.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -90,50 +92,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../intro.html">
    Explain ML
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Linear Algebra for ML
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-15-eigen.html">
-   Eigen values
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-15-determinant.html">
-   Determinant
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-15-Positive-semi-definite.html">
-   Positive definiteness
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Stochastic processes
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-19-stochastic-processes.html">
-   Stochastic processes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-17-Stationary-Time_Series.html">
-   Stationarity of time-series stochastic process
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-23-Stationarity-stochastic-processes.html">
-   Stationarity of stochastic processes II
   </a>
  </li>
 </ul>
@@ -202,6 +160,109 @@
  <li class="toctree-l1">
   <a class="reference internal" href="2021-March-11-blr-pymc.html">
    Bayesian linear regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-12-logistic-bayesian.html">
+   Bayesian logistic regression
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Gaussian processes
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2019-August-2020-gaussian-processes.html">
+   Gaussian Processes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-April-15-LLS-GP.html">
+   Local Lengthscale GP
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Gaussian process regression in PyMC
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-17-lls-gp-pymc3.html">
+   Local Lengthscale GP with PyMC
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15-April-2021-deep-gp-from-scratch.html">
+   Deep Kernel Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16-April-2021-ard-gp.html">
+   Automatic relevance determination (ARD)
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Active Learning
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2018-June-2016-active-committee.html">
+   Active Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2020-April-21-active-learning-with-bayesian-linear-regression.html">
+   Active Learning with Bayesian Linear Regression
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Appendix 1 - Linear Algebra for ML
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-15-eigen.html">
+   Eigen values
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-15-determinant.html">
+   Determinant
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-15-Positive-semi-definite.html">
+   Positive definiteness
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Appendix 2 - Stochastic processes
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-19-stochastic-processes.html">
+   Stochastic processes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-17-Stationary-Time_Series.html">
+   Stationarity of time-series stochastic process
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-23-Stationarity-stochastic-processes.html">
+   Stationarity of stochastic processes II
   </a>
  </li>
 </ul>
@@ -306,16 +367,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i>
-            Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="simple nav section-nav flex-column">
-</ul>
-
-        </nav>
-        
         </div>
     </div>
 </div>
@@ -324,14 +375,28 @@
         
               <div>
                 
-  <div class="cell docutils container">
+  <div class="section" id="gaussian-process-regression-in-pymc">
+<h1>Gaussian process regression in PyMC<a class="headerlink" href="#gaussian-process-regression-in-pymc" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">pymc3</span> <span class="k">as</span> <span class="nn">pm</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rc</span>
+<span class="kn">import</span> <span class="nn">arviz</span> <span class="k">as</span> <span class="nn">az</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
 
-
-<span class="k">def</span> <span class="nf">kernel</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">lenghtscale</span><span class="p">,</span> <span class="n">std</span><span class="p">):</span>
+<span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We will use PyMC to do Gaussian process regression.</p>
+<p>Let us define the RBF kernel as the following,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">kernel</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">lenghtscale</span><span class="p">,</span> <span class="n">std</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Borrowed from Nando De Freita&#39;s lecture code</span>
 <span class="sd">    https://www.cs.ubc.ca/~nando/540-2013/lectures/gp.py</span>
@@ -342,29 +407,26 @@
 </div>
 </div>
 </div>
+<p>We generate a synthetic dataset from a known distribution.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># From GPY tutorial</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">n_train</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mf">3.</span><span class="p">,</span><span class="mf">3.</span><span class="p">,(</span><span class="n">n_train</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
 <span class="n">Y</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">n_train</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="mf">0.1</span><span class="p">)</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">Y</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">Y</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7fa8753bfbb0&gt;
-</pre></div>
-</div>
-<img alt="../_images/2021-March-16-GP-PyMC3_2_1.png" src="../_images/2021-March-16-GP-PyMC3_2_1.png" />
+<img alt="../_images/2021-March-16-GP-PyMC3_5_0.png" src="../_images/2021-March-16-GP-PyMC3_5_0.png" />
 </div>
 </div>
+<p>we can define Gaussian process model in PyMC as the following,</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">basic_model</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">Model</span><span class="p">()</span>
@@ -381,22 +443,19 @@
     <span class="n">K</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">noise_sigma</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
     
     <span class="n">y</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">MvNormal</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">mu</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">cov</span> <span class="o">=</span> <span class="n">K</span><span class="p">,</span> <span class="n">observed</span> <span class="o">=</span> <span class="n">Y</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pm</span><span class="o">.</span><span class="n">model_to_graphviz</span><span class="p">(</span><span class="n">basic_model</span><span class="o">.</span><span class="n">model</span><span class="p">)</span>
+
+<span class="n">pm</span><span class="o">.</span><span class="n">model_to_graphviz</span><span class="p">(</span><span class="n">basic_model</span><span class="o">.</span><span class="n">model</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2021-March-16-GP-PyMC3_4_0.svg" src="../_images/2021-March-16-GP-PyMC3_4_0.svg" /></div>
+<img alt="../_images/2021-March-16-GP-PyMC3_7_0.svg" src="../_images/2021-March-16-GP-PyMC3_7_0.svg" /></div>
 </div>
+<p>Let us get MAP estimate of the paramaters.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">map_estimate</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">find_MAP</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">basic_model</span><span class="p">)</span>
+<span class="n">map_estimate</span>
 </pre></div>
 </div>
 </div>
@@ -415,36 +474,28 @@
             background: #F44336;
         }
     </style>
-  <progress value='14' class='' max='14' style='width:300px; height:20px; vertical-align: middle;'></progress>
-  100.00% [14/14 00:00<00:00 logp = 2.7016, ||grad|| = 0.019826]
+  <progress value='15' class='' max='15' style='width:300px; height:20px; vertical-align: middle;'></progress>
+  100.00% [15/15 00:00<00:00 logp = 4.2173, ||grad|| = 0.32916]
 </div>
 </div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">map_estimate</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;kernel_std_log__&#39;: array(-0.0337715),
- &#39;kernel_ls_log__&#39;: array(0.55369828),
- &#39;noise_sigma_log__&#39;: array(-2.24535811),
- &#39;kernel_std&#39;: array(0.96679239),
- &#39;kernel_ls&#39;: array(1.73967495),
- &#39;noise_sigma&#39;: array(0.10588961)}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;kernel_std_log__&#39;: array(-0.03658128),
+ &#39;kernel_ls_log__&#39;: array(0.70103107),
+ &#39;noise_sigma_log__&#39;: array(-2.29810151),
+ &#39;kernel_std&#39;: array(0.96407973),
+ &#39;kernel_ls&#39;: array(2.01583009),
+ &#39;noise_sigma&#39;: array(0.10044936)}
 </pre></div>
 </div>
 </div>
 </div>
+<p>Now, we draw a large number of samples from the posterior.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">basic_model</span><span class="p">:</span>
     <span class="c1"># draw 2000 posterior samples per chain</span>
-    <span class="n">trace</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span><span class="n">return_inferencedata</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">tune</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+    <span class="n">trace</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span><span class="n">return_inferencedata</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">tune</span><span class="o">=</span><span class="mi">2000</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -469,39 +520,26 @@ NUTS: [noise_sigma, kernel_ls, kernel_std]
             background: #F44336;
         }
     </style>
-  <progress value='12000' class='' max='12000' style='width:300px; height:20px; vertical-align: middle;'></progress>
-  100.00% [12000/12000 00:11<00:00 Sampling 4 chains, 0 divergences]
+  <progress value='16000' class='' max='16000' style='width:300px; height:20px; vertical-align: middle;'></progress>
+  100.00% [16000/16000 00:14<00:00 Sampling 4 chains, 0 divergences]
 </div>
-</div><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sampling 4 chains for 1_000 tune and 2_000 draw iterations (4_000 + 8_000 draws total) took 19 seconds.
+</div><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sampling 4 chains for 2_000 tune and 2_000 draw iterations (8_000 + 8_000 draws total) took 14 seconds.
 </pre></div>
 </div>
 </div>
 </div>
+<p>We can visualize the dposterior distribution as the following,</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">arviz</span> <span class="k">as</span> <span class="nn">az</span>
-
-<span class="n">az</span><span class="o">.</span><span class="n">plot_trace</span><span class="p">(</span><span class="n">trace</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">az</span><span class="o">.</span><span class="n">plot_trace</span><span class="p">(</span><span class="n">trace</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/anaconda3/lib/python3.8/site-packages/arviz/data/io_pymc3.py:96: FutureWarning: Using `from_pymc3` without the model will be deprecated in a future release. Not using the model will return less accurate and less useful results. Make sure you use the model argument or call from_pymc3 within a model context.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[&lt;matplotlib.axes._subplots.AxesSubplot object at 0x7fa874e9a490&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7fa880238790&gt;],
-       [&lt;matplotlib.axes._subplots.AxesSubplot object at 0x7fa87f977970&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7fa87c3394f0&gt;],
-       [&lt;matplotlib.axes._subplots.AxesSubplot object at 0x7fa87ee78580&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7fa87c016e50&gt;]],
-      dtype=object)
-</pre></div>
-</div>
-<img alt="../_images/2021-March-16-GP-PyMC3_8_2.png" src="../_images/2021-March-16-GP-PyMC3_8_2.png" />
+<img alt="../_images/2021-March-16-GP-PyMC3_13_0.png" src="../_images/2021-March-16-GP-PyMC3_13_0.png" />
 </div>
 </div>
+<p>Let us predict at new input locations.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
@@ -533,41 +571,33 @@ NUTS: [noise_sigma, kernel_ls, kernel_std]
                              <span class="n">kernel_std</span><span class="o">=</span><span class="n">trace</span><span class="p">[</span><span class="s1">&#39;kernel_std&#39;</span><span class="p">][</span><span class="n">b</span><span class="p">],</span>
                              <span class="n">noise</span><span class="o">=</span><span class="n">trace</span><span class="p">[</span><span class="s1">&#39;noise_sigma&#39;</span><span class="p">][</span><span class="n">b</span><span class="p">])</span>
                   <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_samples</span><span class="p">)])</span>
-
-<span class="n">preds</span><span class="o">.</span><span class="n">shape</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(500, 1, 100)
 </pre></div>
 </div>
 </div>
 </div>
+<p>The figure below shows the mean and variance estimate of the posterior.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ci_lower</span> <span class="o">=</span> <span class="p">(</span><span class="mi">100</span> <span class="o">-</span> <span class="n">ci</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ci</span> <span class="o">=</span> <span class="mi">95</span>
+<span class="n">ci_lower</span> <span class="o">=</span> <span class="p">(</span><span class="mi">100</span> <span class="o">-</span> <span class="n">ci</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
 <span class="n">ci_upper</span> <span class="o">=</span> <span class="p">(</span><span class="mi">100</span> <span class="o">+</span> <span class="n">ci</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
 <span class="n">preds_mean</span> <span class="o">=</span> <span class="n">preds</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">n_samples</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">test_x</span><span class="p">))</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">preds_lower</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">preds</span><span class="p">,</span> <span class="n">ci_lower</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">preds_upper</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">preds</span><span class="p">,</span> <span class="n">ci_upper</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
-
-
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">test_x</span><span class="p">,</span><span class="n">preds</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">n_samples</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">test_x</span><span class="p">))</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
-<span class="n">ci</span> <span class="o">=</span> <span class="mi">95</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">test_x</span><span class="p">,</span><span class="n">preds</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">n_samples</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">test_x</span><span class="p">))</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;predictive mean&#39;</span><span class="p">)</span>
 
 
 <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">train_x</span><span class="p">,</span> <span class="n">train_y</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">test_x</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">preds_upper</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">preds_lower</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">alpha</span><span class="o">=.</span><span class="mi">3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;95% CI&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">test_x</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">preds_upper</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">preds_lower</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">alpha</span><span class="o">=.</span><span class="mi">3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;95\% CI&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">));</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">);</span><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PolyCollection at 0x7fa880225d30&gt;
-</pre></div>
+<img alt="../_images/2021-March-16-GP-PyMC3_18_0.png" src="../_images/2021-March-16-GP-PyMC3_18_0.png" />
 </div>
-<img alt="../_images/2021-March-16-GP-PyMC3_11_1.png" src="../_images/2021-March-16-GP-PyMC3_11_1.png" />
 </div>
 </div>
 
@@ -596,6 +626,8 @@ NUTS: [noise_sigma, kernel_ls, kernel_std]
         
         <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="2021-April-15-LLS-GP.html" title="previous page">Local Lengthscale GP</a>
+    <a class='right-next' id="next-link" href="2021-March-17-lls-gp-pymc3.html" title="next page">Local Lengthscale GP with PyMC</a>
 
         </div>
         

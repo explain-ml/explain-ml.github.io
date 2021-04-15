@@ -97,50 +97,6 @@
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  Linear Algebra for ML
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-15-eigen.html">
-   Eigen values
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-15-determinant.html">
-   Determinant
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-15-Positive-semi-definite.html">
-   Positive definiteness
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Stochastic processes
- </span>
-</p>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-19-stochastic-processes.html">
-   Stochastic processes
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Stationarity of time-series stochastic process
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-23-Stationarity-stochastic-processes.html">
-   Stationarity of stochastic processes II
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
   Theory of Bayesian ML
  </span>
 </p>
@@ -204,6 +160,109 @@
  <li class="toctree-l1">
   <a class="reference internal" href="2021-March-11-blr-pymc.html">
    Bayesian linear regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-12-logistic-bayesian.html">
+   Bayesian logistic regression
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Gaussian processes
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2019-August-2020-gaussian-processes.html">
+   Gaussian Processes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-April-15-LLS-GP.html">
+   Local Lengthscale GP
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-16-GP-PyMC3.html">
+   Gaussian process regression in PyMC
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-17-lls-gp-pymc3.html">
+   Local Lengthscale GP with PyMC
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15-April-2021-deep-gp-from-scratch.html">
+   Deep Kernel Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16-April-2021-ard-gp.html">
+   Automatic relevance determination (ARD)
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Active Learning
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2018-June-2016-active-committee.html">
+   Active Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2020-April-21-active-learning-with-bayesian-linear-regression.html">
+   Active Learning with Bayesian Linear Regression
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Appendix 1 - Linear Algebra for ML
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-15-eigen.html">
+   Eigen values
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-15-determinant.html">
+   Determinant
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-15-Positive-semi-definite.html">
+   Positive definiteness
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Appendix 2 - Stochastic processes
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-19-stochastic-processes.html">
+   Stochastic processes
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Stationarity of time-series stochastic process
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-23-Stationarity-stochastic-processes.html">
+   Stationarity of stochastic processes II
   </a>
  </li>
 </ul>
@@ -518,16 +577,16 @@ X_t = \sum\limits_{i=1}^{p}\phi_iX_{t-i} + \epsilon_t
 <div class="section" id="characteristic-equation-and-unit-root">
 <h3>Characteristic equation and unit root<a class="headerlink" href="#characteristic-equation-and-unit-root" title="Permalink to this headline">¶</a></h3>
 <p>AutoRegressive(1) model</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8da720dc-5339-4a96-8436-b031b7a518de">
-<span class="eqno">(3)<a class="headerlink" href="#equation-8da720dc-5339-4a96-8436-b031b7a518de" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5147368b-bf24-47ae-ae27-34f9dd510544">
+<span class="eqno">(40)<a class="headerlink" href="#equation-5147368b-bf24-47ae-ae27-34f9dd510544" title="Permalink to this equation">¶</a></span>\[\begin{align}
 X_t - \phi_1X_{t-1} &amp;= a_t \\
 (1-\phi_1B)X_t &amp;= a_t \\
 \text{Char. eq.}\\
 1 - \phi_1Z &amp;= 0
 \end{align}\]</div>
 <p>AutoRegressive(2) model</p>
-<div class="amsmath math notranslate nohighlight" id="equation-945f3738-dca4-4791-83a0-f4004a7450aa">
-<span class="eqno">(4)<a class="headerlink" href="#equation-945f3738-dca4-4791-83a0-f4004a7450aa" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1fddc6c6-1d68-4ae5-ba2d-521c2744b542">
+<span class="eqno">(41)<a class="headerlink" href="#equation-1fddc6c6-1d68-4ae5-ba2d-521c2744b542" title="Permalink to this equation">¶</a></span>\[\begin{align}
 X_t - \phi_1X_{t-1} - \phi_2X_{t-2}&amp;= a_t \\
 X_t- \phi_1 BX_t -\phi_2 B^2 X_t &amp;=   a_t \\
 X_t\left[ 1 - \phi_1 B - \phi_2 B^2  \right] &amp;= a_t \\

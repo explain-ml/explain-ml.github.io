@@ -57,7 +57,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="2021-March-12-mlp.html" />
+    <link rel="next" title="Gaussian Processes" href="2019-August-2020-gaussian-processes.html" />
     <link rel="prev" title="Bayesian linear regression" href="2021-March-11-blr-pymc.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -92,50 +92,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../intro.html">
    Explain ML
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Linear Algebra for ML
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-15-eigen.html">
-   Eigen values
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-15-determinant.html">
-   Determinant
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-15-Positive-semi-definite.html">
-   Positive definiteness
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Stochastic processes
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-19-stochastic-processes.html">
-   Stochastic processes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-17-Stationary-Time_Series.html">
-   Stationarity of time-series stochastic process
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-23-Stationarity-stochastic-processes.html">
-   Stationarity of stochastic processes II
   </a>
  </li>
 </ul>
@@ -209,6 +165,104 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Bayesian logistic regression
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Gaussian processes
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2019-August-2020-gaussian-processes.html">
+   Gaussian Processes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-April-15-LLS-GP.html">
+   Local Lengthscale GP
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-16-GP-PyMC3.html">
+   Gaussian process regression in PyMC
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-17-lls-gp-pymc3.html">
+   Local Lengthscale GP with PyMC
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15-April-2021-deep-gp-from-scratch.html">
+   Deep Kernel Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16-April-2021-ard-gp.html">
+   Automatic relevance determination (ARD)
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Active Learning
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2018-June-2016-active-committee.html">
+   Active Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2020-April-21-active-learning-with-bayesian-linear-regression.html">
+   Active Learning with Bayesian Linear Regression
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Appendix 1 - Linear Algebra for ML
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-15-eigen.html">
+   Eigen values
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-15-determinant.html">
+   Determinant
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-15-Positive-semi-definite.html">
+   Positive definiteness
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Appendix 2 - Stochastic processes
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-19-stochastic-processes.html">
+   Stochastic processes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-17-Stationary-Time_Series.html">
+   Stationarity of time-series stochastic process
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-23-Stationarity-stochastic-processes.html">
+   Stationarity of stochastic processes II
   </a>
  </li>
 </ul>
@@ -393,10 +447,12 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># pm.model_to_graphviz(basic_model.model)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pm</span><span class="o">.</span><span class="n">model_to_graphviz</span><span class="p">(</span><span class="n">basic_model</span><span class="o">.</span><span class="n">model</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../_images/2021-March-12-logistic-bayesian_8_0.svg" src="../_images/2021-March-12-logistic-bayesian_8_0.svg" /></div>
 </div>
 <p>Let us get MAP for the parameter posterior.</p>
 <div class="cell docutils container">
@@ -483,9 +539,9 @@ NUTS: [theta]
         }
     </style>
   <progress value='88000' class='' max='88000' style='width:300px; height:20px; vertical-align: middle;'></progress>
-  100.00% [88000/88000 00:45<00:00 Sampling 4 chains, 2,300 divergences]
+  100.00% [88000/88000 00:44<00:00 Sampling 4 chains, 2,300 divergences]
 </div>
-</div><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sampling 4 chains for 20_000 tune and 2_000 draw iterations (80_000 + 8_000 draws total) took 46 seconds.
+</div><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sampling 4 chains for 20_000 tune and 2_000 draw iterations (80_000 + 8_000 draws total) took 45 seconds.
 There were 780 divergences after tuning. Increase `target_accept` or reparameterize.
 There were 772 divergences after tuning. Increase `target_accept` or reparameterize.
 There were 397 divergences after tuning. Increase `target_accept` or reparameterize.
@@ -557,7 +613,7 @@ The estimated number of effective samples is smaller than 200 for some parameter
         }
     </style>
   <progress value='8000' class='' max='8000' style='width:300px; height:20px; vertical-align: middle;'></progress>
-  100.00% [8000/8000 00:17<00:00]
+  100.00% [8000/8000 00:16<00:00]
 </div>
 </div></div>
 </div>
@@ -584,7 +640,7 @@ The estimated number of effective samples is smaller than 200 for some parameter
 </div>
 </div>
 <p>Following code is inspired from”: <a class="reference external" href="https://docs.pymc.io/notebooks/bayesian_neural_network_advi.html">https://docs.pymc.io/notebooks/bayesian_neural_network_advi.html</a></p>
-<p>The following plots show probabilities of being in any of the class for any arbitrary sample in the space.</p>
+<p>The following plot show probabilities of being in any of the class for any arbitrary sample in the space.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pred</span> <span class="o">=</span> <span class="n">posterior</span><span class="p">[</span><span class="s1">&#39;Y_obs&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">&gt;</span><span class="mf">0.5</span>
@@ -605,6 +661,7 @@ The estimated number of effective samples is smaller than 200 for some parameter
 <img alt="../_images/2021-March-12-logistic-bayesian_25_0.png" src="../_images/2021-March-12-logistic-bayesian_25_0.png" />
 </div>
 </div>
+<p>The following plot shows uncertainty in the predictions at any arbitrary location in input space.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pred</span> <span class="o">=</span> <span class="n">posterior</span><span class="p">[</span><span class="s1">&#39;Y_obs&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">&gt;</span><span class="mf">0.5</span>
@@ -622,7 +679,7 @@ The estimated number of effective samples is smaller than 200 for some parameter
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2021-March-12-logistic-bayesian_26_0.png" src="../_images/2021-March-12-logistic-bayesian_26_0.png" />
+<img alt="../_images/2021-March-12-logistic-bayesian_27_0.png" src="../_images/2021-March-12-logistic-bayesian_27_0.png" />
 </div>
 </div>
 </div>
@@ -653,7 +710,7 @@ The estimated number of effective samples is smaller than 200 for some parameter
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="2021-March-11-blr-pymc.html" title="previous page">Bayesian linear regression</a>
-    <a class='right-next' id="next-link" href="2021-March-12-mlp.html" title="next page">&lt;no title&gt;</a>
+    <a class='right-next' id="next-link" href="2019-August-2020-gaussian-processes.html" title="next page">Gaussian Processes</a>
 
         </div>
         

@@ -4,22 +4,8 @@
 - file: intro
   numbered: false
 
-- part: Linear Algebra for ML
-  chapters:  
-    - file: notebooks/2021-March-15-eigen
-    - file: notebooks/2021-March-15-determinant
-    - file: notebooks/2021-March-15-Positive-semi-definite
-    
-- part: Stochastic processes
-  chapters:
-    - file: notebooks/2021-March-19-stochastic-processes
-    - file: notebooks/2021-March-17-Stationary-Time_Series
-    - file: notebooks/2021-March-23-Stationarity-stochastic-processes
-
 - part: Theory of Bayesian ML
   chapters:
-    
-    - file: notebooks/2021-March-27-Marginal-Likelihood
     - file: notebooks/2021-March-31-derivation-of-marginal-likelihood
 
 - part: Bayesian ML
@@ -38,23 +24,42 @@
   chapters:
     - file: notebooks/2021-March-11-blr-pymc
     - file: notebooks/2021-March-12-logistic-bayesian
-    - file: notebooks/2021-March-12-mlp
+#     - file: notebooks/2021-March-12-mlp
 
-# - part: Gaussian processes
-#   chapters:
-#     - file: notebooks/2021-March-16-GP-PyMC3
-#     - file: notebooks/2021-March-17-LLS-GP-PyMC3
+- part: Gaussian processes
+  chapters:
+    - file: notebooks/2019-August-2020-gaussian-processes.ipynb
+    - file: notebooks/2021-April-15-LLS-GP
+    - file: notebooks/2021-March-16-GP-PyMC3
+    - file: notebooks/2021-March-17-lls-gp-pymc3
+    - file: notebooks/15-April-2021-deep-gp-from-scratch
+    - file: notebooks/16-April-2021-ard-gp
 
 # - part: Gaussian Mixure models
 #   chapters:
 #     - file: notebooks/2021-March-23-GMM
 #     - file: notebooks/2021-March-26-GMM-example
 
-# Add active learning here
+- part: Active Learning
+  chapters:
+    - file: notebooks/2018-June-2016-active-committee 
+    - file: notebooks/2020-April-21-active-learning-with-bayesian-linear-regression
 
 - part: Others
   chapters:
     - file: notebooks/2021-March-24-sigmoid
+
+- part: Appendix 1 - Linear Algebra for ML
+  chapters:  
+    - file: notebooks/2021-March-15-eigen
+    - file: notebooks/2021-March-15-determinant
+    - file: notebooks/2021-March-15-Positive-semi-definite
+    
+- part: Appendix 2 - Stochastic processes
+  chapters:
+    - file: notebooks/2021-March-19-stochastic-processes
+    - file: notebooks/2021-March-17-Stationary-Time_Series
+    - file: notebooks/2021-March-23-Stationarity-stochastic-processes
 
 - part: References
   chapters:

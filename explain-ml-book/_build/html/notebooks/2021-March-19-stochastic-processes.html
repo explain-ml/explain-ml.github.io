@@ -97,50 +97,6 @@
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  Linear Algebra for ML
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-15-eigen.html">
-   Eigen values
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-15-determinant.html">
-   Determinant
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-15-Positive-semi-definite.html">
-   Positive definiteness
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Stochastic processes
- </span>
-</p>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Stochastic processes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-17-Stationary-Time_Series.html">
-   Stationarity of time-series stochastic process
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-23-Stationarity-stochastic-processes.html">
-   Stationarity of stochastic processes II
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
   Theory of Bayesian ML
  </span>
 </p>
@@ -204,6 +160,109 @@
  <li class="toctree-l1">
   <a class="reference internal" href="2021-March-11-blr-pymc.html">
    Bayesian linear regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-12-logistic-bayesian.html">
+   Bayesian logistic regression
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Gaussian processes
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2019-August-2020-gaussian-processes.html">
+   Gaussian Processes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-April-15-LLS-GP.html">
+   Local Lengthscale GP
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-16-GP-PyMC3.html">
+   Gaussian process regression in PyMC
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-17-lls-gp-pymc3.html">
+   Local Lengthscale GP with PyMC
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15-April-2021-deep-gp-from-scratch.html">
+   Deep Kernel Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16-April-2021-ard-gp.html">
+   Automatic relevance determination (ARD)
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Active Learning
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2018-June-2016-active-committee.html">
+   Active Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2020-April-21-active-learning-with-bayesian-linear-regression.html">
+   Active Learning with Bayesian Linear Regression
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Appendix 1 - Linear Algebra for ML
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-15-eigen.html">
+   Eigen values
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-15-determinant.html">
+   Determinant
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-15-Positive-semi-definite.html">
+   Positive definiteness
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Appendix 2 - Stochastic processes
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Stochastic processes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-17-Stationary-Time_Series.html">
+   Stationarity of time-series stochastic process
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-23-Stationarity-stochastic-processes.html">
+   Stationarity of stochastic processes II
   </a>
  </li>
 </ul>
@@ -26943,16 +27002,16 @@ gCnVfoYD/3a7EUpFCi1gSrWfYcBXbjdCqUihBUyp9hMDHCMi2SKS7nZjlPI6LWBKtZ+ZwOXANuwt\
 </div></div>
 </div>
 <p>Let’s check for expected value and variance of <span class="math notranslate nohighlight">\(f(t)\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-22f15176-1aea-47da-8bc0-2405ddaf2763">
-<span class="eqno">(1)<a class="headerlink" href="#equation-22f15176-1aea-47da-8bc0-2405ddaf2763" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-64feb2ce-d328-4749-9504-fb92e3baa9e3">
+<span class="eqno">(38)<a class="headerlink" href="#equation-64feb2ce-d328-4749-9504-fb92e3baa9e3" title="Permalink to this equation">¶</a></span>\[\begin{align}
 f(t) &amp;= f(t-1) + I, \text{   where, } I \text{ takes value 1 or -1 with equal probability}\\
 \mathbb{E}(f(t)) &amp;= \mathbb{E}(f(t-1)) + \mathbb{E}(I)\\
                  &amp;= \sum\limits_{time=0}^{t}\mathbb{E}(I)\\
 \mathbb{E}(f(t)) &amp;= 0
 \end{align}\]</div>
 <p>And, variance</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9db2c19a-d340-40f0-a4e3-544686a36eba">
-<span class="eqno">(2)<a class="headerlink" href="#equation-9db2c19a-d340-40f0-a4e3-544686a36eba" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-362b8baf-60ca-4d78-9155-51d3c3cca771">
+<span class="eqno">(39)<a class="headerlink" href="#equation-362b8baf-60ca-4d78-9155-51d3c3cca771" title="Permalink to this equation">¶</a></span>\[\begin{align}
 V(f(t)) &amp;= \sum\limits_{T=0}^{t}V(I)\\
         &amp;= \sum\limits_{T=0}^{t}(\mathbb{E}(I^2) - (\mathbb{E}(I))^2\\
         &amp;= \sum\limits_{T=0}^{t}\mathbb{E}(I^2)\\

@@ -97,50 +97,6 @@
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  Linear Algebra for ML
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-15-eigen.html">
-   Eigen values
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-15-determinant.html">
-   Determinant
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-15-Positive-semi-definite.html">
-   Positive definiteness
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Stochastic processes
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-19-stochastic-processes.html">
-   Stochastic processes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-17-Stationary-Time_Series.html">
-   Stationarity of time-series stochastic process
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-23-Stationarity-stochastic-processes.html">
-   Stationarity of stochastic processes II
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
   Theory of Bayesian ML
  </span>
 </p>
@@ -204,6 +160,109 @@
  <li class="toctree-l1">
   <a class="reference internal" href="2021-March-11-blr-pymc.html">
    Bayesian linear regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-12-logistic-bayesian.html">
+   Bayesian logistic regression
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Gaussian processes
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2019-August-2020-gaussian-processes.html">
+   Gaussian Processes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-April-15-LLS-GP.html">
+   Local Lengthscale GP
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-16-GP-PyMC3.html">
+   Gaussian process regression in PyMC
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-17-lls-gp-pymc3.html">
+   Local Lengthscale GP with PyMC
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15-April-2021-deep-gp-from-scratch.html">
+   Deep Kernel Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16-April-2021-ard-gp.html">
+   Automatic relevance determination (ARD)
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Active Learning
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2018-June-2016-active-committee.html">
+   Active Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2020-April-21-active-learning-with-bayesian-linear-regression.html">
+   Active Learning with Bayesian Linear Regression
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Appendix 1 - Linear Algebra for ML
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-15-eigen.html">
+   Eigen values
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-15-determinant.html">
+   Determinant
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-15-Positive-semi-definite.html">
+   Positive definiteness
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Appendix 2 - Stochastic processes
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-19-stochastic-processes.html">
+   Stochastic processes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-17-Stationary-Time_Series.html">
+   Stationarity of time-series stochastic process
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-23-Stationarity-stochastic-processes.html">
+   Stationarity of stochastic processes II
   </a>
  </li>
 </ul>
@@ -386,8 +445,8 @@
 \mathbf{y} = X\boldsymbol{\theta} + \boldsymbol{\epsilon}
 \]</div>
 <p>In Bayesian settings, we can define the Linear regression as following,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-08952ee6-3d45-4f1e-ae4b-a72eb8ceda1a">
-<span class="eqno">(16)<a class="headerlink" href="#equation-08952ee6-3d45-4f1e-ae4b-a72eb8ceda1a" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9f60b295-6308-464b-bf9f-f1339115ab1f">
+<span class="eqno">(23)<a class="headerlink" href="#equation-9f60b295-6308-464b-bf9f-f1339115ab1f" title="Permalink to this equation">¶</a></span>\[\begin{align}
 p(\boldsymbol{\theta}|X, \mathbf{y}) &amp;= \frac{p(\mathbf{y}|X, \boldsymbol{\theta})p(\boldsymbol{\theta})}{p(\mathbf{y}|X)}\\
 \mathcal{N}(\boldsymbol{\theta}|\mathbf{m}_n, S_n) &amp; = \frac{\mathcal{N}(\mathbf{y}|X\boldsymbol{\theta}, \sigma_n^2I)\mathcal{N}(\boldsymbol{\theta}|0, \sigma^2I)}{p(\mathbf{y}|X)}
 \end{align}\]</div>
@@ -418,15 +477,15 @@ p(\boldsymbol{\theta}|X, \mathbf{y}) &amp;= \frac{p(\mathbf{y}|X, \boldsymbol{\t
 <div class="section" id="mle-for-theta">
 <h3>MLE for <span class="math notranslate nohighlight">\(\theta\)</span><a class="headerlink" href="#mle-for-theta" title="Permalink to this headline">¶</a></h3>
 <p>Now, we should be able to appreciate the effectiveness of MLE as we can find such <span class="math notranslate nohighlight">\(\theta\)</span> so that our likelihood of observing given data <span class="math notranslate nohighlight">\(D=\mathbf{y}\)</span> is maximized.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9f693dda-e993-4f5b-960b-6e4f5f061d49">
-<span class="eqno">(17)<a class="headerlink" href="#equation-9f693dda-e993-4f5b-960b-6e4f5f061d49" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-756a780e-d394-453b-8a60-7221e111c96c">
+<span class="eqno">(24)<a class="headerlink" href="#equation-756a780e-d394-453b-8a60-7221e111c96c" title="Permalink to this equation">¶</a></span>\[\begin{align}
 p(D|\theta) &amp;= \frac{1}{\sqrt{(2\pi)^N}\sigma_n^N}exp\left[-\sum\limits_{i=1}^{N}\frac{(y_i - \theta x_i)^2}{2\sigma_n^2}\right] \\
 \log p(D|\theta) &amp;= -\frac{N}{2}\log(2\pi\sigma_n^2) - \sum\limits_{i=1}^{N}\frac{(y_i - \theta x_i)^2}{2\sigma_n^2}\\
 \arg\min_\theta\;(-\log p(D|\theta))&amp;= \arg\min_\theta \sum\limits_{i=1}^{N}(y_i - \theta x_i)^2\\
 \end{align}\]</div>
 <p>This turns out as the same cost function in linear regression.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-24e173e2-34b7-4401-9074-5124555c2ac1">
-<span class="eqno">(18)<a class="headerlink" href="#equation-24e173e2-34b7-4401-9074-5124555c2ac1" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6c8b3a2c-a0ec-45b2-a067-46077fd28e6a">
+<span class="eqno">(25)<a class="headerlink" href="#equation-6c8b3a2c-a0ec-45b2-a067-46077fd28e6a" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \frac{d}{d\theta} \log p(D|\theta) &amp;= \sum\limits_{i=1}^{N}\frac{(y_i - \theta x_i)x_i}{\sigma_n^2} = 0\\
 \theta_{MLE} &amp;= \frac{\sum\limits_{i=1}^{N}y_ix_i}{\sum\limits_{i=1}^{N}x_i^2}
 \end{align}\]</div>
@@ -7328,8 +7387,8 @@ zFLcvSyybwQw3d2nh5hLRKQ2bgKygcMJxm30Ax43s0MqvaaJJDXNBiBS//5J8OZ0lJnlmtmVwO+B\
 <div class="section" id="map-for-linear-regression">
 <h3>MAP for linear regression<a class="headerlink" href="#map-for-linear-regression" title="Permalink to this headline">¶</a></h3>
 <p>We have assumed a Gaussian distribution over <span class="math notranslate nohighlight">\(\boldsymbol{\theta}\)</span> because likelihood is Gaussian (conjugate priors).</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a2f764d2-1db3-49ac-b211-a722885365cf">
-<span class="eqno">(19)<a class="headerlink" href="#equation-a2f764d2-1db3-49ac-b211-a722885365cf" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a91aa45b-45a8-48df-a707-46bb57c8811a">
+<span class="eqno">(26)<a class="headerlink" href="#equation-a91aa45b-45a8-48df-a707-46bb57c8811a" title="Permalink to this equation">¶</a></span>\[\begin{align}
 p(\boldsymbol{\theta}) \sim \mathcal{N}(0, \sigma^2I)
 \end{align}\]</div>
 <div class="cell docutils container">
@@ -14551,8 +14610,8 @@ GrROAYYDdwYZm8SG/w9y3lV6q1SH4gAAAABJRU5ErkJggg==\
 </div></div>
 </div>
 <p>Now, we will find MAP estimate incorporating the prior.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-09cf72c1-9616-4231-bac7-1dc26e290f57">
-<span class="eqno">(20)<a class="headerlink" href="#equation-09cf72c1-9616-4231-bac7-1dc26e290f57" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7b73a54f-f470-4a69-a899-2f5bf77ed450">
+<span class="eqno">(27)<a class="headerlink" href="#equation-7b73a54f-f470-4a69-a899-2f5bf77ed450" title="Permalink to this equation">¶</a></span>\[\begin{align}
 p(\theta|D) \propto p(D|\theta)p(\theta) &amp;= \frac{1}{\sqrt{(2\pi)^N}\sigma_n^N}exp\left[-\frac{1}{2}(\mathbf{y}-\theta\mathbf{x})^T(I\sigma_n^2)^{-1}(\mathbf{y}-\theta\mathbf{x})\right] \frac{1}{\sqrt{2\pi \sigma^2}}exp\left[{-\frac{(\theta-0)^2}{2\sigma^2}}\right]
 \\
 \log [p(D|\theta)p(\theta)] &amp;= -\frac{N}{2}\log(2\pi\sigma_n^2) - \sum\limits_{i=1}^{N}\frac{(y_i - \theta x_i)^2}{2\sigma_n^2} - \frac{1}{2}\log(2\pi \sigma^2)-\frac{\theta^2}{2 \sigma^2}\\
@@ -14632,8 +14691,8 @@ p(\theta|D) \propto p(D|\theta)p(\theta) &amp;= \frac{1}{\sqrt{(2\pi)^N}\sigma_n
 <div class="section" id="bayesian-linear-regression-1d-with-bias-term">
 <h2>Bayesian linear regression (1D with bias term)<a class="headerlink" href="#bayesian-linear-regression-1d-with-bias-term" title="Permalink to this headline">¶</a></h2>
 <p>Now, we will programatically explore MLE and MAP for 1D linear regression after including the bias term.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-10505e28-1fb4-4153-bc4e-cf598b5706c5">
-<span class="eqno">(21)<a class="headerlink" href="#equation-10505e28-1fb4-4153-bc4e-cf598b5706c5" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-8c1b4d99-7a10-4cbf-8c24-55e5f0e9a44d">
+<span class="eqno">(28)<a class="headerlink" href="#equation-8c1b4d99-7a10-4cbf-8c24-55e5f0e9a44d" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \mathbf{\theta}_{MLE} &amp;= (X^TX)^{-1}X^T\mathbf{y}\\
 \\
 \mathbf{\theta}_{MAP} &amp;= (X^TX + I\frac{\sigma_n^2}{\sigma^2})^{-1}X^T\mathbf{y}
@@ -52291,8 +52350,8 @@ uT1NcCillFJKKaWUUsrtaYJDKaWUUkoppZRSbu//ADPnYD4LwDX8AAAAAElFTkSuQmCC\
 <div class="section" id="posterior-distribution-over-theta">
 <h2>Posterior distribution over <span class="math notranslate nohighlight">\(\theta\)</span><a class="headerlink" href="#posterior-distribution-over-theta" title="Permalink to this headline">¶</a></h2>
 <p>Posterior over <span class="math notranslate nohighlight">\(\theta\)</span> is given as the following,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-654c915b-077d-4ef0-9148-c8cfd458b237">
-<span class="eqno">(22)<a class="headerlink" href="#equation-654c915b-077d-4ef0-9148-c8cfd458b237" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1fbd5659-a273-4936-a149-8bf2174600ac">
+<span class="eqno">(29)<a class="headerlink" href="#equation-1fbd5659-a273-4936-a149-8bf2174600ac" title="Permalink to this equation">¶</a></span>\[\begin{align}
 p(\boldsymbol{\theta}|X, \mathbf{y}) &amp;\sim \mathcal{N}(\mathbf{m}_n, S_n)\\
 \mathbf{m}_n &amp;= \left(X^TX + \frac{\sigma_n^2}{\sigma^2}I\right)X^T\mathbf{y}\\
 S_n &amp;= \left(\frac{1}{\sigma^2}I + \frac{X^TX}{\sigma_n^2}\right)^{-1}

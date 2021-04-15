@@ -43,7 +43,7 @@ with basic_model:
     # Likelihood (sampling distribution) of observations
     Y_obs = pm.Bernoulli("Y_obs", p=y_hat, observed=y)
 
-# pm.model_to_graphviz(basic_model.model)
+pm.model_to_graphviz(basic_model.model)
 
 Let us get MAP for the parameter posterior.
 
@@ -99,7 +99,7 @@ plt.ylabel('$x_2$');
 
 Following code is inspired from": https://docs.pymc.io/notebooks/bayesian_neural_network_advi.html
 
-The following plots show probabilities of being in any of the class for any arbitrary sample in the space. 
+The following plot show probabilities of being in any of the class for any arbitrary sample in the space. 
 
 pred = posterior['Y_obs'].mean(axis=0)>0.5
 cmap = sns.diverging_palette(250, 12, s=85, l=25, as_cmap=True)
@@ -112,6 +112,8 @@ cbar = plt.colorbar(contour, ax=ax)
 #cbar.ax.set_ylabel("Posterior predictive mean probability of class label = 0");
 plt.xlabel('$x_1$');
 plt.ylabel('$x_2$');
+
+The following plot shows uncertainty in the predictions at any arbitrary location in input space.
 
 pred = posterior['Y_obs'].mean(axis=0)>0.5
 cmap = sns.cubehelix_palette(light=1, as_cmap=True)
