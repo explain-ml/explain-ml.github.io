@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; Explain-ML</title>
+    <title>Bayesian logistic regression &#8212; Explain-ML</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -58,7 +58,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="&lt;no title&gt;" href="2021-March-12-mlp.html" />
-    <link rel="prev" title="Laplacian Prior (LASSO)" href="2021-March-11-blr-pymc.html" />
+    <link rel="prev" title="Bayesian linear regression" href="2021-March-11-blr-pymc.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -141,6 +141,18 @@
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
+  Theory of Bayesian ML
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html">
+   Marginal likelihood for Bayesian linear regression
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
   Bayesian ML
  </span>
 </p>
@@ -155,136 +167,48 @@
    Bayesian linear regression
   </a>
  </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Others
- </span>
-</p>
-<ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-11-blr-pymc.html">
-   Laplacian Prior (LASSO)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-17-LLS-GP-PyMC3.html">
-   Stationary GP model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-17-LLS-GP-PyMC3.html#lls-gp">
-   LLS GP
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-23-GMM.html">
-   Step 1
+  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html">
+   Bayesian model selection
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="2021-March-27-Marginal-Likelihood-2.html">
-   Trying empirical bayesian inference
+   Marginal likelihood
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Sampling from distributions
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-10-importance-sampling.html">
+   Importance sampling
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-27-Marginal-Likelihood-2.html#drawing-samples-from-posterior">
-   Drawing samples from posterior
+  <a class="reference internal" href="2021-March-10-rejection-sampling.html">
+   Rejection sampling
   </a>
  </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Bayesian ML with PyMC
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-27-Marginal-Likelihood-2.html#comparing-with-exact-inference">
-   Comparing with exact inference
+  <a class="reference internal" href="2021-March-11-blr-pymc.html">
+   Bayesian linear regression
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html">
-   Pseudo-random data (degree 3 polynomial)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html#marginal-likelihood-pdf">
-   Marginal likelihood pdf
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html#models">
-   Models
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html#model-selection">
-   Model selection
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html#model-selection-with-parameter-optimization">
-   Model selection with parameter optimization
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html#using-empirical-bayes-bishop">
-   Using empirical bayes (Bishop)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html#drawbacks">
-   Drawbacks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html">
-   Marginal likelihood for Bayesian linear regression
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#begin-aligned">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#id1">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#id2">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#products-of-gaussian-pdfs">
-   Products of Gaussian PDFs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#id3">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#id4">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#id5">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#id6">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#multiplication-of-two-gaussians">
-   Multiplication of two Gaussians
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#what-is-the-relationship-between-marginal-likelihood-closed-form-and-any-calculations-done-in-multiplications-of-two-gaussians">
-   What is the relationship between marginal_Likelihood_closed_form and any calculations done in multiplications of two gaussians?
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Bayesian logistic regression
   </a>
  </li>
 </ul>
@@ -389,16 +313,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i>
-            Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="simple nav section-nav flex-column">
-</ul>
-
-        </nav>
-        
         </div>
     </div>
 </div>
@@ -407,43 +321,42 @@
         
               <div>
                 
-  <div class="cell docutils container">
+  <div class="section" id="bayesian-logistic-regression">
+<h1>Bayesian logistic regression<a class="headerlink" href="#bayesian-logistic-regression" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rc</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">pymc3</span> <span class="k">as</span> <span class="nn">pm</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_blobs</span>
+<span class="kn">import</span> <span class="nn">arviz</span> <span class="k">as</span> <span class="nn">az</span>
+<span class="kn">import</span> <span class="nn">theano.tensor</span> <span class="k">as</span> <span class="nn">tt</span>
+
+<span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">rc</span><span class="p">(</span><span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="n">usetex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_blobs</span>
-</pre></div>
-</div>
-</div>
-</div>
+<p>Let us generate a pseudo-random dataset for logistic regression.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">make_blobs</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">n_features</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">cluster_std</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">centers</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span><span class="n">c</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span><span class="n">c</span><span class="o">=</span><span class="n">y</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$x_1$&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$x_2$&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7ff2d076cd60&gt;
-</pre></div>
-</div>
-<img alt="../_images/2021-March-12-logistic-bayesian_3_1.png" src="../_images/2021-March-12-logistic-bayesian_3_1.png" />
+<img alt="../_images/2021-March-12-logistic-bayesian_3_0.png" src="../_images/2021-March-12-logistic-bayesian_3_0.png" />
 </div>
 </div>
+<p>Adding extra column of ones to incorporate the bias.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_concat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="mi">1</span><span class="p">)),</span> <span class="n">X</span><span class="p">))</span>
@@ -457,16 +370,7 @@
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="kn">import</span> <span class="nn">pymc3</span> <span class="k">as</span> <span class="nn">pm</span>
-<span class="kn">import</span> <span class="nn">arviz</span> <span class="k">as</span> <span class="nn">az</span>
-<span class="kn">import</span> <span class="nn">theano.tensor</span> <span class="k">as</span> <span class="nn">tt</span>
-</pre></div>
-</div>
-</div>
-</div>
+<p>We define the bayesian logistic regression model as the following. Notice that we need to use Bernoulli likelihood as our output is binary.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">basic_model</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">Model</span><span class="p">()</span>
@@ -489,16 +393,16 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pm</span><span class="o">.</span><span class="n">model_to_graphviz</span><span class="p">(</span><span class="n">basic_model</span><span class="o">.</span><span class="n">model</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># pm.model_to_graphviz(basic_model.model)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/2021-March-12-logistic-bayesian_7_0.svg" src="../_images/2021-March-12-logistic-bayesian_7_0.svg" /></div>
 </div>
+<p>Let us get MAP for the parameter posterior.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">map_estimate</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">find_MAP</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">basic_model</span><span class="p">)</span>
+<span class="n">map_estimate</span>
 </pre></div>
 </div>
 </div>
@@ -523,49 +427,37 @@
 </div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">map_estimate</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;theta&#39;: array([20.12421332,  3.69334159, -9.60226941])}
 </pre></div>
 </div>
 </div>
 </div>
+<p>Let us visualize the optimal seperating hyperplane.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#separating hyperplane; X\theta = 0</span>
 <span class="k">def</span> <span class="nf">hyperplane</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">theta</span><span class="p">):</span> 
     <span class="k">return</span> <span class="p">(</span><span class="o">-</span><span class="n">theta</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="n">theta</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span><span class="p">(</span><span class="n">theta</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">+</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">hyperplane</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">map_estimate</span><span class="p">[</span><span class="s1">&#39;theta&#39;</span><span class="p">]))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span><span class="n">c</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">+</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">hyperplane</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">map_estimate</span><span class="p">[</span><span class="s1">&#39;theta&#39;</span><span class="p">]),</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;optimal hyperplane&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span><span class="n">c</span><span class="o">=</span><span class="n">y</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$x_1$&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$x_2$&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">));</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7ff2ba166b80&gt;
-</pre></div>
-</div>
-<img alt="../_images/2021-March-12-logistic-bayesian_11_1.png" src="../_images/2021-March-12-logistic-bayesian_11_1.png" />
+<img alt="../_images/2021-March-12-logistic-bayesian_12_0.png" src="../_images/2021-March-12-logistic-bayesian_12_0.png" />
 </div>
 </div>
+<p>Let us draw a large number of samples from the posterior.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">basic_model</span><span class="p">:</span>
     <span class="c1"># draw 500 posterior samples</span>
-    <span class="n">trace</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span><span class="n">return_inferencedata</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">tune</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+    <span class="n">trace</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span><span class="n">return_inferencedata</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">tune</span><span class="o">=</span><span class="mi">20000</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -590,20 +482,20 @@ NUTS: [theta]
             background: #F44336;
         }
     </style>
-  <progress value='12000' class='' max='12000' style='width:300px; height:20px; vertical-align: middle;'></progress>
-  100.00% [12000/12000 00:04<00:00 Sampling 4 chains, 3,576 divergences]
+  <progress value='88000' class='' max='88000' style='width:300px; height:20px; vertical-align: middle;'></progress>
+  100.00% [88000/88000 00:45<00:00 Sampling 4 chains, 2,300 divergences]
 </div>
-</div><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sampling 4 chains for 1_000 tune and 2_000 draw iterations (4_000 + 8_000 draws total) took 13 seconds.
-There were 1037 divergences after tuning. Increase `target_accept` or reparameterize.
-There were 1089 divergences after tuning. Increase `target_accept` or reparameterize.
-The acceptance probability does not match the target. It is 0.6271662865285772, but should be close to 0.8. Try to increase the number of tuning steps.
-There were 790 divergences after tuning. Increase `target_accept` or reparameterize.
-There were 660 divergences after tuning. Increase `target_accept` or reparameterize.
+</div><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sampling 4 chains for 20_000 tune and 2_000 draw iterations (80_000 + 8_000 draws total) took 46 seconds.
+There were 780 divergences after tuning. Increase `target_accept` or reparameterize.
+There were 772 divergences after tuning. Increase `target_accept` or reparameterize.
+There were 397 divergences after tuning. Increase `target_accept` or reparameterize.
+There were 351 divergences after tuning. Increase `target_accept` or reparameterize.
 The estimated number of effective samples is smaller than 200 for some parameters.
 </pre></div>
 </div>
 </div>
 </div>
+<p>Let us visualize the parameter posterior.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">az</span><span class="o">.</span><span class="n">plot_trace</span><span class="p">(</span><span class="n">trace</span><span class="p">)</span>
@@ -611,18 +503,18 @@ The estimated number of effective samples is smaller than 200 for some parameter
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/anaconda3/lib/python3.8/site-packages/arviz/data/io_pymc3.py:96: FutureWarning: Using `from_pymc3` without the model will be deprecated in a future release. Not using the model will return less accurate and less useful results. Make sure you use the model argument or call from_pymc3 within a model context.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/patel_zeel/anaconda3/lib/python3.8/site-packages/arviz/data/io_pymc3.py:96: FutureWarning: Using `from_pymc3` without the model will be deprecated in a future release. Not using the model will return less accurate and less useful results. Make sure you use the model argument or call from_pymc3 within a model context.
   warnings.warn(
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[&lt;matplotlib.axes._subplots.AxesSubplot object at 0x7ff2ba61e0d0&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7ff2ba6b6eb0&gt;]],
-      dtype=object)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[&lt;AxesSubplot:title={&#39;center&#39;:&#39;theta&#39;}&gt;,
+        &lt;AxesSubplot:title={&#39;center&#39;:&#39;theta&#39;}&gt;]], dtype=object)
 </pre></div>
 </div>
-<img alt="../_images/2021-March-12-logistic-bayesian_13_2.png" src="../_images/2021-March-12-logistic-bayesian_13_2.png" />
+<img alt="../_images/2021-March-12-logistic-bayesian_16_2.png" src="../_images/2021-March-12-logistic-bayesian_16_2.png" />
 </div>
 </div>
+<p>Let us predict for new input locations.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span>
@@ -637,12 +529,6 @@ The estimated number of effective samples is smaller than 200 for some parameter
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_test</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">xx</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">yy</span><span class="o">.</span><span class="n">ravel</span><span class="p">()]</span>
 <span class="n">X_test_concat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">X_test</span><span class="p">),</span> <span class="mi">1</span><span class="p">)),</span> <span class="n">X_test</span><span class="p">))</span>
-<span class="n">X_test_concat</span><span class="o">.</span><span class="n">shape</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(4368, 3)
 </pre></div>
 </div>
 </div>
@@ -671,7 +557,7 @@ The estimated number of effective samples is smaller than 200 for some parameter
         }
     </style>
   <progress value='8000' class='' max='8000' style='width:300px; height:20px; vertical-align: middle;'></progress>
-  100.00% [8000/8000 00:09<00:00]
+  100.00% [8000/8000 00:17<00:00]
 </div>
 </div></div>
 </div>
@@ -682,22 +568,23 @@ The estimated number of effective samples is smaller than 200 for some parameter
 </div>
 </div>
 </div>
+<p>Following plot shows the posterior distribution over the hyperplanes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">Z</span><span class="p">))[:</span><span class="mi">500</span><span class="p">]:</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span> <span class="n">yy</span><span class="p">,</span> <span class="n">Z</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">xx</span><span class="o">.</span><span class="n">shape</span><span class="p">),</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span><span class="n">c</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span><span class="n">c</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">10</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$x_1$&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$x_2$&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7ff2bb4c7ee0&gt;
-</pre></div>
-</div>
-<img alt="../_images/2021-March-12-logistic-bayesian_18_1.png" src="../_images/2021-March-12-logistic-bayesian_18_1.png" />
+<img alt="../_images/2021-March-12-logistic-bayesian_23_0.png" src="../_images/2021-March-12-logistic-bayesian_23_0.png" />
 </div>
 </div>
-<p>FOllowing code inspired from”: <a class="reference external" href="https://docs.pymc.io/notebooks/bayesian_neural_network_advi.html">https://docs.pymc.io/notebooks/bayesian_neural_network_advi.html</a></p>
+<p>Following code is inspired from”: <a class="reference external" href="https://docs.pymc.io/notebooks/bayesian_neural_network_advi.html">https://docs.pymc.io/notebooks/bayesian_neural_network_advi.html</a></p>
+<p>The following plots show probabilities of being in any of the class for any arbitrary sample in the space.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pred</span> <span class="o">=</span> <span class="n">posterior</span><span class="p">[</span><span class="s1">&#39;Y_obs&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">&gt;</span><span class="mf">0.5</span>
@@ -709,11 +596,13 @@ The estimated number of effective samples is smaller than 200 for some parameter
 <span class="n">cbar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">contour</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
 <span class="c1">#_ = ax.set(xlim=(-3, 3), ylim=(-3, 3), xlabel=&quot;X&quot;, ylabel=&quot;Y&quot;)</span>
 <span class="c1">#cbar.ax.set_ylabel(&quot;Posterior predictive mean probability of class label = 0&quot;);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$x_1$&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$x_2$&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2021-March-12-logistic-bayesian_20_0.png" src="../_images/2021-March-12-logistic-bayesian_20_0.png" />
+<img alt="../_images/2021-March-12-logistic-bayesian_25_0.png" src="../_images/2021-March-12-logistic-bayesian_25_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -727,11 +616,14 @@ The estimated number of effective samples is smaller than 200 for some parameter
 <span class="n">cbar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">contour</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
 <span class="c1">#_ = ax.set(xlim=(-3, 3), ylim=(-3, 3), xlabel=&quot;X&quot;, ylabel=&quot;Y&quot;)</span>
 <span class="c1">#cbar.ax.set_ylabel(&quot;Posterior predictive mean probability of class label = 0&quot;);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$x_1$&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$x_2$&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2021-March-12-logistic-bayesian_21_0.png" src="../_images/2021-March-12-logistic-bayesian_21_0.png" />
+<img alt="../_images/2021-March-12-logistic-bayesian_26_0.png" src="../_images/2021-March-12-logistic-bayesian_26_0.png" />
+</div>
 </div>
 </div>
 
@@ -760,7 +652,7 @@ The estimated number of effective samples is smaller than 200 for some parameter
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="2021-March-11-blr-pymc.html" title="previous page">Laplacian Prior (LASSO)</a>
+    <a class='left-prev' id="prev-link" href="2021-March-11-blr-pymc.html" title="previous page">Bayesian linear regression</a>
     <a class='right-next' id="next-link" href="2021-March-12-mlp.html" title="next page">&lt;no title&gt;</a>
 
         </div>

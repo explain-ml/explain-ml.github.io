@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pseudo-random data (degree 3 polynomial) &#8212; Explain-ML</title>
+    <title>Bayesian model selection &#8212; Explain-ML</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -57,8 +57,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Marginal likelihood for Bayesian linear regression" href="2021-March-31-derivation-of-marginal-likelihood.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="2021-March-27-Marginal-Likelihood.html" />
+    <link rel="next" title="Marginal likelihood" href="2021-March-27-Marginal-Likelihood-2.html" />
+    <link rel="prev" title="Bayesian linear regression" href="2021-April-14-bayesian-linear-regression.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -141,10 +141,22 @@
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  Bayesian ML
+  Theory of Bayesian ML
  </span>
 </p>
 <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html">
+   Marginal likelihood for Bayesian linear regression
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Bayesian ML
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="2021-March-23-bayesian-ml.html">
    Bayesian ML: Fundamentals
@@ -155,136 +167,43 @@
    Bayesian linear regression
   </a>
  </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Others
- </span>
-</p>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-11-blr-pymc.html">
-   Laplacian Prior (LASSO)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-17-LLS-GP-PyMC3.html">
-   Stationary GP model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-17-LLS-GP-PyMC3.html#lls-gp">
-   LLS GP
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-23-GMM.html">
-   Step 1
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Bayesian model selection
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="2021-March-27-Marginal-Likelihood-2.html">
-   Trying empirical bayesian inference
+   Marginal likelihood
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Sampling from distributions
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-10-importance-sampling.html">
+   Importance sampling
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-27-Marginal-Likelihood-2.html#drawing-samples-from-posterior">
-   Drawing samples from posterior
+  <a class="reference internal" href="2021-March-10-rejection-sampling.html">
+   Rejection sampling
   </a>
  </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Bayesian ML with PyMC
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-27-Marginal-Likelihood-2.html#comparing-with-exact-inference">
-   Comparing with exact inference
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Pseudo-random data (degree 3 polynomial)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#marginal-likelihood-pdf">
-   Marginal likelihood pdf
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#models">
-   Models
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#model-selection">
-   Model selection
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#model-selection-with-parameter-optimization">
-   Model selection with parameter optimization
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#using-empirical-bayes-bishop">
-   Using empirical bayes (Bishop)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#drawbacks">
-   Drawbacks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html">
-   Marginal likelihood for Bayesian linear regression
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#begin-aligned">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#id1">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#id2">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#products-of-gaussian-pdfs">
-   Products of Gaussian PDFs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#id3">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#id4">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#id5">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#id6">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#multiplication-of-two-gaussians">
-   Multiplication of two Gaussians
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#what-is-the-relationship-between-marginal-likelihood-closed-form-and-any-calculations-done-in-multiplications-of-two-gaussians">
-   What is the relationship between marginal_Likelihood_closed_form and any calculations done in multiplications of two gaussians?
+  <a class="reference internal" href="2021-March-11-blr-pymc.html">
+   Bayesian linear regression
   </a>
  </li>
 </ul>
@@ -395,62 +314,52 @@
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pseudo-random-data-degree-3-polynomial">
    Pseudo-random data (degree 3 polynomial)
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#marginal-likelihood-pdf">
    Marginal likelihood pdf
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#models">
    Models
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#model-selection">
    Model selection
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#model-selection-with-parameter-optimization">
    Model selection with parameter optimization
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#drawbacks">
+   Drawbacks
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#using-empirical-bayes-bishop">
    Using empirical bayes (Bishop)
   </a>
   <ul class="nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
      Marginal likelihood pdf
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#paramater-tuning">
      Paramater tuning
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#comparing-two-views-of-likelihoods">
-     Comparing two views of likelihoods
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#begin-align">
-     \begin{align}
-    </a>
-   </li>
   </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#drawbacks">
-   Drawbacks
-  </a>
  </li>
 </ul>
 
@@ -464,7 +373,9 @@
         
               <div>
                 
-  <p><a class="reference external" href="http://mlg.eng.cam.ac.uk/teaching/4f13/1920/bayesian%20finite%20regression.pdf">http://mlg.eng.cam.ac.uk/teaching/4f13/1920/bayesian finite regression.pdf</a> (Last slide)
+  <div class="section" id="bayesian-model-selection">
+<h1>Bayesian model selection<a class="headerlink" href="#bayesian-model-selection" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="http://mlg.eng.cam.ac.uk/teaching/4f13/1920/bayesian%20finite%20regression.pdf">http://mlg.eng.cam.ac.uk/teaching/4f13/1920/bayesian finite regression.pdf</a> (Last slide)
 <a class="reference external" href="http://mlg.eng.cam.ac.uk/teaching/4f13/1920/marginal%20likelihood.pdf">http://mlg.eng.cam.ac.uk/teaching/4f13/1920/marginal likelihood.pdf</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -482,12 +393,12 @@
 </div>
 </div>
 <div class="section" id="pseudo-random-data-degree-3-polynomial">
-<h1>Pseudo-random data (degree 3 polynomial)<a class="headerlink" href="#pseudo-random-data-degree-3-polynomial" title="Permalink to this headline">¶</a></h1>
+<h2>Pseudo-random data (degree 3 polynomial)<a class="headerlink" href="#pseudo-random-data-degree-3-polynomial" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 
-<span class="n">N</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">sigma_n</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1"># noise in data</span>
 <span class="n">sigma_w</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1"># parameter variance</span>
 
@@ -502,12 +413,12 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2021-March-29-bayesian-model-selection_3_0.png" src="../_images/2021-March-29-bayesian-model-selection_3_0.png" />
+<img alt="../_images/2021-March-29-bayesian-model-selection_4_0.png" src="../_images/2021-March-29-bayesian-model-selection_4_0.png" />
 </div>
 </div>
 </div>
 <div class="section" id="marginal-likelihood-pdf">
-<h1>Marginal likelihood pdf<a class="headerlink" href="#marginal-likelihood-pdf" title="Permalink to this headline">¶</a></h1>
+<h2>Marginal likelihood pdf<a class="headerlink" href="#marginal-likelihood-pdf" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">LogMarginalLikelihoodPdf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
@@ -518,7 +429,7 @@
 </div>
 </div>
 <div class="section" id="models">
-<h1>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h1>
+<h2>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x_M0</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -535,7 +446,7 @@
 </div>
 </div>
 <div class="section" id="model-selection">
-<h1>Model selection<a class="headerlink" href="#model-selection" title="Permalink to this headline">¶</a></h1>
+<h2>Model selection<a class="headerlink" href="#model-selection" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="p">[</span><span class="n">LogMarginalLikelihoodPdf</span><span class="p">(</span><span class="n">x_M</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x_M</span> <span class="ow">in</span> <span class="p">[</span><span class="n">x_M0</span><span class="p">,</span> <span class="n">x_M1</span><span class="p">,</span> <span class="n">x_M2</span><span class="p">,</span> <span class="n">x_M3</span><span class="p">,</span> <span class="n">x_M4</span><span class="p">,</span> <span class="n">x_M5</span><span class="p">,</span> <span class="n">x_M6</span><span class="p">,</span> <span class="n">x_M7</span><span class="p">]]</span>
@@ -547,12 +458,13 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2021-March-29-bayesian-model-selection_9_0.png" src="../_images/2021-March-29-bayesian-model-selection_9_0.png" />
+<img alt="../_images/2021-March-29-bayesian-model-selection_10_0.png" src="../_images/2021-March-29-bayesian-model-selection_10_0.png" />
 </div>
 </div>
+<p>We can infer that Degree 3 polynomial is best suited to model current data.</p>
 </div>
 <div class="section" id="model-selection-with-parameter-optimization">
-<h1>Model selection with parameter optimization<a class="headerlink" href="#model-selection-with-parameter-optimization" title="Permalink to this headline">¶</a></h1>
+<h2>Model selection with parameter optimization<a class="headerlink" href="#model-selection-with-parameter-optimization" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">NegLogMarginalLikelihoodPdf</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span> <span class="c1"># Negative log marginal likelihood (written in GP fashion)</span>
@@ -560,31 +472,7 @@
     <span class="n">K</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="nd">@x</span><span class="o">.</span><span class="n">T</span><span class="p">)</span><span class="o">*</span><span class="n">sigma_w</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">N</span><span class="p">)</span><span class="o">*</span><span class="n">sigma_n</span><span class="o">**</span><span class="mi">2</span>
     <span class="n">K_inv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">pinv</span><span class="p">(</span><span class="n">K</span><span class="p">)</span>
     <span class="n">nll</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">y</span><span class="o">.</span><span class="n">T</span><span class="nd">@K_inv@y</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">K</span><span class="p">))</span> <span class="o">+</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">K</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="mf">0.5</span><span class="o">*</span><span class="n">y</span><span class="o">.</span><span class="n">T</span><span class="nd">@K_inv@y</span><span class="p">,</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">K</span><span class="p">)),</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">nll</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">NegLogMarginalLikelihoodPdf</span><span class="p">((</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">),</span> <span class="n">x_M1</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 0.0006     0.0004992  0.0004984 ... -0.0002984 -0.0002992 -0.0003   ]
- [ 0.0004992  0.0005984  0.0004976 ... -0.0002976 -0.0002984 -0.0002992]
- [ 0.0004984  0.0004976  0.0005968 ... -0.0002968 -0.0002976 -0.0002984]
- ...
- [-0.0002984 -0.0002976 -0.0002968 ...  0.0005968  0.0004976  0.0004984]
- [-0.0002992 -0.0002984 -0.0002976 ...  0.0004976  0.0005984  0.0004992]
- [-0.0003    -0.0002992 -0.0002984 ...  0.0004984  0.0004992  0.0006   ]]
-[[3.24032436e+08]] -inf 918.9385332046727
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-inf
 </pre></div>
 </div>
 </div>
@@ -612,22 +500,34 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>degree = 0, sigma_w=10.0, sig_n_opt=10.0 time: 0.5179195404052734 seconds
-degree = 1, sigma_w=10.0, sig_n_opt=10.0 time: 0.5073156356811523 seconds
-degree = 2, sigma_w=10.0, sig_n_opt=10.0 time: 0.510296106338501 seconds
-degree = 3, sigma_w=10.0, sig_n_opt=10.0 time: 0.5096111297607422 seconds
-degree = 4, sigma_w=10.0, sig_n_opt=10.0 time: 0.5116767883300781 seconds
-degree = 5, sigma_w=10.0, sig_n_opt=10.0 time: 0.5100688934326172 seconds
-degree = 6, sigma_w=10.0, sig_n_opt=10.0 time: 0.5097932815551758 seconds
-degree = 7, sigma_w=10.0, sig_n_opt=10.0 time: 0.5098989009857178 seconds
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>degree = 0, sigma_w=11.386419730789676, sig_n_opt=10.409619988275981 time: 0.16215753555297852 seconds
+degree = 1, sigma_w=8.895627576152828, sig_n_opt=8.940430356187846 time: 0.08962178230285645 seconds
+degree = 2, sigma_w=7.119736606266272, sig_n_opt=6.9430152775634495 time: 0.14646410942077637 seconds
+degree = 3, sigma_w=3.219312493175096, sig_n_opt=4.710523287770871 time: 0.14163684844970703 seconds
+degree = 4, sigma_w=2.6041389205399996, sig_n_opt=4.739086634960693 time: 0.2660367488861084 seconds
+degree = 5, sigma_w=-2.5131468222243427, sig_n_opt=4.745522282327305 time: 0.17346620559692383 seconds
+degree = 6, sigma_w=2.163988485988779, sig_n_opt=4.768321344889457 time: 0.5917925834655762 seconds
+degree = 7, sigma_w=1.6084504892174767, sig_n_opt=4.758818020810231 time: 0.32204294204711914 seconds
 </pre></div>
 </div>
-<img alt="../_images/2021-March-29-bayesian-model-selection_13_1.png" src="../_images/2021-March-29-bayesian-model-selection_13_1.png" />
+<img alt="../_images/2021-March-29-bayesian-model-selection_14_1.png" src="../_images/2021-March-29-bayesian-model-selection_14_1.png" />
 </div>
 </div>
+<p>We can see the best set of hyper-parameters selected by gradient descent on negative log likelihood for indivisual models (degree of polynomial).</p>
+</div>
+<div class="section" id="drawbacks">
+<h2>Drawbacks<a class="headerlink" href="#drawbacks" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>This method does not scale well with big data (while doing parameter optimization), because of matrix inversion.</p>
+<ul class="simple">
+<li><p>Potential solution: optimize parameters with chepaer methods, then use Marginal likelihood for model selection</p></li>
+</ul>
+</li>
+</ol>
 </div>
 <div class="section" id="using-empirical-bayes-bishop">
-<h1>Using empirical bayes (Bishop)<a class="headerlink" href="#using-empirical-bayes-bishop" title="Permalink to this headline">¶</a></h1>
+<h2>Using empirical bayes (Bishop)<a class="headerlink" href="#using-empirical-bayes-bishop" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://krasserm.github.io/2019/02/23/bayesian-linear-regression/">http://krasserm.github.io/2019/02/23/bayesian-linear-regression/</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alpha</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">sigma_w</span><span class="o">**</span><span class="mi">2</span>
@@ -637,7 +537,7 @@ degree = 7, sigma_w=10.0, sig_n_opt=10.0 time: 0.5098989009857178 seconds
 </div>
 </div>
 <div class="section" id="id1">
-<h2>Marginal likelihood pdf<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h3>Marginal likelihood pdf<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">posterior</span><span class="p">(</span><span class="n">Phi</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span> <span class="n">return_inverse</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
@@ -683,31 +583,13 @@ degree = 7, sigma_w=10.0, sig_n_opt=10.0 time: 0.5098989009857178 seconds
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2021-March-29-bayesian-model-selection_18_0.png" src="../_images/2021-March-29-bayesian-model-selection_18_0.png" />
+<img alt="../_images/2021-March-29-bayesian-model-selection_21_0.png" src="../_images/2021-March-29-bayesian-model-selection_21_0.png" />
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">scores</span><span class="p">,</span> <span class="n">Bscores</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(-inf, -4285.261000670051),
- (-inf, -3834.413976828204),
- (-inf, -3510.198243296033),
- (-inf, -3037.1015706006956),
- (-inf, -3043.478864663047),
- (-inf, -3050.110011419756),
- (-inf, -3056.7609228930273),
- (-inf, -3062.8368316800147)]
-</pre></div>
-</div>
-</div>
-</div>
+<p>Results are exactly the same as the previous method.</p>
 </div>
 <div class="section" id="paramater-tuning">
-<h2>Paramater tuning<a class="headerlink" href="#paramater-tuning" title="Permalink to this headline">¶</a></h2>
+<h3>Paramater tuning<a class="headerlink" href="#paramater-tuning" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="n">Phi</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">alpha_0</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">,</span> <span class="n">beta_0</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">rtol</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
@@ -773,62 +655,44 @@ degree = 7, sigma_w=10.0, sig_n_opt=10.0 time: 0.5098989009857178 seconds
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Convergence after 3 iterations.
-Degree 0 sigma_w 11.593101703465186 sigma_n 9.35958176227756
-Degree 0 sigma_w 67.36247360447825 sigma_n 1.3811964410207875 (Earlier method)
-time: 0.0030295848846435547 seconds
+Degree 0 sigma_w 11.386046324847063 sigma_n 10.409625056741909
+Degree 0 sigma_w 11.386419730789676 sigma_n 10.409619988275981 (Earlier method)
+time: 0.0020685195922851562 seconds
 Convergence after 3 iterations.
-Degree 1 sigma_w 8.866800803457197 sigma_n 8.048529569003309
-Degree 1 sigma_w 57.77850385431284 sigma_n 1.398290540690322 (Earlier method)
-time: 0.004939556121826172 seconds
-Convergence after 2 iterations.
-Degree 2 sigma_w 6.9778422692478985 sigma_n 6.946352976189561
-Degree 2 sigma_w 48.45758776603595 sigma_n 1.3826104295324149 (Earlier method)
-time: 0.0033392906188964844 seconds
+Degree 1 sigma_w 8.89562357924776 sigma_n 8.940424942304906
+Degree 1 sigma_w 8.895627576152828 sigma_n 8.940430356187846 (Earlier method)
+time: 0.006841897964477539 seconds
+Convergence after 3 iterations.
+Degree 2 sigma_w 7.119729723394079 sigma_n 6.943013815169844
+Degree 2 sigma_w 7.119736606266272 sigma_n 6.9430152775634495 (Earlier method)
+time: 0.0012140274047851562 seconds
 Convergence after 4 iterations.
-Degree 3 sigma_w 2.812513466859813 sigma_n 4.9210563801447975
-Degree 3 sigma_w 14.724887028440621 sigma_n 1.3769721679510585 (Earlier method)
-time: 0.002380847930908203 seconds
-Convergence after 4 iterations.
-Degree 4 sigma_w 2.4211372908556354 sigma_n 4.922121375564269
-Degree 4 sigma_w 13.053851895378054 sigma_n 1.3768528001590439 (Earlier method)
-time: 0.0060918331146240234 seconds
-Convergence after 4 iterations.
-Degree 5 sigma_w 2.220810932741754 sigma_n 4.924412712688317
-Degree 5 sigma_w 12.807336539010228 sigma_n 1.3768791479257987 (Earlier method)
-time: 0.002724170684814453 seconds
-Convergence after 5 iterations.
-Degree 6 sigma_w 2.0258681118518194 sigma_n 4.926899680771834
-Degree 6 sigma_w 5.230977211771143 sigma_n 1.3654563695339466 (Earlier method)
-time: 0.004251003265380859 seconds
-Convergence after 5 iterations.
-Degree 7 sigma_w 1.659801285680296 sigma_n 4.925514812120487
-Degree 7 sigma_w 2.6290176014599163 sigma_n 1.3659380144792148 (Earlier method)
-time: 0.00419926643371582 seconds
+Degree 3 sigma_w 3.219311433389237 sigma_n 4.710523173354075
+Degree 3 sigma_w 3.219312493175096 sigma_n 4.710523287770871 (Earlier method)
+time: 0.0022554397583007812 seconds
+Convergence after 6 iterations.
+Degree 4 sigma_w 2.6041361190065677 sigma_n 4.739086719922639
+Degree 4 sigma_w 2.6041389205399996 sigma_n 4.739086634960693 (Earlier method)
+time: 0.0025718212127685547 seconds
+Convergence after 9 iterations.
+Degree 5 sigma_w 2.5131492993598394 sigma_n 4.745518078421809
+Degree 5 sigma_w -2.5131468222243427 sigma_n 4.745522282327305 (Earlier method)
+time: 0.003193378448486328 seconds
+Convergence after 9 iterations.
+Degree 6 sigma_w 2.1639963673023725 sigma_n 4.768325837603502
+Degree 6 sigma_w 2.163988485988779 sigma_n 4.768321344889457 (Earlier method)
+time: 0.0029621124267578125 seconds
+Convergence after 6 iterations.
+Degree 7 sigma_w 1.6084472283522588 sigma_n 4.758819295283589
+Degree 7 sigma_w 1.6084504892174767 sigma_n 4.758818020810231 (Earlier method)
+time: 0.002556324005126953 seconds
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="comparing-two-views-of-likelihoods">
-<h2>Comparing two views of likelihoods<a class="headerlink" href="#comparing-two-views-of-likelihoods" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="begin-align">
-<h2>\begin{align}<a class="headerlink" href="#begin-align" title="Permalink to this headline">¶</a></h2>
-<p>p(\theta, \sigma_w) &amp;= \mathcal{N}(0, \sigma_w^2)\
-p(y|\theta, \sigma_n) &amp;= \mathcal{N}(0, \sigma_n^2)</p>
-<p>S_n = \left(\right)^{-1}
-\end{align}</p>
+<p>This method is extremely fast than the previous method. We get close answers while using any of the two methods.</p>
 </div>
 </div>
-<div class="section" id="drawbacks">
-<h1>Drawbacks<a class="headerlink" href="#drawbacks" title="Permalink to this headline">¶</a></h1>
-<ol class="simple">
-<li><p>This method does not scale well with big data (while doing parameter optimization), because of matrix inversion.</p>
-<ul class="simple">
-<li><p>Potential solution: optimize parameters with chepaer methods, then use Marginal likelihood for model selection</p></li>
-</ul>
-</li>
-</ol>
 </div>
 
     <script type="text/x-thebe-config">
@@ -856,8 +720,8 @@ p(y|\theta, \sigma_n) &amp;= \mathcal{N}(0, \sigma_n^2)</p>
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="2021-March-27-Marginal-Likelihood.html" title="previous page">&lt;no title&gt;</a>
-    <a class='right-next' id="next-link" href="2021-March-31-derivation-of-marginal-likelihood.html" title="next page">Marginal likelihood for Bayesian linear regression</a>
+    <a class='left-prev' id="prev-link" href="2021-April-14-bayesian-linear-regression.html" title="previous page">Bayesian linear regression</a>
+    <a class='right-next' id="next-link" href="2021-March-27-Marginal-Likelihood-2.html" title="next page">Marginal likelihood</a>
 
         </div>
         

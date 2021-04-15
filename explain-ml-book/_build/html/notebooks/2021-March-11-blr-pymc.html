@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Laplacian Prior (LASSO) &#8212; Explain-ML</title>
+    <title>Bayesian linear regression &#8212; Explain-ML</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -58,7 +58,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="&lt;no title&gt;" href="2021-March-12-logistic-bayesian.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="2021-March-10-rejection-sampling.html" />
+    <link rel="prev" title="Rejection sampling" href="2021-March-10-rejection-sampling.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -141,6 +141,18 @@
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
+  Theory of Bayesian ML
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html">
+   Marginal likelihood for Bayesian linear regression
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
   Bayesian ML
  </span>
 </p>
@@ -155,136 +167,43 @@
    Bayesian linear regression
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html">
+   Bayesian model selection
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-27-Marginal-Likelihood-2.html">
+   Marginal likelihood
+  </a>
+ </li>
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  Others
+  Sampling from distributions
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-10-importance-sampling.html">
+   Importance sampling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-10-rejection-sampling.html">
+   Rejection sampling
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Bayesian ML with PyMC
  </span>
 </p>
 <ul class="current nav sidenav_l1">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Laplacian Prior (LASSO)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-17-LLS-GP-PyMC3.html">
-   Stationary GP model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-17-LLS-GP-PyMC3.html#lls-gp">
-   LLS GP
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-23-GMM.html">
-   Step 1
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-27-Marginal-Likelihood-2.html">
-   Trying empirical bayesian inference
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-27-Marginal-Likelihood-2.html#drawing-samples-from-posterior">
-   Drawing samples from posterior
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-27-Marginal-Likelihood-2.html#comparing-with-exact-inference">
-   Comparing with exact inference
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html">
-   Pseudo-random data (degree 3 polynomial)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html#marginal-likelihood-pdf">
-   Marginal likelihood pdf
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html#models">
-   Models
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html#model-selection">
-   Model selection
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html#model-selection-with-parameter-optimization">
-   Model selection with parameter optimization
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html#using-empirical-bayes-bishop">
-   Using empirical bayes (Bishop)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html#drawbacks">
-   Drawbacks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html">
-   Marginal likelihood for Bayesian linear regression
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#begin-aligned">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#id1">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#id2">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#products-of-gaussian-pdfs">
-   Products of Gaussian PDFs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#id3">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#id4">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#id5">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#id6">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#multiplication-of-two-gaussians">
-   Multiplication of two Gaussians
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#what-is-the-relationship-between-marginal-likelihood-closed-form-and-any-calculations-done-in-multiplications-of-two-gaussians">
-   What is the relationship between marginal_Likelihood_closed_form and any calculations done in multiplications of two gaussians?
+   Bayesian linear regression
   </a>
  </li>
 </ul>
@@ -389,6 +308,21 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#laplacian-prior-lasso">
+   Laplacian Prior (LASSO)
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
         </div>
     </div>
 </div>
@@ -397,17 +331,24 @@
         
               <div>
                 
-  <div class="cell docutils container">
+  <div class="section" id="bayesian-linear-regression">
+<h1>Bayesian linear regression<a class="headerlink" href="#bayesian-linear-regression" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rc</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 <span class="kn">import</span> <span class="nn">pymc3</span> <span class="k">as</span> <span class="nn">pm</span>
 <span class="kn">import</span> <span class="nn">arviz</span> <span class="k">as</span> <span class="nn">az</span>
+
+<span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">rc</span><span class="p">(</span><span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="n">usetex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>Let us generate data from known parameters.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">theta_gt</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
@@ -417,22 +358,24 @@
 </div>
 </div>
 </div>
+<p>We can see the optimal fit on this data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
 <span class="n">x_line</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
 <span class="n">y_line_gt</span> <span class="o">=</span> <span class="n">theta_gt</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">theta_gt</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">x_line</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_line</span><span class="p">,</span> <span class="n">y_line_gt</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_line</span><span class="p">,</span> <span class="n">y_line_gt</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$\hat</span><span class="si">{y}</span><span class="s1"> = X</span><span class="se">\\</span><span class="s1">theta_</span><span class="si">{opt}</span><span class="s1">$&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">));</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fa4514da9d0&gt;]
-</pre></div>
-</div>
-<img alt="../_images/2021-March-11-blr-pymc_2_1.png" src="../_images/2021-March-11-blr-pymc_2_1.png" />
+<img alt="../_images/2021-March-11-blr-pymc_5_0.png" src="../_images/2021-March-11-blr-pymc_5_0.png" />
 </div>
 </div>
+<p>We can define Bayesian linear regression model in PyMC as the following,</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">basic_model</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">Model</span><span class="p">()</span>
@@ -452,9 +395,11 @@
 </div>
 </div>
 </div>
+<p>Let us get the MAP for model paramaters.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">map_estimate</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">find_MAP</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">basic_model</span><span class="p">)</span>
+<span class="n">map_estimate</span>
 </pre></div>
 </div>
 </div>
@@ -474,27 +419,19 @@
         }
     </style>
   <progress value='27' class='' max='27' style='width:300px; height:20px; vertical-align: middle;'></progress>
-  100.00% [27/27 00:00<00:00 logp = -141.96, ||grad|| = 20.895]
+  100.00% [27/27 00:00<00:00 logp = -155.06, ||grad|| = 30.283]
 </div>
 </div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">map_estimate</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;theta&#39;: array([2.1821466 , 5.02074971]),
- &#39;sigma_log__&#39;: array(-0.09116321),
- &#39;sigma&#39;: array(0.91286871)}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;theta&#39;: array([2.06886375, 4.76338553]),
+ &#39;sigma_log__&#39;: array(0.0340025),
+ &#39;sigma&#39;: array(1.03458719)}
 </pre></div>
 </div>
 </div>
 </div>
+<p>Let us draw a large number of samples from the posterior.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">basic_model</span><span class="p">:</span>
@@ -525,35 +462,29 @@ NUTS: [sigma, theta]
         }
     </style>
   <progress value='12000' class='' max='12000' style='width:300px; height:20px; vertical-align: middle;'></progress>
-  100.00% [12000/12000 00:03<00:00 Sampling 4 chains, 0 divergences]
+  100.00% [12000/12000 00:05<00:00 Sampling 4 chains, 0 divergences]
 </div>
-</div><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sampling 4 chains for 1_000 tune and 2_000 draw iterations (4_000 + 8_000 draws total) took 14 seconds.
-The acceptance probability does not match the target. It is 0.8876949123102069, but should be close to 0.8. Try to increase the number of tuning steps.
+</div><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sampling 4 chains for 1_000 tune and 2_000 draw iterations (4_000 + 8_000 draws total) took 5 seconds.
 </pre></div>
 </div>
 </div>
 </div>
+<p>We can visualize the posterior distributions over individual paramaters as the following,</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">az</span><span class="o">.</span><span class="n">plot_trace</span><span class="p">(</span><span class="n">trace</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">az</span><span class="o">.</span><span class="n">plot_trace</span><span class="p">(</span><span class="n">trace</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/anaconda3/lib/python3.8/site-packages/arviz/data/io_pymc3.py:96: FutureWarning: Using `from_pymc3` without the model will be deprecated in a future release. Not using the model will return less accurate and less useful results. Make sure you use the model argument or call from_pymc3 within a model context.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/patel_zeel/anaconda3/lib/python3.8/site-packages/arviz/data/io_pymc3.py:96: FutureWarning: Using `from_pymc3` without the model will be deprecated in a future release. Not using the model will return less accurate and less useful results. Make sure you use the model argument or call from_pymc3 within a model context.
   warnings.warn(
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[&lt;matplotlib.axes._subplots.AxesSubplot object at 0x7fa43840b9a0&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7fa4381c7100&gt;],
-       [&lt;matplotlib.axes._subplots.AxesSubplot object at 0x7fa4382b5850&gt;,
-        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7fa437f57280&gt;]],
-      dtype=object)
-</pre></div>
-</div>
-<img alt="../_images/2021-March-11-blr-pymc_7_2.png" src="../_images/2021-March-11-blr-pymc_7_2.png" />
+<img alt="../_images/2021-March-11-blr-pymc_13_1.png" src="../_images/2021-March-11-blr-pymc_13_1.png" />
 </div>
 </div>
+<p>Below is the summary statistics of the posterior.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">basic_model</span><span class="p">:</span>
@@ -594,50 +525,54 @@ The acceptance probability does not match the target. It is 0.8876949123102069, 
   <tbody>
     <tr>
       <th>theta[0]</th>
-      <td>2.19</td>
-      <td>0.20</td>
-      <td>1.83</td>
-      <td>2.55</td>
+      <td>2.06</td>
+      <td>0.22</td>
+      <td>1.65</td>
+      <td>2.47</td>
       <td>0.00</td>
       <td>0.0</td>
-      <td>3536.33</td>
-      <td>3545.41</td>
+      <td>3486.19</td>
+      <td>3563.27</td>
       <td>1.0</td>
     </tr>
     <tr>
       <th>theta[1]</th>
-      <td>5.02</td>
-      <td>0.35</td>
-      <td>4.37</td>
-      <td>5.67</td>
+      <td>4.77</td>
+      <td>0.37</td>
+      <td>4.09</td>
+      <td>5.48</td>
       <td>0.01</td>
       <td>0.0</td>
-      <td>3456.16</td>
-      <td>3666.80</td>
+      <td>3587.88</td>
+      <td>3968.01</td>
       <td>1.0</td>
     </tr>
     <tr>
       <th>sigma</th>
-      <td>0.93</td>
-      <td>0.07</td>
-      <td>0.80</td>
       <td>1.06</td>
+      <td>0.08</td>
+      <td>0.92</td>
+      <td>1.21</td>
       <td>0.00</td>
       <td>0.0</td>
-      <td>3953.39</td>
-      <td>3593.95</td>
+      <td>4405.63</td>
+      <td>3833.57</td>
       <td>1.0</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
+<p>Let us predict at the new input locations. This would mean to sample from the likelihood using posterior parameters.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x_new</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="c1"># 50 input values between -3 and 3</span>
 <span class="k">with</span> <span class="n">basic_model</span><span class="p">:</span>
     <span class="n">pm</span><span class="o">.</span><span class="n">set_data</span><span class="p">({</span><span class="s1">&#39;features&#39;</span><span class="p">:</span> <span class="n">x_new</span><span class="p">})</span>
     <span class="n">posterior</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">sample_posterior_predictive</span><span class="p">(</span><span class="n">trace</span><span class="p">)</span>
+    
+<span class="n">preds</span> <span class="o">=</span> <span class="n">posterior</span><span class="p">[</span><span class="s1">&#39;Y_obs&#39;</span><span class="p">]</span>
+<span class="n">preds</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 </div>
 </div>
@@ -657,25 +592,9 @@ The acceptance probability does not match the target. It is 0.8876949123102069, 
         }
     </style>
   <progress value='8000' class='' max='8000' style='width:300px; height:20px; vertical-align: middle;'></progress>
-  100.00% [8000/8000 00:05<00:00]
+  100.00% [8000/8000 00:07<00:00]
 </div>
-</div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">preds</span> <span class="o">=</span> <span class="n">posterior</span><span class="p">[</span><span class="s1">&#39;Y_obs&#39;</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">preds</span><span class="o">.</span><span class="n">shape</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(8000, 100)
+</div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(8000, 100)
 </pre></div>
 </div>
 </div>
@@ -683,51 +602,37 @@ The acceptance probability does not match the target. It is 0.8876949123102069, 
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_mean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">preds</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_std</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">preds</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Data&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+<span class="n">y_std</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">preds</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Data&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_new</span><span class="p">,</span> <span class="n">y_mean</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Prediction Mean&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x_new</span><span class="p">,</span> <span class="n">y_mean</span> <span class="o">-</span> <span class="mi">3</span><span class="o">*</span><span class="n">y_std</span><span class="p">,</span> <span class="n">y_mean</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">y_std</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.12</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Uncertainty Interval ($\mu\pm3\sigma$)&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;violet&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x_new</span><span class="p">,</span> <span class="n">y_mean</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">y_std</span><span class="p">,</span> <span class="n">y_mean</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">y_std</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.12</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Uncertainty Interval ($\mu\pm2\sigma$)&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;violet&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$x$&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$y$&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">14</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower right&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fa421458ca0&gt;
-</pre></div>
-</div>
-<img alt="../_images/2021-March-11-blr-pymc_14_1.png" src="../_images/2021-March-11-blr-pymc_14_1.png" />
+<img alt="../_images/2021-March-11-blr-pymc_18_0.png" src="../_images/2021-March-11-blr-pymc_18_0.png" />
 </div>
 </div>
+<p>We can see that uncertainty is covering 95% of the samples here and hence model is giving sensible estimate of uncertainty.</p>
+<p>We can see that uncertainty is lower in the region where the dataset is lying.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_new</span><span class="p">,</span> <span class="n">y_std</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_new</span><span class="p">,</span> <span class="n">y_std</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fa421686730&gt;]
-</pre></div>
-</div>
-<img alt="../_images/2021-March-11-blr-pymc_15_1.png" src="../_images/2021-March-11-blr-pymc_15_1.png" />
+<img alt="../_images/2021-March-11-blr-pymc_20_0.png" src="../_images/2021-March-11-blr-pymc_20_0.png" />
 </div>
 </div>
 <div class="section" id="laplacian-prior-lasso">
-<h1>Laplacian Prior (LASSO)<a class="headerlink" href="#laplacian-prior-lasso" title="Permalink to this headline">¶</a></h1>
+<h2>Laplacian Prior (LASSO)<a class="headerlink" href="#laplacian-prior-lasso" title="Permalink to this headline">¶</a></h2>
+<p>Let us use a Laplacial prior instead of Gaussian. Note that this settings matches with Lasso regression.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Lasso</span><span class="p">:</span>
@@ -759,16 +664,22 @@ The acceptance probability does not match the target. It is 0.8876949123102069, 
         <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">:</span>
             <span class="n">pm</span><span class="o">.</span><span class="n">set_data</span><span class="p">({</span><span class="s1">&#39;features&#39;</span><span class="p">:</span> <span class="n">X</span><span class="p">})</span>
             <span class="n">posterior</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">sample_posterior_predictive</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">trace</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">posterior</span> <span class="o">=</span> <span class="n">posterior</span>      
+        <span class="bp">self</span><span class="o">.</span><span class="n">posterior</span> <span class="o">=</span> <span class="n">posterior</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>Let us draw posterior with different initial prior paramaters.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">out</span> <span class="o">=</span> <span class="p">{}</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;pymc3&#39;</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">ERROR</span><span class="p">)</span>
+
+<span class="n">out</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="n">regs</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="p">[</span><span class="mf">0.02</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.07</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
     <span class="n">reg</span> <span class="o">=</span> <span class="n">Lasso</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
     <span class="n">reg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
     <span class="n">regs</span><span class="p">[</span><span class="n">b</span><span class="p">]</span> <span class="o">=</span> <span class="n">reg</span>
@@ -777,10 +688,7 @@ The acceptance probability does not match the target. It is 0.8876949123102069, 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Auto-assigning NUTS sampler...
-Initializing NUTS using jitter+adapt_diag...
-Multiprocess sampling (4 chains in 4 jobs)
-NUTS: [sigma, theta]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>b 0.02
 </pre></div>
 </div>
 <div class="output text_html">
@@ -800,11 +708,7 @@ NUTS: [sigma, theta]
   <progress value='8000' class='' max='8000' style='width:300px; height:20px; vertical-align: middle;'></progress>
   100.00% [8000/8000 00:02<00:00 Sampling 4 chains, 0 divergences]
 </div>
-</div><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sampling 4 chains for 500 tune and 1_500 draw iterations (2_000 + 6_000 draws total) took 11 seconds.
-Auto-assigning NUTS sampler...
-Initializing NUTS using jitter+adapt_diag...
-Multiprocess sampling (4 chains in 4 jobs)
-NUTS: [sigma, theta]
+</div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>b 0.05
 </pre></div>
 </div>
 <div class="output text_html">
@@ -824,13 +728,7 @@ NUTS: [sigma, theta]
   <progress value='8000' class='' max='8000' style='width:300px; height:20px; vertical-align: middle;'></progress>
   100.00% [8000/8000 00:03<00:00 Sampling 4 chains, 0 divergences]
 </div>
-</div><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sampling 4 chains for 500 tune and 1_500 draw iterations (2_000 + 6_000 draws total) took 11 seconds.
-The acceptance probability does not match the target. It is 0.8950862393930992, but should be close to 0.8. Try to increase the number of tuning steps.
-The acceptance probability does not match the target. It is 0.9001430434934337, but should be close to 0.8. Try to increase the number of tuning steps.
-Auto-assigning NUTS sampler...
-Initializing NUTS using jitter+adapt_diag...
-Multiprocess sampling (4 chains in 4 jobs)
-NUTS: [sigma, theta]
+</div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>b 0.07
 </pre></div>
 </div>
 <div class="output text_html">
@@ -850,13 +748,7 @@ NUTS: [sigma, theta]
   <progress value='8000' class='' max='8000' style='width:300px; height:20px; vertical-align: middle;'></progress>
   100.00% [8000/8000 00:03<00:00 Sampling 4 chains, 0 divergences]
 </div>
-</div><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sampling 4 chains for 500 tune and 1_500 draw iterations (2_000 + 6_000 draws total) took 12 seconds.
-The acceptance probability does not match the target. It is 0.8872049026216231, but should be close to 0.8. Try to increase the number of tuning steps.
-The acceptance probability does not match the target. It is 0.8926119008971145, but should be close to 0.8. Try to increase the number of tuning steps.
-Auto-assigning NUTS sampler...
-Initializing NUTS using jitter+adapt_diag...
-Multiprocess sampling (4 chains in 4 jobs)
-NUTS: [sigma, theta]
+</div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>b 0.1
 </pre></div>
 </div>
 <div class="output text_html">
@@ -876,12 +768,7 @@ NUTS: [sigma, theta]
   <progress value='8000' class='' max='8000' style='width:300px; height:20px; vertical-align: middle;'></progress>
   100.00% [8000/8000 00:03<00:00 Sampling 4 chains, 0 divergences]
 </div>
-</div><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sampling 4 chains for 500 tune and 1_500 draw iterations (2_000 + 6_000 draws total) took 11 seconds.
-The acceptance probability does not match the target. It is 0.8957605161750353, but should be close to 0.8. Try to increase the number of tuning steps.
-Auto-assigning NUTS sampler...
-Initializing NUTS using jitter+adapt_diag...
-Multiprocess sampling (4 chains in 4 jobs)
-NUTS: [sigma, theta]
+</div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>b 0.2
 </pre></div>
 </div>
 <div class="output text_html">
@@ -901,13 +788,7 @@ NUTS: [sigma, theta]
   <progress value='8000' class='' max='8000' style='width:300px; height:20px; vertical-align: middle;'></progress>
   100.00% [8000/8000 00:03<00:00 Sampling 4 chains, 0 divergences]
 </div>
-</div><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sampling 4 chains for 500 tune and 1_500 draw iterations (2_000 + 6_000 draws total) took 11 seconds.
-The acceptance probability does not match the target. It is 0.9115157275409002, but should be close to 0.8. Try to increase the number of tuning steps.
-The acceptance probability does not match the target. It is 0.8951962162827283, but should be close to 0.8. Try to increase the number of tuning steps.
-Auto-assigning NUTS sampler...
-Initializing NUTS using jitter+adapt_diag...
-Multiprocess sampling (4 chains in 4 jobs)
-NUTS: [sigma, theta]
+</div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>b 1
 </pre></div>
 </div>
 <div class="output text_html">
@@ -927,31 +808,25 @@ NUTS: [sigma, theta]
   <progress value='8000' class='' max='8000' style='width:300px; height:20px; vertical-align: middle;'></progress>
   100.00% [8000/8000 00:03<00:00 Sampling 4 chains, 0 divergences]
 </div>
-</div><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sampling 4 chains for 500 tune and 1_500 draw iterations (2_000 + 6_000 draws total) took 11 seconds.
-The acceptance probability does not match the target. It is 0.8839670790851839, but should be close to 0.8. Try to increase the number of tuning steps.
-The acceptance probability does not match the target. It is 0.8965663402771328, but should be close to 0.8. Try to increase the number of tuning steps.
-The acceptance probability does not match the target. It is 0.891884956026622, but should be close to 0.8. Try to increase the number of tuning steps.
-</pre></div>
+</div></div>
 </div>
-</div>
-</div>
+<p>Let us visualize the posterior distribution over theta.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">([</span><span class="mf">0.02</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.07</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]):</span>
     <span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span><span class="n">out</span><span class="p">[</span><span class="n">b</span><span class="p">][:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="n">b</span><span class="p">)</span>
     <span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span><span class="n">out</span><span class="p">[</span><span class="n">b</span><span class="p">][:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="n">b</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fa437fa7eb0&gt;
-</pre></div>
-</div>
-<img alt="../_images/2021-March-11-blr-pymc_19_1.png" src="../_images/2021-March-11-blr-pymc_19_1.png" />
+<img alt="../_images/2021-March-11-blr-pymc_27_0.png" src="../_images/2021-March-11-blr-pymc_27_0.png" />
 </div>
 </div>
+<p>Higher values of <span class="math notranslate nohighlight">\(b\)</span> seem to give close to the original predictions.</p>
+<p>We define a custom function to visualize the posterior fit on the new input locations by varying initial paramaters of prior.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plot_custom</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
@@ -962,7 +837,7 @@ The acceptance probability does not match the target. It is 0.891884956026622, b
     <span class="n">y_std</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">preds</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Data&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_new</span><span class="p">,</span> <span class="n">y_mean</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Prediction Mean&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x_new</span><span class="p">,</span> <span class="n">y_mean</span> <span class="o">-</span> <span class="mi">3</span><span class="o">*</span><span class="n">y_std</span><span class="p">,</span> <span class="n">y_mean</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">y_std</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.12</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Uncertainty Interval ($\mu\pm3\sigma$)&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;violet&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x_new</span><span class="p">,</span> <span class="n">y_mean</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">y_std</span><span class="p">,</span> <span class="n">y_mean</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">y_std</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.12</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Uncertainty Interval ($\mu\pm2\sigma$)&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;violet&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$x$&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$y$&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">14</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
@@ -993,9 +868,9 @@ The acceptance probability does not match the target. It is 0.891884956026622, b
         }
     </style>
   <progress value='6000' class='' max='6000' style='width:300px; height:20px; vertical-align: middle;'></progress>
-  100.00% [6000/6000 00:04<00:00]
+  100.00% [6000/6000 00:05<00:00]
 </div>
-</div><img alt="../_images/2021-March-11-blr-pymc_21_1.png" src="../_images/2021-March-11-blr-pymc_21_1.png" />
+</div><img alt="../_images/2021-March-11-blr-pymc_31_1.png" src="../_images/2021-March-11-blr-pymc_31_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1020,23 +895,12 @@ The acceptance probability does not match the target. It is 0.891884956026622, b
         }
     </style>
   <progress value='6000' class='' max='6000' style='width:300px; height:20px; vertical-align: middle;'></progress>
-  100.00% [6000/6000 00:03<00:00]
+  100.00% [6000/6000 00:05<00:00]
 </div>
-</div><img alt="../_images/2021-March-11-blr-pymc_22_1.png" src="../_images/2021-March-11-blr-pymc_22_1.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_custom</span><span class="p">(</span><span class="mf">0.02</span><span class="p">)</span>
-</pre></div>
+</div><img alt="../_images/2021-March-11-blr-pymc_32_1.png" src="../_images/2021-March-11-blr-pymc_32_1.png" />
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fa4246c48e0&gt;]
-</pre></div>
-</div>
-<img alt="../_images/2021-March-11-blr-pymc_23_1.png" src="../_images/2021-March-11-blr-pymc_23_1.png" />
-</div>
+<p>We can see that for <span class="math notranslate nohighlight">\(b=0.05\)</span> model is giving sensible predictions.</p>
 </div>
 </div>
 
@@ -1065,7 +929,7 @@ The acceptance probability does not match the target. It is 0.891884956026622, b
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="2021-March-10-rejection-sampling.html" title="previous page">&lt;no title&gt;</a>
+    <a class='left-prev' id="prev-link" href="2021-March-10-rejection-sampling.html" title="previous page">Rejection sampling</a>
     <a class='right-next' id="next-link" href="2021-March-12-logistic-bayesian.html" title="next page">&lt;no title&gt;</a>
 
         </div>

@@ -1,4 +1,6 @@
-### Marginal likelihood for Bayesian linear regression
+# Marginal likelihood for Bayesian linear regression
+
+## Work under progress
 
 Bayesian linear regression is defined as below in the Bayesian settings,
 
@@ -154,5 +156,4 @@ for train_ind, test_ind in splitter(x):
     model.fit(train_x, train_y)
     
 
-# What is the relationship between marginal_Likelihood_closed_form and any calculations done in multiplications of two gaussians?
-
+## What is the relationship between marginal_Likelihood_closed_form and any calculations done in multiplications of two gaussians?

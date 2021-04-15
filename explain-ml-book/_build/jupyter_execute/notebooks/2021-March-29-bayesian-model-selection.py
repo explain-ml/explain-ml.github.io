@@ -1,3 +1,5 @@
+# Bayesian model selection
+
 http://mlg.eng.cam.ac.uk/teaching/4f13/1920/bayesian%20finite%20regression.pdf (Last slide)
 http://mlg.eng.cam.ac.uk/teaching/4f13/1920/marginal%20likelihood.pdf
 
@@ -15,7 +17,7 @@ from time import time
 
 np.random.seed(0)
 
-N = 1000
+N = 100
 sigma_n = 5 # noise in data
 sigma_w = 100 # parameter variance
 
@@ -51,6 +53,8 @@ plt.xlabel('Degree of polynomial');
 plt.ylabel('Log Marginal Likelihood \n(Higher is better)');
 plt.xticks(range(len(scores)));
 
+We can infer that Degree 3 polynomial is best suited to model current data.
+
 ### Model selection with parameter optimization
 
 def NegLogMarginalLikelihoodPdf(params, x, y): # Negative log marginal likelihood (written in GP fashion)
@@ -58,11 +62,7 @@ def NegLogMarginalLikelihoodPdf(params, x, y): # Negative log marginal likelihoo
     K = (x@x.T)*sigma_w**2 + np.eye(N)*sigma_n**2
     K_inv = np.linalg.pinv(K)
     nll = 0.5*y.T@K_inv@y + 0.5*np.log(np.linalg.det(K)) + (len(y)/2)*np.log(2*np.pi)
-    print(K)
-    print(0.5*y.T@K_inv@y, 0.5*np.log(np.linalg.det(K)), (len(y)/2)*np.log(2*np.pi))
     return nll[0,0]
-
-NegLogMarginalLikelihoodPdf((0.01, 0.01), x_M1, y)
 
 Negscores = []
 sig_n_list = []
@@ -82,7 +82,16 @@ plt.xlabel('Degree of polynomial');
 plt.ylabel('Neg Log Marginal Likelihood \n(Lower is better)');
 plt.xticks(range(len(Negscores)));
 
+We can see the best set of hyper-parameters selected by gradient descent on negative log likelihood for indivisual models (degree of polynomial).
+
+## Drawbacks
+
+1. This method does not scale well with big data (while doing parameter optimization), because of matrix inversion.
+    * Potential solution: optimize parameters with chepaer methods, then use Marginal likelihood for model selection
+
 ## Using empirical bayes (Bishop)
+
+http://krasserm.github.io/2019/02/23/bayesian-linear-regression/
 
 alpha = 1/sigma_w**2
 beta = 1/sigma_n**2
@@ -124,7 +133,7 @@ plt.xlabel('Degree of polynomial');
 plt.ylabel('Log Marginal Likelihood \n(Higher is better)');
 plt.xticks(range(len(Bscores)));
 
-list(zip(scores, Bscores))
+Results are exactly the same as the previous method.
 
 ### Paramater tuning
 
@@ -182,16 +191,4 @@ for i, x_M in enumerate([x_M0, x_M1, x_M2, x_M3, x_M4, x_M5, x_M6, x_M7]):
     print('Degree',i,'sigma_w',sig_w_list[i],'sigma_n', sig_n_list[i], '(Earlier method)')
     print('time:',time()-init,'seconds')
 
-### Comparing two views of likelihoods
-
-### \begin{align}
-p(\theta, \sigma_w) &= \mathcal{N}(0, \sigma_w^2)\\
-p(y|\theta, \sigma_n) &= \mathcal{N}(0, \sigma_n^2)
-
-S_n = \left(\right)^{-1}
-\end{align}
-
-## Drawbacks
-
-1. This method does not scale well with big data (while doing parameter optimization), because of matrix inversion.
-    * Potential solution: optimize parameters with chepaer methods, then use Marginal likelihood for model selection
+This method is extremely fast than the previous method. We get close answers while using any of the two methods.

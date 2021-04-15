@@ -1,17 +1,25 @@
+# Marginal likelihood
+
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib import rc
 import scipy.stats
-import matplotlib.pyplot as plt
 from scipy.integrate import simps
 import pyDOE2
+
+rc('font', size=16)
+rc('text', usetex=True)
 
 From MML book
 
 Definition 6.3 (Expected Value). The expected value of a function $g: \mathbb{R} \rightarrow$ $\mathbb{R}$ of a univariate continuous random variable $X \sim p(x)$ is given by
+
 $$
 \mathbb{E}_{X}[g(x)]=\int_{\mathcal{X}} g(x) p(x) \mathrm{d} x
 $$
+
 Correspondingly, the expected value of a function $g$ of a discrete random variable $X \sim p(x)$ is given by
+
 $$
 \mathbb{E}_{X}[g(x)]=\sum_{x \in \mathcal{X}} g(x) p(x)
 $$
@@ -62,6 +70,7 @@ To do:
 Linear regression in say two variables. Prior is $p(\theta)\sim \mathcal{N}([0, 0]^T, I)$. We can easily draw samples from this prior then the obtained sample can be used to calculate the likelihood. The marginal likelihood is the empirical mean of likelihoods derived in this way.
 
 ### Generating pseudo-random data
+
 np.random.seed(0)
 N = 100 # Number of samples
 sigma_n = 20 # Noise std in data
@@ -82,35 +91,37 @@ def LinRegLikelihood(theta0, theta1): # Direct pdf
 # Calculations
 vec_func = np.vectorize(LinRegLikelihood)
 np.random.seed(0)
-Prior_thetas = np.random.multivariate_normal([0,0], np.eye(N_theta)*sigma**2, size=100000)
+Prior_thetas = np.random.multivariate_normal([0,0], np.eye(N_theta)*sigma**2, size=10000)
 Likelihoods = vec_func(Prior_thetas[:,0], Prior_thetas[:,1])
 MarginalLikelihood = np.mean(Likelihoods, axis=0).reshape(-1,1)
 print('Prior_thetas', Prior_thetas.shape)
 print('Likelihoods', Likelihoods.shape)
 print('MarginalLikelihood', MarginalLikelihood.shape, 'value =',MarginalLikelihood)
 
-np.log(MarginalLikelihood)
+Exact_LL = np.log(scipy.stats.multivariate_normal.pdf(y.squeeze(), np.zeros(N), (x_with_bias@x_with_bias.T)*sigma**2 + np.eye(N)*sigma_n**2))
 
-np.log(scipy.stats.multivariate_normal.pdf(y.squeeze(), np.zeros(N), (x_with_bias@x_with_bias.T)*sigma**2 + np.eye(N)*sigma_n**2))
+print('Approx LogLikelihood =', np.log(MarginalLikelihood))
+print('Exact LogLikelihood =', Exact_LL)
+
+We have approximated Log likelihood closely.
 
 ### Trying empirical bayesian inference
 
 We have marginal likelihood now. Let us try to approximate posterior pdf based on prior pdf.
 
-LHS_thetas = pyDOE2.doe_lhs.lhs(n=2,samples=100000)*40 - 20
-Likelihoods = np.array([LinRegLikelihood(theta) for theta in LHS_thetas]).reshape(-1,1)
+LHS_thetas = pyDOE2.doe_lhs.lhs(n=2,samples=10000)*40 - 20
+Likelihoods = np.array([LinRegLikelihood(theta[0], theta[1]) for theta in LHS_thetas]).reshape(-1,1)
 Prior_pdf = scipy.stats.multivariate_normal.pdf(LHS_thetas, [0,0], np.eye(2)*sigma**2).reshape(-1,1)
 mp = plt.scatter(LHS_thetas[:,0], LHS_thetas[:,1], c=Prior_pdf)
 plt.colorbar(mp);
-plt.xlabel('theta_0');plt.ylabel('theta_1');
+plt.xlabel('$\\theta_0$');plt.ylabel('$\\theta_1$');
 plt.title('Prior ditribution of theta');
 
 Posterior_pdf = (Likelihoods*Prior_pdf)/MarginalLikelihood
 mp = plt.scatter(LHS_thetas[:,0], LHS_thetas[:,1], c=Posterior_pdf, s=10)
 plt.colorbar(mp);
-plt.xlabel('theta_0');plt.ylabel('theta_1');
+plt.xlabel('$\\theta_0$');plt.ylabel('$\\theta_1$');
 plt.title('Posterior ditribution of theta');
-plt.ylim(5,15);plt.xlim(-10,10);
 
 ### Drawing samples from posterior
 
@@ -129,7 +140,4 @@ Sn = np.linalg.inv(np.linalg.inv(S0) + (x_with_bias.T@x_with_bias)/sigma_n**2)
 Mn = Sn@(np.linalg.inv(S0)@M0 + (x_with_bias.T@y)/sigma_n**2)
 Mn, Sn
 
-Sn
-
-1/((2*np.pi)**Sn.shape[0]*np.linalg.det(Sn))
-
+We can see that approximated inference distribution closely matches with exact inference distribution.

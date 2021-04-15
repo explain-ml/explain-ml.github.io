@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trying empirical bayesian inference &#8212; Explain-ML</title>
+    <title>Marginal likelihood &#8212; Explain-ML</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -57,8 +57,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="2021-March-27-Marginal-Likelihood.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="2021-March-26-GMM-example.html" />
+    <link rel="next" title="Importance sampling" href="2021-March-10-importance-sampling.html" />
+    <link rel="prev" title="Bayesian model selection" href="2021-March-29-bayesian-model-selection.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -141,10 +141,22 @@
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  Bayesian ML
+  Theory of Bayesian ML
  </span>
 </p>
 <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html">
+   Marginal likelihood for Bayesian linear regression
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Bayesian ML
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="2021-March-23-bayesian-ml.html">
    Bayesian ML: Fundamentals
@@ -155,136 +167,43 @@
    Bayesian linear regression
   </a>
  </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Others
- </span>
-</p>
-<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-11-blr-pymc.html">
-   Laplacian Prior (LASSO)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-17-LLS-GP-PyMC3.html">
-   Stationary GP model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-17-LLS-GP-PyMC3.html#lls-gp">
-   LLS GP
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-23-GMM.html">
-   Step 1
+  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html">
+   Bayesian model selection
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Trying empirical bayesian inference
+   Marginal likelihood
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Sampling from distributions
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-10-importance-sampling.html">
+   Importance sampling
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="#drawing-samples-from-posterior">
-   Drawing samples from posterior
+  <a class="reference internal" href="2021-March-10-rejection-sampling.html">
+   Rejection sampling
   </a>
  </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Bayesian ML with PyMC
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="#comparing-with-exact-inference">
-   Comparing with exact inference
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html">
-   Pseudo-random data (degree 3 polynomial)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html#marginal-likelihood-pdf">
-   Marginal likelihood pdf
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html#models">
-   Models
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html#model-selection">
-   Model selection
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html#model-selection-with-parameter-optimization">
-   Model selection with parameter optimization
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html#using-empirical-bayes-bishop">
-   Using empirical bayes (Bishop)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html#drawbacks">
-   Drawbacks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html">
-   Marginal likelihood for Bayesian linear regression
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#begin-aligned">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#id1">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#id2">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#products-of-gaussian-pdfs">
-   Products of Gaussian PDFs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#id3">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#id4">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#id5">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#id6">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#multiplication-of-two-gaussians">
-   Multiplication of two Gaussians
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#what-is-the-relationship-between-marginal-likelihood-closed-form-and-any-calculations-done-in-multiplications-of-two-gaussians">
-   What is the relationship between marginal_Likelihood_closed_form and any calculations done in multiplications of two gaussians?
+  <a class="reference internal" href="2021-March-11-blr-pymc.html">
+   Bayesian linear regression
   </a>
  </li>
 </ul>
@@ -395,17 +314,22 @@
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#generating-pseudo-random-data">
+   Generating pseudo-random data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#trying-empirical-bayesian-inference">
    Trying empirical bayesian inference
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#drawing-samples-from-posterior">
    Drawing samples from posterior
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#comparing-with-exact-inference">
    Comparing with exact inference
   </a>
@@ -422,27 +346,34 @@
         
               <div>
                 
-  <div class="cell docutils container">
+  <div class="section" id="marginal-likelihood">
+<h1>Marginal likelihood<a class="headerlink" href="#marginal-likelihood" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rc</span>
 <span class="kn">import</span> <span class="nn">scipy.stats</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">simps</span>
 <span class="kn">import</span> <span class="nn">pyDOE2</span>
+
+<span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">rc</span><span class="p">(</span><span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="n">usetex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <p>From MML book</p>
-<p>Definition 6.3 (Expected Value). The expected value of a function <span class="math notranslate nohighlight">\(g: \mathbb{R} \rightarrow\)</span> <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> of a univariate continuous random variable <span class="math notranslate nohighlight">\(X \sim p(x)\)</span> is given by
-$<span class="math notranslate nohighlight">\(
+<p>Definition 6.3 (Expected Value). The expected value of a function <span class="math notranslate nohighlight">\(g: \mathbb{R} \rightarrow\)</span> <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> of a univariate continuous random variable <span class="math notranslate nohighlight">\(X \sim p(x)\)</span> is given by</p>
+<div class="math notranslate nohighlight">
+\[
 \mathbb{E}_{X}[g(x)]=\int_{\mathcal{X}} g(x) p(x) \mathrm{d} x
-\)</span><span class="math notranslate nohighlight">\(
-Correspondingly, the expected value of a function \)</span>g<span class="math notranslate nohighlight">\( of a discrete random variable \)</span>X \sim p(x)<span class="math notranslate nohighlight">\( is given by
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>Correspondingly, the expected value of a function <span class="math notranslate nohighlight">\(g\)</span> of a discrete random variable <span class="math notranslate nohighlight">\(X \sim p(x)\)</span> is given by</p>
+<div class="math notranslate nohighlight">
+\[
 \mathbb{E}_{X}[g(x)]=\sum_{x \in \mathcal{X}} g(x) p(x)
-\)</span>$</p>
+\]</div>
 <p>From Nando De Freitas <a class="reference external" href="https://www.youtube.com/watch?v=mz3j59aJBZQ&amp;list=PLE6Wd9FR--EdyJ5lbFl8UuGjecvVw66F6&amp;index=16&amp;t=1957s">https://www.youtube.com/watch?v=mz3j59aJBZQ&amp;list=PLE6Wd9FR–EdyJ5lbFl8UuGjecvVw66F6&amp;index=16&amp;t=1957s</a></p>
 <p>starting 50 mins</p>
 <p><span class="math notranslate nohighlight">\(I = \int_{\mathcal{X}} g(x)p(x)dx = \dfrac{\sum_{i=1}^N g(x_i)}{N}\)</span> where <span class="math notranslate nohighlight">\(x_i \sim p(x)\)</span> is a sample from p(x)</p>
@@ -484,10 +415,11 @@ Correspondingly, the expected value of a function \)</span>g<span class="math no
 <p>Marginal likelihood = <span class="math notranslate nohighlight">\(\int_{\mathcal{\theta}} P(D|\theta) P(\theta)d\theta = I = \dfrac{\sum_{i=1}^N P(D|\theta_i)}{N}\)</span> where <span class="math notranslate nohighlight">\(\theta_i\)</span> is drawn from <span class="math notranslate nohighlight">\(p(\theta)\)</span></p>
 <p>To do:</p>
 <p>Linear regression in say two variables. Prior is <span class="math notranslate nohighlight">\(p(\theta)\sim \mathcal{N}([0, 0]^T, I)\)</span>. We can easily draw samples from this prior then the obtained sample can be used to calculate the likelihood. The marginal likelihood is the empirical mean of likelihoods derived in this way.</p>
+<div class="section" id="generating-pseudo-random-data">
+<h2>Generating pseudo-random data<a class="headerlink" href="#generating-pseudo-random-data" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Generating pseudo-random data</span>
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">N</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1"># Number of samples</span>
 <span class="n">sigma_n</span> <span class="o">=</span> <span class="mi">20</span> <span class="c1"># Noise std in data</span>
 <span class="n">sigma</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1"># Prior std on theta</span>
@@ -505,7 +437,7 @@ Correspondingly, the expected value of a function \)</span>g<span class="math no
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x = (100, 1), y = (100, 1)
 </pre></div>
 </div>
-<img alt="../_images/2021-March-27-Marginal-Likelihood-2_8_1.png" src="../_images/2021-March-27-Marginal-Likelihood-2_8_1.png" />
+<img alt="../_images/2021-March-27-Marginal-Likelihood-2_10_1.png" src="../_images/2021-March-27-Marginal-Likelihood-2_10_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -523,7 +455,7 @@ Correspondingly, the expected value of a function \)</span>g<span class="math no
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculations</span>
 <span class="n">vec_func</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vectorize</span><span class="p">(</span><span class="n">LinRegLikelihood</span><span class="p">)</span>
 <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">Prior_thetas</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">multivariate_normal</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">N_theta</span><span class="p">)</span><span class="o">*</span><span class="n">sigma</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">100000</span><span class="p">)</span>
+<span class="n">Prior_thetas</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">multivariate_normal</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">N_theta</span><span class="p">)</span><span class="o">*</span><span class="n">sigma</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
 <span class="n">Likelihoods</span> <span class="o">=</span> <span class="n">vec_func</span><span class="p">(</span><span class="n">Prior_thetas</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">Prior_thetas</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span>
 <span class="n">MarginalLikelihood</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">Likelihoods</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Prior_thetas&#39;</span><span class="p">,</span> <span class="n">Prior_thetas</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
@@ -532,48 +464,54 @@ Correspondingly, the expected value of a function \)</span>g<span class="math no
 </pre></div>
 </div>
 </div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">MarginalLikelihood</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-449.18278911]])
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Prior_thetas (10000, 2)
+Likelihoods (10000,)
+MarginalLikelihood (1, 1) value = [[1.04859619e-196]]
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">scipy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">multivariate_normal</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(),</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">N</span><span class="p">),</span> <span class="p">(</span><span class="n">x_with_bias</span><span class="nd">@x_with_bias</span><span class="o">.</span><span class="n">T</span><span class="p">)</span><span class="o">*</span><span class="n">sigma</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">N</span><span class="p">)</span><span class="o">*</span><span class="n">sigma_n</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Exact_LL</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">scipy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">multivariate_normal</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(),</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">N</span><span class="p">),</span> <span class="p">(</span><span class="n">x_with_bias</span><span class="nd">@x_with_bias</span><span class="o">.</span><span class="n">T</span><span class="p">)</span><span class="o">*</span><span class="n">sigma</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">N</span><span class="p">)</span><span class="o">*</span><span class="n">sigma_n</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Approx LogLikelihood =&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">MarginalLikelihood</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Exact LogLikelihood =&#39;</span><span class="p">,</span> <span class="n">Exact_LL</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-451.18739650293173
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Approx LogLikelihood = [[-451.25922591]]
+Exact LogLikelihood = -451.18739650293173
 </pre></div>
 </div>
 </div>
+</div>
+<p>We have approximated Log likelihood closely.</p>
 </div>
 <div class="section" id="trying-empirical-bayesian-inference">
-<h1>Trying empirical bayesian inference<a class="headerlink" href="#trying-empirical-bayesian-inference" title="Permalink to this headline">¶</a></h1>
+<h2>Trying empirical bayesian inference<a class="headerlink" href="#trying-empirical-bayesian-inference" title="Permalink to this headline">¶</a></h2>
 <p>We have marginal likelihood now. Let us try to approximate posterior pdf based on prior pdf.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">LHS_thetas</span> <span class="o">=</span> <span class="n">pyDOE2</span><span class="o">.</span><span class="n">doe_lhs</span><span class="o">.</span><span class="n">lhs</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">samples</span><span class="o">=</span><span class="mi">100000</span><span class="p">)</span><span class="o">*</span><span class="mi">40</span> <span class="o">-</span> <span class="mi">20</span>
-<span class="n">Likelihoods</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">LinRegLikelihood</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="k">for</span> <span class="n">theta</span> <span class="ow">in</span> <span class="n">LHS_thetas</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">LHS_thetas</span> <span class="o">=</span> <span class="n">pyDOE2</span><span class="o">.</span><span class="n">doe_lhs</span><span class="o">.</span><span class="n">lhs</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">samples</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span><span class="o">*</span><span class="mi">40</span> <span class="o">-</span> <span class="mi">20</span>
+<span class="n">Likelihoods</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">LinRegLikelihood</span><span class="p">(</span><span class="n">theta</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">theta</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="k">for</span> <span class="n">theta</span> <span class="ow">in</span> <span class="n">LHS_thetas</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">Prior_pdf</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">multivariate_normal</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">LHS_thetas</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">sigma</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">mp</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">LHS_thetas</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">LHS_thetas</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">Prior_pdf</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">mp</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;theta_0&#39;</span><span class="p">);</span><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;theta_1&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$</span><span class="se">\\</span><span class="s1">theta_0$&#39;</span><span class="p">);</span><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$</span><span class="se">\\</span><span class="s1">theta_1$&#39;</span><span class="p">);</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Prior ditribution of theta&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2021-March-27-Marginal-Likelihood-2_14_0.png" src="../_images/2021-March-27-Marginal-Likelihood-2_14_0.png" />
+<img alt="../_images/2021-March-27-Marginal-Likelihood-2_17_0.png" src="../_images/2021-March-27-Marginal-Likelihood-2_17_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -581,19 +519,18 @@ Correspondingly, the expected value of a function \)</span>g<span class="math no
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Posterior_pdf</span> <span class="o">=</span> <span class="p">(</span><span class="n">Likelihoods</span><span class="o">*</span><span class="n">Prior_pdf</span><span class="p">)</span><span class="o">/</span><span class="n">MarginalLikelihood</span>
 <span class="n">mp</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">LHS_thetas</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">LHS_thetas</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">Posterior_pdf</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">mp</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;theta_0&#39;</span><span class="p">);</span><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;theta_1&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$</span><span class="se">\\</span><span class="s1">theta_0$&#39;</span><span class="p">);</span><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$</span><span class="se">\\</span><span class="s1">theta_1$&#39;</span><span class="p">);</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Posterior ditribution of theta&#39;</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">15</span><span class="p">);</span><span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2021-March-27-Marginal-Likelihood-2_15_0.png" src="../_images/2021-March-27-Marginal-Likelihood-2_15_0.png" />
+<img alt="../_images/2021-March-27-Marginal-Likelihood-2_18_0.png" src="../_images/2021-March-27-Marginal-Likelihood-2_18_0.png" />
 </div>
 </div>
 </div>
 <div class="section" id="drawing-samples-from-posterior">
-<h1>Drawing samples from posterior<a class="headerlink" href="#drawing-samples-from-posterior" title="Permalink to this headline">¶</a></h1>
+<h2>Drawing samples from posterior<a class="headerlink" href="#drawing-samples-from-posterior" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Posterior_idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">Posterior_pdf</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="n">Posterior_pdf</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span><span class="o">/</span><span class="n">Posterior_pdf</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
@@ -610,16 +547,16 @@ Correspondingly, the expected value of a function \)</span>g<span class="math no
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([2.09319469, 9.59569423]),
- array([[5.37638641, 0.52119208],
-        [0.52119208, 0.20137299]]))
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([2.16952649, 9.61024467]),
+ array([[5.29858899, 0.60689322],
+        [0.60689322, 0.19894884]]))
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="comparing-with-exact-inference">
-<h1>Comparing with exact inference<a class="headerlink" href="#comparing-with-exact-inference" title="Permalink to this headline">¶</a></h1>
+<h2>Comparing with exact inference<a class="headerlink" href="#comparing-with-exact-inference" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">sigma</span><span class="o">**</span><span class="mi">2</span>
@@ -640,30 +577,7 @@ Correspondingly, the expected value of a function \)</span>g<span class="math no
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Sn</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[5.30408854, 0.52248407],
-       [0.52248407, 0.20907722]])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="o">/</span><span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span><span class="o">**</span><span class="n">Sn</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">Sn</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.030300320902152397
-</pre></div>
-</div>
-</div>
+<p>We can see that approximated inference distribution closely matches with exact inference distribution.</p>
 </div>
 </div>
 
@@ -692,8 +606,8 @@ Correspondingly, the expected value of a function \)</span>g<span class="math no
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="2021-March-26-GMM-example.html" title="previous page">&lt;no title&gt;</a>
-    <a class='right-next' id="next-link" href="2021-March-27-Marginal-Likelihood.html" title="next page">&lt;no title&gt;</a>
+    <a class='left-prev' id="prev-link" href="2021-March-29-bayesian-model-selection.html" title="previous page">Bayesian model selection</a>
+    <a class='right-next' id="next-link" href="2021-March-10-importance-sampling.html" title="next page">Importance sampling</a>
 
         </div>
         

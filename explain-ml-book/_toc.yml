@@ -3,6 +3,7 @@
 #
 - file: intro
   numbered: false
+
 - part: Linear Algebra for ML
   chapters:  
     - file: notebooks/2021-March-15-eigen
@@ -15,27 +16,45 @@
     - file: notebooks/2021-March-17-Stationary-Time_Series
     - file: notebooks/2021-March-23-Stationarity-stochastic-processes
 
+- part: Theory of Bayesian ML
+  chapters:
+    
+    - file: notebooks/2021-March-27-Marginal-Likelihood
+    - file: notebooks/2021-March-31-derivation-of-marginal-likelihood
+
 - part: Bayesian ML
   chapters:
     - file: notebooks/2021-March-23-bayesian-ml
     - file: notebooks/2021-April-14-bayesian-linear-regression
+    - file: notebooks/2021-March-29-bayesian-model-selection
+    - file: notebooks/2021-March-27-Marginal-Likelihood-2
 
-- part: Others
+- part: Sampling from distributions
   chapters:
     - file: notebooks/2021-March-10-importance-sampling
     - file: notebooks/2021-March-10-rejection-sampling
+
+- part: Bayesian ML with PyMC
+  chapters:
     - file: notebooks/2021-March-11-blr-pymc
     - file: notebooks/2021-March-12-logistic-bayesian
     - file: notebooks/2021-March-12-mlp
-    - file: notebooks/2021-March-16-GP-PyMC3
-    - file: notebooks/2021-March-17-LLS-GP-PyMC3
-    - file: notebooks/2021-March-23-GMM
+
+# - part: Gaussian processes
+#   chapters:
+#     - file: notebooks/2021-March-16-GP-PyMC3
+#     - file: notebooks/2021-March-17-LLS-GP-PyMC3
+
+# - part: Gaussian Mixure models
+#   chapters:
+#     - file: notebooks/2021-March-23-GMM
+#     - file: notebooks/2021-March-26-GMM-example
+
+# Add active learning here
+
+- part: Others
+  chapters:
     - file: notebooks/2021-March-24-sigmoid
-    - file: notebooks/2021-March-26-GMM-example
-    - file: notebooks/2021-March-27-Marginal-Likelihood-2
-    - file: notebooks/2021-March-27-Marginal-Likelihood
-    - file: notebooks/2021-March-29-bayesian-model-selection
-    - file: notebooks/2021-March-31-derivation-of-marginal-likelihood
 
 - part: References
   chapters:

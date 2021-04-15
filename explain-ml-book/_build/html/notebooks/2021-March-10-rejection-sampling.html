@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; Explain-ML</title>
+    <title>Rejection sampling &#8212; Explain-ML</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -57,8 +57,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Laplacian Prior (LASSO)" href="2021-March-11-blr-pymc.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="2021-March-10-importance-sampling.html" />
+    <link rel="next" title="Bayesian linear regression" href="2021-March-11-blr-pymc.html" />
+    <link rel="prev" title="Importance sampling" href="2021-March-10-importance-sampling.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -141,6 +141,18 @@
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
+  Theory of Bayesian ML
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html">
+   Marginal likelihood for Bayesian linear regression
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
   Bayesian ML
  </span>
 </p>
@@ -155,136 +167,43 @@
    Bayesian linear regression
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html">
+   Bayesian model selection
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-27-Marginal-Likelihood-2.html">
+   Marginal likelihood
+  </a>
+ </li>
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  Others
+  Sampling from distributions
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-10-importance-sampling.html">
+   Importance sampling
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Rejection sampling
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Bayesian ML with PyMC
  </span>
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="2021-March-11-blr-pymc.html">
-   Laplacian Prior (LASSO)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-17-LLS-GP-PyMC3.html">
-   Stationary GP model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-17-LLS-GP-PyMC3.html#lls-gp">
-   LLS GP
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-23-GMM.html">
-   Step 1
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-27-Marginal-Likelihood-2.html">
-   Trying empirical bayesian inference
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-27-Marginal-Likelihood-2.html#drawing-samples-from-posterior">
-   Drawing samples from posterior
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-27-Marginal-Likelihood-2.html#comparing-with-exact-inference">
-   Comparing with exact inference
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html">
-   Pseudo-random data (degree 3 polynomial)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html#marginal-likelihood-pdf">
-   Marginal likelihood pdf
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html#models">
-   Models
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html#model-selection">
-   Model selection
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html#model-selection-with-parameter-optimization">
-   Model selection with parameter optimization
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html#using-empirical-bayes-bishop">
-   Using empirical bayes (Bishop)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html#drawbacks">
-   Drawbacks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html">
-   Marginal likelihood for Bayesian linear regression
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#begin-aligned">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#id1">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#id2">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#products-of-gaussian-pdfs">
-   Products of Gaussian PDFs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#id3">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#id4">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#id5">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#id6">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#multiplication-of-two-gaussians">
-   Multiplication of two Gaussians
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-31-derivation-of-marginal-likelihood.html#what-is-the-relationship-between-marginal-likelihood-closed-form-and-any-calculations-done-in-multiplications-of-two-gaussians">
-   What is the relationship between marginal_Likelihood_closed_form and any calculations done in multiplications of two gaussians?
+   Bayesian linear regression
   </a>
  </li>
 </ul>
@@ -394,7 +313,27 @@
             Contents
         </div>
         <nav id="bd-toc-nav">
-            <ul class="simple nav section-nav flex-column">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exponential-distribution">
+   Exponential distribution
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#normal-distribution">
+   Normal distribution
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gamma-distribution">
+   Gamma distribution
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#beta-distribution">
+   Beta distribution
+  </a>
+ </li>
 </ul>
 
         </nav>
@@ -407,79 +346,71 @@
         
               <div>
                 
-  <div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">expon</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="o">%</span><span class="k">matplotlib</span> inline
-</pre></div>
-</div>
-</div>
-</div>
+  <div class="section" id="rejection-sampling">
+<h1>Rejection sampling<a class="headerlink" href="#rejection-sampling" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://www.youtube.com/watch?v=kYWHfgkRc9s">https://www.youtube.com/watch?v=kYWHfgkRc9s</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rv</span> <span class="o">=</span> <span class="n">expon</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rc</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">expon</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">rc</span><span class="p">(</span><span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="n">usetex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
+<div class="section" id="exponential-distribution">
+<h2>Exponential distribution<a class="headerlink" href="#exponential-distribution" title="Permalink to this headline">¶</a></h2>
 <p>Plotting pdf of exponential distribution</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">rv</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rv</span> <span class="o">=</span> <span class="n">expon</span><span class="p">()</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">rv</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;pdf&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f9940904100&gt;]
-</pre></div>
-</div>
-<img alt="../_images/2021-March-10-rejection-sampling_4_1.png" src="../_images/2021-March-10-rejection-sampling_4_1.png" />
+<img alt="../_images/2021-March-10-rejection-sampling_5_0.png" src="../_images/2021-March-10-rejection-sampling_5_0.png" />
 </div>
 </div>
 <p>Generating samples from uniform distribution</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uni_samples</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span><span class="n">uni_samples</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;pdf&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.4585946173234412
-</pre></div>
-</div>
+<img alt="../_images/2021-March-10-rejection-sampling_7_0.png" src="../_images/2021-March-10-rejection-sampling_7_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uni_samples</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">100000</span><span class="p">)</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span><span class="n">uni_samples</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;pdf&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f990fca75b0&gt;
-</pre></div>
-</div>
-<img alt="../_images/2021-March-10-rejection-sampling_7_1.png" src="../_images/2021-March-10-rejection-sampling_7_1.png" />
+<img alt="../_images/2021-March-10-rejection-sampling_8_0.png" src="../_images/2021-March-10-rejection-sampling_8_0.png" />
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1000000</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f991007e1c0&gt;
-</pre></div>
-</div>
-<img alt="../_images/2021-March-10-rejection-sampling_8_1.png" src="../_images/2021-March-10-rejection-sampling_8_1.png" />
-</div>
-</div>
+<p>We can accept all the samples that fall within the area underneath pdf.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
@@ -495,15 +426,12 @@
 
 <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">samples_uniform_x</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span> <span class="n">samples_uniform_y</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span><span class="n">s</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Accepted&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">samples_uniform_x</span><span class="p">[</span><span class="o">~</span><span class="n">idx</span><span class="p">],</span> <span class="n">samples_uniform_y</span><span class="p">[</span><span class="o">~</span><span class="n">idx</span><span class="p">],</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="n">s</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Rejected&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">));</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f99074e9130&gt;
-</pre></div>
-</div>
-<img alt="../_images/2021-March-10-rejection-sampling_9_1.png" src="../_images/2021-March-10-rejection-sampling_9_1.png" />
+<img alt="../_images/2021-March-10-rejection-sampling_10_0.png" src="../_images/2021-March-10-rejection-sampling_10_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -513,9 +441,10 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2021-March-10-rejection-sampling_10_0.png" src="../_images/2021-March-10-rejection-sampling_10_0.png" />
+<img alt="../_images/2021-March-10-rejection-sampling_11_0.png" src="../_images/2021-March-10-rejection-sampling_11_0.png" />
 </div>
 </div>
+<p>We can define a general function to do the rejection sampling.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rejection_sampling</span><span class="p">(</span><span class="n">pdf</span><span class="p">,</span> <span class="n">lower_support</span><span class="p">,</span> <span class="n">upper_support</span><span class="p">,</span> <span class="n">samples</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">y_max</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
@@ -532,12 +461,15 @@
 
     <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">samples_uniform_x</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span> <span class="n">samples_uniform_y</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span><span class="n">s</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Accepted&quot;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">samples_uniform_x</span><span class="p">[</span><span class="o">~</span><span class="n">idx</span><span class="p">],</span> <span class="n">samples_uniform_y</span><span class="p">[</span><span class="o">~</span><span class="n">idx</span><span class="p">],</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="n">s</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Rejected&quot;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">samples_uniform_x</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;mean = </span><span class="si">{</span><span class="n">samples_uniform_x</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="normal-distribution">
+<h2>Normal distribution<a class="headerlink" href="#normal-distribution" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span>
@@ -546,17 +478,15 @@
 <span class="n">pdf</span> <span class="o">=</span> <span class="n">rv</span><span class="o">.</span><span class="n">pdf</span>
 <span class="n">rejection_sampling</span><span class="p">(</span><span class="n">pdf</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f991541dc10&gt;]
-</pre></div>
-</div>
-<img alt="../_images/2021-March-10-rejection-sampling_12_1.png" src="../_images/2021-March-10-rejection-sampling_12_1.png" />
+<img alt="../_images/2021-March-10-rejection-sampling_15_0.png" src="../_images/2021-March-10-rejection-sampling_15_0.png" />
 </div>
 </div>
+<p>Let us try with lower value of standard deviation.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span>
@@ -565,17 +495,15 @@
 <span class="n">pdf</span> <span class="o">=</span> <span class="n">rv</span><span class="o">.</span><span class="n">pdf</span>
 <span class="n">rejection_sampling</span><span class="p">(</span><span class="n">pdf</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f99121327c0&gt;]
-</pre></div>
-</div>
-<img alt="../_images/2021-March-10-rejection-sampling_13_1.png" src="../_images/2021-March-10-rejection-sampling_13_1.png" />
+<img alt="../_images/2021-March-10-rejection-sampling_17_0.png" src="../_images/2021-March-10-rejection-sampling_17_0.png" />
 </div>
 </div>
+<p>We need to increase the space of sampling in this case.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scale</span> <span class="o">=</span><span class="mf">0.1</span>
@@ -583,17 +511,17 @@
 <span class="n">pdf</span> <span class="o">=</span> <span class="n">rv</span><span class="o">.</span><span class="n">pdf</span>
 <span class="n">rejection_sampling</span><span class="p">(</span><span class="n">pdf</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">50000</span><span class="p">,</span><span class="n">y_max</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">scale</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)))</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f9911b2e250&gt;]
-</pre></div>
-</div>
-<img alt="../_images/2021-March-10-rejection-sampling_14_1.png" src="../_images/2021-March-10-rejection-sampling_14_1.png" />
+<img alt="../_images/2021-March-10-rejection-sampling_19_0.png" src="../_images/2021-March-10-rejection-sampling_19_0.png" />
 </div>
 </div>
+</div>
+<div class="section" id="gamma-distribution">
+<h2>Gamma distribution<a class="headerlink" href="#gamma-distribution" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">gamma</span>
@@ -607,15 +535,12 @@
 <span class="n">pdf</span> <span class="o">=</span> <span class="n">rv</span><span class="o">.</span><span class="n">pdf</span>
 <span class="n">rejection_sampling</span><span class="p">(</span><span class="n">pdf</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f9917770ca0&gt;]
-</pre></div>
-</div>
-<img alt="../_images/2021-March-10-rejection-sampling_16_1.png" src="../_images/2021-March-10-rejection-sampling_16_1.png" />
+<img alt="../_images/2021-March-10-rejection-sampling_22_0.png" src="../_images/2021-March-10-rejection-sampling_22_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -624,15 +549,12 @@
 <span class="n">pdf</span> <span class="o">=</span> <span class="n">rv</span><span class="o">.</span><span class="n">pdf</span>
 <span class="n">rejection_sampling</span><span class="p">(</span><span class="n">pdf</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f99177f37c0&gt;]
-</pre></div>
-</div>
-<img alt="../_images/2021-March-10-rejection-sampling_17_1.png" src="../_images/2021-March-10-rejection-sampling_17_1.png" />
+<img alt="../_images/2021-March-10-rejection-sampling_23_0.png" src="../_images/2021-March-10-rejection-sampling_23_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -641,15 +563,38 @@
 <span class="n">pdf</span> <span class="o">=</span> <span class="n">rv</span><span class="o">.</span><span class="n">pdf</span>
 <span class="n">rejection_sampling</span><span class="p">(</span><span class="n">pdf</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f9917f77ee0&gt;]
+<img alt="../_images/2021-March-10-rejection-sampling_24_0.png" src="../_images/2021-March-10-rejection-sampling_24_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="beta-distribution">
+<h2>Beta distribution<a class="headerlink" href="#beta-distribution" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">beta</span>
 </pre></div>
 </div>
-<img alt="../_images/2021-March-10-rejection-sampling_18_1.png" src="../_images/2021-March-10-rejection-sampling_18_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rv</span> <span class="o">=</span> <span class="n">beta</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mf">4.5</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">pdf</span> <span class="o">=</span> <span class="n">rv</span><span class="o">.</span><span class="n">pdf</span>
+<span class="n">rejection_sampling</span><span class="p">(</span><span class="n">pdf</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10000</span><span class="p">,</span> <span class="n">y_max</span><span class="o">=</span><span class="mf">2.5</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/2021-March-10-rejection-sampling_27_0.png" src="../_images/2021-March-10-rejection-sampling_27_0.png" />
+</div>
+</div>
 </div>
 </div>
 
@@ -678,8 +623,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="2021-March-10-importance-sampling.html" title="previous page">&lt;no title&gt;</a>
-    <a class='right-next' id="next-link" href="2021-March-11-blr-pymc.html" title="next page">Laplacian Prior (LASSO)</a>
+    <a class='left-prev' id="prev-link" href="2021-March-10-importance-sampling.html" title="previous page">Importance sampling</a>
+    <a class='right-next' id="next-link" href="2021-March-11-blr-pymc.html" title="next page">Bayesian linear regression</a>
 
         </div>
         

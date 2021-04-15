@@ -57,8 +57,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="References" href="../references.html" />
-    <link rel="prev" title="Pseudo-random data (degree 3 polynomial)" href="2021-March-29-bayesian-model-selection.html" />
+    <link rel="next" title="Bayesian ML: Fundamentals" href="2021-March-23-bayesian-ml.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="2021-March-27-Marginal-Likelihood.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -141,6 +141,18 @@
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
+  Theory of Bayesian ML
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Marginal likelihood for Bayesian linear regression
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
   Bayesian ML
  </span>
 </p>
@@ -155,136 +167,43 @@
    Bayesian linear regression
   </a>
  </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Others
- </span>
-</p>
-<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-11-blr-pymc.html">
-   Laplacian Prior (LASSO)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-17-LLS-GP-PyMC3.html">
-   Stationary GP model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-17-LLS-GP-PyMC3.html#lls-gp">
-   LLS GP
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-23-GMM.html">
-   Step 1
+  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html">
+   Bayesian model selection
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="2021-March-27-Marginal-Likelihood-2.html">
-   Trying empirical bayesian inference
+   Marginal likelihood
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Sampling from distributions
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2021-March-10-importance-sampling.html">
+   Importance sampling
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-27-Marginal-Likelihood-2.html#drawing-samples-from-posterior">
-   Drawing samples from posterior
+  <a class="reference internal" href="2021-March-10-rejection-sampling.html">
+   Rejection sampling
   </a>
  </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Bayesian ML with PyMC
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-27-Marginal-Likelihood-2.html#comparing-with-exact-inference">
-   Comparing with exact inference
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html">
-   Pseudo-random data (degree 3 polynomial)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html#marginal-likelihood-pdf">
-   Marginal likelihood pdf
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html#models">
-   Models
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html#model-selection">
-   Model selection
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html#model-selection-with-parameter-optimization">
-   Model selection with parameter optimization
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html#using-empirical-bayes-bishop">
-   Using empirical bayes (Bishop)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2021-March-29-bayesian-model-selection.html#drawbacks">
-   Drawbacks
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Marginal likelihood for Bayesian linear regression
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#begin-aligned">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#id1">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#id2">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#products-of-gaussian-pdfs">
-   Products of Gaussian PDFs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#id3">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#id4">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#id5">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#id6">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#multiplication-of-two-gaussians">
-   Multiplication of two Gaussians
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#what-is-the-relationship-between-marginal-likelihood-closed-form-and-any-calculations-done-in-multiplications-of-two-gaussians">
-   What is the relationship between marginal_Likelihood_closed_form and any calculations done in multiplications of two gaussians?
+  <a class="reference internal" href="2021-March-11-blr-pymc.html">
+   Bayesian linear regression
   </a>
  </li>
 </ul>
@@ -395,64 +314,66 @@
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Marginal likelihood for Bayesian linear regression
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#work-under-progress">
+   Work under progress
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#begin-aligned">
+     \begin{aligned}
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     \begin{aligned}
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     \begin{aligned}
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#products-of-gaussian-pdfs">
+     Products of Gaussian PDFs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     \begin{aligned}
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     \begin{aligned}
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     \begin{aligned}
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     \begin{aligned}
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#begin-aligned">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id2">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#products-of-gaussian-pdfs">
-   Products of Gaussian PDFs
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id3">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id4">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id5">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id6">
-   \begin{aligned}
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#multiplication-of-two-gaussians">
    Multiplication of two Gaussians
   </a>
   <ul class="nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id7">
      \begin{aligned}
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-is-the-relationship-between-marginal-likelihood-closed-form-and-any-calculations-done-in-multiplications-of-two-gaussians">
    What is the relationship between marginal_Likelihood_closed_form and any calculations done in multiplications of two gaussians?
   </a>
@@ -471,10 +392,11 @@
                 
   <div class="section" id="marginal-likelihood-for-bayesian-linear-regression">
 <h1>Marginal likelihood for Bayesian linear regression<a class="headerlink" href="#marginal-likelihood-for-bayesian-linear-regression" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="work-under-progress">
+<h2>Work under progress<a class="headerlink" href="#work-under-progress" title="Permalink to this headline">¶</a></h2>
 <p>Bayesian linear regression is defined as below in the Bayesian settings,</p>
-</div>
 <div class="section" id="begin-aligned">
-<h1>\begin{aligned}<a class="headerlink" href="#begin-aligned" title="Permalink to this headline">¶</a></h1>
+<h3>\begin{aligned}<a class="headerlink" href="#begin-aligned" title="Permalink to this headline">¶</a></h3>
 <p>\mathbf{y} &amp;= X\boldsymbol{\theta} + \epsilon\
 \epsilon &amp;\sim \mathcal{N}(0, \sigma_n^2)\
 \theta &amp;\sim \mathcal{N}(\mathbf{m}_0, S_0)
@@ -482,7 +404,7 @@
 <p>For a Gaussian random variable <span class="math notranslate nohighlight">\(\mathbf{z} \sim \mathcal{N}(\boldsymbol{\mu}, \Sigma)\)</span>, <span class="math notranslate nohighlight">\(A\mathbf{z} + \mathbf{b}\)</span> is also a Gaussian random variable.</p>
 </div>
 <div class="section" id="id1">
-<h1>\begin{aligned}<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<h3>\begin{aligned}<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>\mathbf{y} = X\mathbf{\theta} + \boldsymbol{\epsilon} &amp;\sim \mathcal{N}(\boldsymbol{\mu}’, \Sigma’)\
 \boldsymbol{\mu}’ &amp;= \mathbb{E}_{\theta, \epsilon}(X\mathbf{\theta}+\boldsymbol{\epsilon})\
 &amp;= X\mathbb{E}(\mathbf{\theta}) + \mathbb{E}(\mathbf{\epsilon})\
@@ -495,17 +417,17 @@
 <p>Marginal likelihood is <span class="math notranslate nohighlight">\(p(\mathbf{y})\)</span> so,</p>
 </div>
 <div class="section" id="id2">
-<h1>\begin{aligned}<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+<h3>\begin{aligned}<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>p(\mathbf{y}) &amp;= \frac{1}{(2\pi)^{\frac{N}{2}}|\Sigma’|^{\frac{1}{2}}}\exp\left[-\frac{1}{2}(\mathbf{y}-\boldsymbol{\mu}’)^T\Sigma’^{-1}(\mathbf{y}-\boldsymbol{\mu}’)\right]\
 &amp;= \frac{1}{(2\pi)^{\frac{N}{2}}|XS_0X^T + \sigma_n^2I|^{\frac{1}{2}}}\exp\left[-\frac{1}{2}(\mathbf{y}-X\mathbf{m}_0)^T(XS_0X^T + \sigma_n^2I)^{-1}(\mathbf{y}-X\mathbf{m}_0)\right]
 \end{aligned}</p>
 </div>
 <div class="section" id="products-of-gaussian-pdfs">
-<h1>Products of Gaussian PDFs<a class="headerlink" href="#products-of-gaussian-pdfs" title="Permalink to this headline">¶</a></h1>
+<h3>Products of Gaussian PDFs<a class="headerlink" href="#products-of-gaussian-pdfs" title="Permalink to this headline">¶</a></h3>
 <p>Product of two Gaussians <span class="math notranslate nohighlight">\(\mathbf{x} \sim \mathcal{N}(\boldsymbol{\mu}_0, \Sigma_0)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{x} \sim \mathcal{N}(\boldsymbol{\mu}_1, \Sigma_1)\)</span> is an unnormalized Gaussian.</p>
 </div>
 <div class="section" id="id3">
-<h1>\begin{aligned}<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h1>
+<h3>\begin{aligned}<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <p>f(\mathbf{x}) &amp;= \frac{1}{(2\pi)^{\frac{N}{2}}|\Sigma_0|^{\frac{1}{2}}}\exp\left[-\frac{1}{2}(\mathbf{x}-\boldsymbol{\mu}_0)^T\Sigma_0^{-1}(\mathbf{x}-\boldsymbol{\mu}_0)\right]\
 g(\mathbf{x}) &amp;= \frac{1}{(2\pi)^{\frac{N}{2}}|\Sigma_1|^{\frac{1}{2}}}\exp\left[-\frac{1}{2}(\mathbf{x}-\boldsymbol{\mu}_1)^T\Sigma_1^{-1}(\mathbf{x}-\boldsymbol{\mu}_1)\right]\
 \int h(x) = \frac{1}{c}\int f(\mathbf{x})g(\mathbf{x})d\mathbf{x} &amp;= 1
@@ -513,7 +435,7 @@ g(\mathbf{x}) &amp;= \frac{1}{(2\pi)^{\frac{N}{2}}|\Sigma_1|^{\frac{1}{2}}}\exp\
 <p>We need to find figure out value of <span class="math notranslate nohighlight">\(c\)</span> to solve the integration.</p>
 </div>
 <div class="section" id="id4">
-<h1>\begin{aligned}<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h1>
+<h3>\begin{aligned}<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <p>h(x) &amp;= \frac{1}{(2\pi)^{\frac{N}{2}}|\Sigma|^{\frac{1}{2}}}\exp\left[-\frac{1}{2}(\mathbf{x}-\boldsymbol{\mu})^T\Sigma^{-1}(\mathbf{x}-\boldsymbol{\mu})\right] =  \frac{1}{(2\pi)^{\frac{N}{2}}|\Sigma|^{\frac{1}{2}}}\exp\left[-\frac{1}{2}\left(\mathbf{x}^T\Sigma^{-1}\mathbf{x} - 2\boldsymbol{\mu}^T\Sigma^{-1}\mathbf{x} + \boldsymbol{\mu}^T\Sigma^{-1}\boldsymbol{\mu}\right)\right]\
 f(x)g(x) &amp;= \frac{1}{(2\pi)^{\frac{N}{2}}|\Sigma_0|^{\frac{1}{2}}(2\pi)^{\frac{N}{2}}|\Sigma_1|^{\frac{1}{2}}}\exp\left[
 -\frac{1}{2}(\mathbf{x}-\boldsymbol{\mu}_0)^T\Sigma_0^{-1}(\mathbf{x}-\boldsymbol{\mu}_0)
@@ -525,7 +447,7 @@ f(x)g(x) &amp;= \frac{1}{(2\pi)^{\frac{N}{2}}|\Sigma_0|^{\frac{1}{2}}(2\pi)^{\fr
 <p>We can compare the exponent terms directly. We get the following results by doing that</p>
 </div>
 <div class="section" id="id5">
-<h1>\begin{aligned}<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h1>
+<h3>\begin{aligned}<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <p>\Sigma^{-1} &amp;= \Sigma_0^{-1} + \Sigma_1^{-1}\
 \Sigma &amp;= \left(\Sigma_0^{-1} + \Sigma_1^{-1}\right)^{-1}\
 \
@@ -539,15 +461,16 @@ f(x)g(x) &amp;= \frac{1}{(2\pi)^{\frac{N}{2}}|\Sigma_0|^{\frac{1}{2}}(2\pi)^{\fr
 <p>Now, solving for the normalizing constant <span class="math notranslate nohighlight">\(c\)</span>,</p>
 </div>
 <div class="section" id="id6">
-<h1>\begin{aligned}<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h1>
+<h3>\begin{aligned}<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <p>\frac{c}{(2\pi)^{\frac{N}{2}}|\Sigma|^{\frac{1}{2}}} &amp;= \frac{1}{(2\pi)^{\frac{N}{2}}|\Sigma_0|^{\frac{1}{2}}(2\pi)^{\frac{N}{2}}|\Sigma_1|^{\frac{1}{2}}}\
 c &amp;=  \frac{|\Sigma|^{\frac{1}{2}}}{(2\pi)^{\frac{N}{2}}|\Sigma_0|^{\frac{1}{2}}|\Sigma_1|^{\frac{1}{2}}}
 \end{aligned}</p>
 </div>
+</div>
 <div class="section" id="multiplication-of-two-gaussians">
-<h1>Multiplication of two Gaussians<a class="headerlink" href="#multiplication-of-two-gaussians" title="Permalink to this headline">¶</a></h1>
+<h2>Multiplication of two Gaussians<a class="headerlink" href="#multiplication-of-two-gaussians" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id7">
-<h2>\begin{aligned}<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<h3>\begin{aligned}<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
 <p>\mathbf{y} &amp;= X\theta + \boldsymbol{\epsilon}\
 \theta &amp;= (X^TX)^{-1}X^T(\mathbf{y} - \boldsymbol{\epsilon})\
 \text{deriving mean and covariance of }\theta\
@@ -700,11 +623,26 @@ c = (2\pi)^{-N/2}|A+B|^{-1/2}\exp -\frac{1}{2}\left[(\mathbf{a} - \mathbf{b})^T(
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="mi">224</span><span class="n">c1ff02397</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">splitter</span> <span class="o">=</span> <span class="n">KFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="k">for</span> <span class="n">train_ind</span><span class="p">,</span> <span class="n">test_ind</span> <span class="ow">in</span> <span class="n">splitter</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="n">train_x</span><span class="p">,</span> <span class="n">train_y</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">train_ind</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="n">train_ind</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="n">test_x</span><span class="p">,</span> <span class="n">test_y</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">test_ind</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="n">test_ind</span><span class="p">]</span>
+
+<span class="ne">TypeError</span>: &#39;KFold&#39; object is not callable
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div class="section" id="what-is-the-relationship-between-marginal-likelihood-closed-form-and-any-calculations-done-in-multiplications-of-two-gaussians">
-<h1>What is the relationship between marginal_Likelihood_closed_form and any calculations done in multiplications of two gaussians?<a class="headerlink" href="#what-is-the-relationship-between-marginal-likelihood-closed-form-and-any-calculations-done-in-multiplications-of-two-gaussians" title="Permalink to this headline">¶</a></h1>
+<h2>What is the relationship between marginal_Likelihood_closed_form and any calculations done in multiplications of two gaussians?<a class="headerlink" href="#what-is-the-relationship-between-marginal-likelihood-closed-form-and-any-calculations-done-in-multiplications-of-two-gaussians" title="Permalink to this headline">¶</a></h2>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -732,8 +670,8 @@ c = (2\pi)^{-N/2}|A+B|^{-1/2}\exp -\frac{1}{2}\left[(\mathbf{a} - \mathbf{b})^T(
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="2021-March-29-bayesian-model-selection.html" title="previous page">Pseudo-random data (degree 3 polynomial)</a>
-    <a class='right-next' id="next-link" href="../references.html" title="next page">References</a>
+    <a class='left-prev' id="prev-link" href="2021-March-27-Marginal-Likelihood.html" title="previous page">&lt;no title&gt;</a>
+    <a class='right-next' id="next-link" href="2021-March-23-bayesian-ml.html" title="next page">Bayesian ML: Fundamentals</a>
 
         </div>
         
