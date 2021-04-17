@@ -34,6 +34,7 @@
     - file: notebooks/2021-March-17-lls-gp-pymc3
     - file: notebooks/15-April-2021-deep-gp-from-scratch
     - file: notebooks/16-April-2021-ard-gp
+    - file: notebooks/16-April-2021-GP-vs-DeepGP
 
 # - part: Gaussian Mixure models
 #   chapters:
