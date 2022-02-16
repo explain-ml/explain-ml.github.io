@@ -8,7 +8,6 @@ This book explains ML
 
 If you'd like to develop on and build the Explain-ML book, you should:
 
-
 - Clone this repository and run
 - Run `pip install -r requirements.txt` (it is recommended you do this within a virtual environment)
 - (Recommended) Remove the existing `Explain-ML/_build/` directory
